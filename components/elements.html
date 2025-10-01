@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Google Tag Manager code -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WH4L8LB');</script>
+  <title>Elements - CFPB Design System</title>
+  <meta name="description" content="CFPB's design system">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/design-system/dist/main.css">
+  <script>
+      // Confirm availability of JS and remove no-js class from html
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
+  </script>
+</head>
+<body class="t-variation">
+  <!-- Google Tag Manager code -->
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WH4L8LB" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  <div class="skip-nav">
+    <a class="skip-nav__link" href="#main">
+        Skip to main content
+    </a>
+  </div>
+  <header role="banner" class="site-header-wrapper">
+
+  <div class="m-global-eyebrow">
+    <div class="a-tagline">
+        <span class="u-usa-flag"></span>
+        <div>
+            An official website of the
+            <span class="u-nowrap">United States government</span>
+        </div>
+    </div>
+</div>
+
+
+  <div class="site-header">
+
+    <form id="search-form" action="/design-system/search" method="get">
+    <div class="o-search-input">
+        <div class="o-search-input__input">
+            <label for="search-box" class="o-search-input__input-label">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--search" viewbox="0 0 15 19"><path d="M14.147 15.488a1.11 1.11 0 0 1-1.567 0l-3.395-3.395a5.575 5.575 0 1 1 1.568-1.568l3.394 3.395a1.11 1.11 0 0 1 0 1.568m-6.361-3.903a4.488 4.488 0 1 0-1.681.327 4.4 4.4 0 0 0 1.68-.327z"></path></svg>
+            </label>
+            <input aria-label="Search for a term" type="search" id="search-box" name="searchQuery" value="" class="a-text-input a-text-input__full" title="Enter your query" autocomplete="off" maxlength="75">
+            <button type="reset" onclick="document.getElementById('search-box').setAttribute('value','')" aria-label="Clear search" title="Clear search">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--error" viewbox="0 0 12 19"><path d="M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z"></path></svg>
+            </button>
+        </div>
+        <button class="a-btn" type="submit" aria-label="Search for term(s)">
+            Search
+        </button>
+    </div>
+</form>
+
+
+    <h1 class="title">
+      <a class="title-link" href="/design-system/">
+        <span class="demi">CFPB</span> Design System
+      </a>
+    </h1>
+  </div> <!-- /.wrapper -->
+</header>
+
+
+  <div id="redirect-banner" class="block block--flush-top block--flush-bottom block--padded-top u-hidden">
+  <div class="m-global-banner">
+    <div class="wrapper wrapper--match-content">
+      <div class="m-notification m-notification--warning m-notification--visible">
+        <svg xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg cf-icon-svg--warning-round" viewbox="0 0 17 20.4"><path d="M16.406 10.283a7.917 7.917 0 1 1-7.917-7.917 7.916 7.916 0 0 1 7.917 7.917zM9.48 14.367a1.003 1.003 0 1 0-1.004 1.003 1.003 1.003 0 0 0 1.004-1.003zM7.697 11.53a.792.792 0 0 0 1.583 0V5.262a.792.792 0 0 0-1.583 0z"></path></svg>
+        <div class="m-notification__content">
+          <div class="m-notification__message">
+            You’ve been redirected to this website from
+            <span data-redirect="source-name"></span>.
+          </div>
+          <p class="m-notification__explanation">
+            The website you were trying to visit has been deprecated.
+            Future updates will happen here.
+          </p>
+          <p>
+            A permanent snapshot of
+            <span data-redirect="source-name"></span>
+            is available at
+            <a data-redirect="archive-website"></a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <main id="main" role="main">
+  <aside class="ds-sidebar">
+
+<details open class="ds-nav-container">
+
+    <summary class="h4">Navigation</summary>
+
+    <ul class="m-list m-list--links">
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/foundation">Foundation</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/components">Components</a>
+                </div>
+
+            
+                
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Components</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/alerts">Alerts</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/banner-notification">Banner (notification)</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/banner-us-gov">Banner (US gov)</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/buttons">Buttons</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/checkboxes">Checkboxes</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/date-picker">Date picker</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/expandables">Expandables</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/fieldsets">Fieldsets</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/helper-text">Helper text</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/labels-and-legends">Labels and legends</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/links">Links</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/lists">Lists</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/pagination">Pagination</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/radio-buttons">Radio buttons</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/range-sliders">Range sliders</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/selects">Selects</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/summaries">Summaries</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/tables">Tables</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/tags">Tags</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/taglines">Taglines</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/text-inputs">Text inputs</a>
+                            </li>
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/tooltips">Tooltips</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+                    <div class="ds-nav ds-nav-2">
+                        <div class="h5">Web Components</div>
+                        
+                        <ul class="m-list m-list--links">
+                        
+                            <li class="m-list__item">
+                                <a class="a-link a-link--jump" href="/design-system/components/elements">Elements</a>
+                            </li>
+                        
+                        </ul>
+                    
+                    
+                </div>
+                
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/patterns">Patterns</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/pages">Pages</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/development">Development</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+        
+        <li class="m-list__item">
+
+            <div class="ds-nav ds-nav-1">
+                <div class="h4">
+                    <a class="a-link a-link--jump" href="/design-system/guidelines">Guidelines</a>
+                </div>
+
+            
+            </div>
+        </li>
+    
+    </ul>
+
+</details>
+
+</aside>
+
+
+  <div class="ds-content">
+    <section>
+      <div class="h5">
+        Web Components
+      </div>
+    
+
+    <h1 class="component-header u-mb30">
+        Elements
+    </h1>
+
+    
+
+    
+
+    
+
+    
+    
+    <ul class="m-list m-list--horizontal m-list--horizontal-spaced">
+        
+        <li class="m-list__item">
+            <a href="#types">Types</a>
+        </li>
+        
+    </ul>
+    
+
+    
+    <section id="description" class="u-mb30">
+        <p>The components are custom elements (web components).</p>
+
+    </section>
+    
+
+    
+
+    
+    
+    <section class="o-variation-group" id="types">
+
+        
+        <h2 class="o-variation-group__title">
+            Types
+        </h2>
+        
+
+        
+
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Button
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>A basic button in web component syntax.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div>
+  <cfpb-button>This is a button</cfpb-button>
+
+  <br>
+
+  <cfpb-button href="#" full-on-mobile>This is a button link</cfpb-button>
+
+  <br>
+
+  <cfpb-button disabled>This is a disabled button link</cfpb-button>
+
+  <br>
+
+  <cfpb-button style-as-link href="#">This is a button styled as a link</cfpb-button>
+
+  <br>
+  <hr>
+  <br>
+  <p>
+  The following section allows interacting with the button API.
+  </p>
+  <p><cfpb-button id="btn-example"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--updating" viewbox="0 0 16 19"><path d="M5.857 3.882v3.341a1.03 1.03 0 0 1-2.058 0v-.97a5.4 5.4 0 0 0-1.032 2.27 1.03 1.03 0 1 1-2.02-.395A7.46 7.46 0 0 1 2.235 4.91h-.748a1.03 1.03 0 1 1 0-2.058h3.34a1.03 1.03 0 0 1 1.03 1.03m-3.25 9.237a1.03 1.03 0 0 1-1.358-.523 7.5 7.5 0 0 1-.37-1.036 1.03 1.03 0 1 1 1.983-.55 5.5 5.5 0 0 0 .269.751 1.03 1.03 0 0 1-.524 1.358m2.905 2.439a1.03 1.03 0 0 1-1.42.322 7.5 7.5 0 0 1-.885-.652 1.03 1.03 0 0 1 1.34-1.563 5.4 5.4 0 0 0 .643.473 1.03 1.03 0 0 1 .322 1.42m3.68.438a1.03 1.03 0 0 1-1.014 1.044h-.106a8 8 0 0 1-.811-.044 1.03 1.03 0 0 1 .224-2.046 5 5 0 0 0 .664.031h.014a1.03 1.03 0 0 1 1.03 1.015zm.034-12.847a1.03 1.03 0 0 1-1.029 1.01h-.033a1.03 1.03 0 0 1 .017-2.06h.017l.019.001a1.03 1.03 0 0 1 1.009 1.05zm3.236 11.25a1.03 1.03 0 0 1-.3 1.425 8 8 0 0 1-.797.453 1.03 1.03 0 1 1-.905-1.849 6 6 0 0 0 .578-.328 1.03 1.03 0 0 1 1.424.3zM10.475 3.504a1.03 1.03 0 0 1 1.41-.359l.018.011a1.03 1.03 0 1 1-1.06 1.764l-.01-.006a1.03 1.03 0 0 1-.358-1.41m4.26 9.445a8 8 0 0 1-.315.56 1.03 1.03 0 1 1-1.749-1.086 5 5 0 0 0 .228-.405 1.03 1.03 0 1 1 1.836.93zm-1.959-6.052a1.03 1.03 0 0 1 1.79-1.016l.008.013a1.03 1.03 0 1 1-1.79 1.017zm2.764 2.487a9 9 0 0 1 0 .366 1.03 1.03 0 0 1-1.029 1.005h-.025A1.03 1.03 0 0 1 13.482 9.7a5 5 0 0 0 0-.266 1.03 1.03 0 0 1 1.003-1.055h.026a1.03 1.03 0 0 1 1.029 1.004z"></path></svg> Example button</cfpb-button></p>
+  <p>
+  <button id="show-icon">Show icon</button>
+  <button id="hide-icon">Hide icon</button>
+  </p>
+  <script>
+  const btn = document.querySelector('#btn-example');
+
+  const btnShowIcon = document.querySelector('#show-icon');
+  const btnHideIcon = document.querySelector('#hide-icon');
+
+  btnShowIcon.addEventListener('click',()=>{
+    btn.showIcon();
+  });
+  btnHideIcon.addEventListener('click',()=>{
+    btn.hideIcon();
+  });
+  </script>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-button-a-basic-button-in-web-com-1" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-button-a-basic-button-in-web-com-1" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-button-a-basic-button-in-web-com-1">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-button-a-basic-button-in-web-com-html-code-snippet-1">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-button-a-basic-button-in-web-com-html-code-snippet-1">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;cfpb-button&gt;This is a button&lt;/cfpb-button&gt; &lt;cfpb-button href="#" full-on-mobile&gt;This is a button link&lt;/cfpb-button&gt; &lt;cfpb-button disabled&gt;This is a disabled button link&lt;/cfpb-button&gt; &lt;cfpb-button style-as-link href="#"&gt;This is a button styled as a link&lt;/cfpb-button&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    File upload
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Allows files to be selected for upload.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div>
+  <cfpb-file-upload>Select file</cfpb-file-upload>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-file-upload-allows-files-to-be-s-2" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-file-upload-allows-files-to-be-s-2" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-file-upload-allows-files-to-be-s-2">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-file-upload-allows-files-to-be-s-html-code-snippet-2">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-file-upload-allows-files-to-be-s-html-code-snippet-2">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;cfpb-file-upload&gt;Select file&lt;/cfpb-file-upload&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Checkbox
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>A checkbox component.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div>
+  <cfpb-form-choice>
+    Gold
+  </cfpb-form-choice>
+
+  <br>
+
+  <cfpb-form-choice disabled>
+    Gold
+  </cfpb-form-choice>
+
+  <br>
+
+  <cfpb-form-choice validation="success">
+    Gold
+  </cfpb-form-choice>
+
+  <br>
+
+  <cfpb-form-choice validation="warning">
+    Gold
+  </cfpb-form-choice>
+
+  <br>
+
+  <cfpb-form-choice validation="error">
+    Gold
+  </cfpb-form-choice>
+
+  <br>
+
+  <cfpb-form-choice large>
+    Gold
+  </cfpb-form-choice>
+
+  <br>
+
+  <cfpb-form-choice large disabled>
+    Gold
+  </cfpb-form-choice>
+
+  <br>
+
+  <cfpb-form-choice large validation="success">
+    Gold
+  </cfpb-form-choice>
+
+  <br>
+
+  <cfpb-form-choice large validation="warning">
+    Gold
+  </cfpb-form-choice>
+
+  <br>
+
+  <cfpb-form-choice large validation="error">
+    Gold
+  </cfpb-form-choice>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-checkbox-a-checkbox-component-cf-3" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-checkbox-a-checkbox-component-cf-3" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-checkbox-a-checkbox-component-cf-3">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-checkbox-a-checkbox-component-cf-html-code-snippet-3">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-checkbox-a-checkbox-component-cf-html-code-snippet-3">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;cfpb-form-choice&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice disabled&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice validation="success"&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice validation="warning"&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice validation="error"&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice large&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice large disabled&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Radio button
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>A radio button component.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div>
+  <cfpb-form-choice type="radio">
+    Gold
+  </cfpb-form-choice>
+
+  <br>
+
+  <cfpb-form-choice type="radio" disabled>
+    Gold
+  </cfpb-form-choice>
+
+  <br>
+
+  <cfpb-form-choice type="radio" validation="success">
+    Gold
+  </cfpb-form-choice>
+
+  <br>
+
+  <cfpb-form-choice type="radio" validation="warning">
+    Gold
+  </cfpb-form-choice>
+
+  <br>
+
+  <cfpb-form-choice type="radio" validation="error">
+    Gold
+  </cfpb-form-choice>
+
+  <br>
+
+  <cfpb-form-choice type="radio" large>
+    Gold
+  </cfpb-form-choice>
+
+  <br>
+
+  <cfpb-form-choice type="radio" large disabled>
+    Gold
+  </cfpb-form-choice>
+
+  <br>
+
+  <cfpb-form-choice type="radio" large validation="success">
+    Gold
+  </cfpb-form-choice>
+
+  <br>
+
+  <cfpb-form-choice type="radio" large validation="warning">
+    Gold
+  </cfpb-form-choice>
+
+  <br>
+
+  <cfpb-form-choice type="radio" large validation="error">
+    Gold
+  </cfpb-form-choice>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-radio-button-a-radio-button-comp-4" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-radio-button-a-radio-button-comp-4" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-radio-button-a-radio-button-comp-4">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-radio-button-a-radio-button-comp-html-code-snippet-4">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-radio-button-a-radio-button-comp-html-code-snippet-4">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;cfpb-form-choice type="radio"&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice type="radio" disabled&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice type="radio" validation="success"&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice type="radio" validation="warning"&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice type="radio" validation="error"&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice type="radio" large&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice type="radio" large disabled&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice type="radio" large validation="success"&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice type="radio" large validation="warning"&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;
+&lt;cfpb-form-choice type="radio" large validation="error"&gt;
+  Gold
+&lt;/cfpb-form-choice&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Topic tag
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Tag element for topics.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div> <cfpb-tag-group stacked>
+  <cfpb-tag-topic>
+    Option 1
+  </cfpb-tag-topic>
+  <cfpb-tag-topic href="#">
+    Option 2
+  </cfpb-tag-topic>
+  <cfpb-tag-topic href="#">
+    Option 3
+  </cfpb-tag-topic>
+</cfpb-tag-group> </div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-topic-tag-tag-element-for-topics-5" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-topic-tag-tag-element-for-topics-5" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-topic-tag-tag-element-for-topics-5">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-topic-tag-tag-element-for-topics-html-code-snippet-5">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-topic-tag-tag-element-for-topics-html-code-snippet-5">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;cfpb-tag-group stacked&gt;
+  &lt;cfpb-tag-topic&gt;
+    Option 1
+  &lt;/cfpb-tag-topic&gt;
+  &lt;cfpb-tag-topic href="#"&gt;
+    Option 2
+  &lt;/cfpb-tag-topic&gt;
+  &lt;cfpb-tag-topic href="#"&gt;
+    Option 3
+  &lt;/cfpb-tag-topic&gt;
+&lt;/cfpb-tag-group&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Filter tag
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>Tag element for filters.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div>
+  <cfpb-tag-filter>
+    Option 1
+  </cfpb-tag-filter>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-filter-tag-tag-element-for-filte-6" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-filter-tag-tag-element-for-filte-6" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-filter-tag-tag-element-for-filte-6">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-filter-tag-tag-element-for-filte-html-code-snippet-6">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-filter-tag-tag-element-for-filte-html-code-snippet-6">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;cfpb-tag-filter&gt;
+  Option 1
+&lt;/cfpb-tag-filter&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Filter tag group
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>A group of filter Tag elements.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div>
+  <cfpb-tag-group id="tag-group-example">
+    <cfpb-tag-filter>
+      Option 1
+    </cfpb-tag-filter>
+    <cfpb-tag-filter>
+      Option 2
+    </cfpb-tag-filter>
+    <cfpb-tag-filter>
+      Option 3
+    </cfpb-tag-filter>
+  </cfpb-tag-group>
+
+  <br>
+  <hr>
+  <br>
+  <p>
+  The following section allows interacting with the tag group API.
+  </p>
+  <p>
+  <label>
+    Name:
+    <input id="add-tag-name">
+  </label>
+  </p>
+<p>
+  <label>
+    Index:
+    <input id="add-tag-index" type="number">
+  </label>
+  </p>
+<p>
+  <label>
+    Type:
+    <select id="tag-type">
+      <option>cfpb-tag-filter</option>
+      <option>cfpb-tag-topic (no link)</option>
+      <option>cfpb-tag-topic (link)</option>
+    </select>
+  </label>
+  </p>
+<p>
+  <button id="add-tag">Add tag</button>
+  <button id="remove-tag">Remove tag</button>
+  </p>
+  <br>
+  <label>
+  <p>Events dispatched:<br>
+  <textarea id="tag-group-events" style="width:100%"></textarea>
+  </p></label>
+  
+  <script>
+  const tagGroup = document.querySelector('#tag-group-example');
+  const textArea = document.querySelector('#tag-group-events');
+  tagGroup.addEventListener('tag-added', (evt)=> textArea.value += 'tag-added: ' + evt.detail.target.textContent.trim() + ' at index ' + evt.detail.index + '\n');
+  tagGroup.addEventListener('tag-removed', (evt)=> textArea.value +=  'tag-removed: ' + evt.detail.target.textContent.trim() + ' at index ' + evt.detail.index + '\n');
+
+  const btnAdd = document.querySelector('#add-tag');
+  const btnRemove = document.querySelector('#remove-tag');
+  const tagName = document.querySelector('#add-tag-name');
+  const tagIndex = document.querySelector('#add-tag-index');
+  const tagType = document.querySelector('#tag-type');
+
+  btnAdd.addEventListener('click',()=>{
+    let tag;
+    switch (tagType.value) {
+      case 'cfpb-tag-filter' :
+        tag = document.createElement('cfpb-tag-filter');
+      break;
+      case 'cfpb-tag-topic (no link)' :
+        tag = document.createElement('cfpb-tag-topic');
+      break;
+      case 'cfpb-tag-topic (link)' :
+        tag = document.createElement('cfpb-tag-topic');
+        tag.setAttribute('href', '#');
+      break;
+    }
+    tag.innerHTML = tagName.value;
+    const index = tagIndex.value === '' ? -1 : Number(tagIndex.value);
+    tagGroup.addTag(tag, index);
+  });
+
+  btnRemove.addEventListener('click',()=>{
+    const tags = tagGroup.querySelectorAll('*')
+    let tag;
+    tags.forEach((item) => {
+      if (item.textContent.trim() === tagName.value) tag = item;
+    });
+    tagGroup.removeTag(tag);
+  });
+  </script>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-filter-tag-group-a-group-of-filt-7" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-filter-tag-group-a-group-of-filt-7" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-filter-tag-group-a-group-of-filt-7">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-filter-tag-group-a-group-of-filt-html-code-snippet-7">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-filter-tag-group-a-group-of-filt-html-code-snippet-7">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;cfpb-tag-group&gt;
+  &lt;cfpb-tag-filter&gt;
+    Option 1
+  &lt;/cfpb-tag-filter&gt;
+  &lt;cfpb-tag-filter&gt;
+    Option 2
+  &lt;/cfpb-tag-filter&gt;
+  &lt;cfpb-tag-filter&gt;
+    Option 3
+  &lt;/cfpb-tag-filter&gt;
+&lt;/cfpb-tag-group&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Label
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>A label component.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div>
+  <cfpb-label>
+    <div slot="label">This is a label</div>
+  </cfpb-label>
+
+  <br>
+  <br>
+  <br>
+
+  <cfpb-label>
+    <div slot="label">This is a label</div>
+    <div slot="helper">With helper text</div>
+  </cfpb-label>
+
+  <br>
+  <br>
+  <br>
+
+  <cfpb-label block>
+    <div slot="label">This is a label</div>
+    <div slot="helper">With a block-level helper text</div>
+  </cfpb-label>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-label-a-label-component-cfpb-lab-8" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-label-a-label-component-cfpb-lab-8" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-label-a-label-component-cfpb-lab-8">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-label-a-label-component-cfpb-lab-html-code-snippet-8">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-label-a-label-component-cfpb-lab-html-code-snippet-8">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;cfpb-label&gt;
+  &lt;div slot="label"&gt;This is a label&lt;/div&gt;
+&lt;/cfpb-label&gt;
+&lt;cfpb-label&gt;
+  &lt;div slot="label"&gt;This is a label&lt;/div&gt;
+  &lt;div slot="helper"&gt;With helper text&lt;/div&gt;
+&lt;/cfpb-label&gt;
+&lt;cfpb-label block&gt;
+  &lt;div slot="label"&gt;This is a label&lt;/div&gt;
+  &lt;div slot="helper"&gt;With a block-level helper text&lt;/div&gt;
+&lt;/cfpb-label&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Multiselect
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>A select component that can have multiple selections.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div>
+  <cfpb-multiselect label="Select a planet">
+    <select multiple>
+      <option>
+        Mercury
+      </option>
+      <option>
+        Venus
+      </option>
+      <option>
+        Earth
+      </option>
+      <option>
+        Mars
+      </option>
+      <option>
+        Jupiter
+      </option>
+      <option>
+        Saturn
+      </option>
+      <option>
+        Uranus
+      </option>
+      <option>
+        Neptune
+      </option>
+    </select>
+  </cfpb-multiselect>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-multiselect-a-select-component-t-9" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-multiselect-a-select-component-t-9" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-multiselect-a-select-component-t-9">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-multiselect-a-select-component-t-html-code-snippet-9">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-multiselect-a-select-component-t-html-code-snippet-9">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;cfpb-multiselect&gt;
+  &lt;select multiple&gt;
+    &lt;option&gt;
+      Mercury
+    &lt;/option&gt;
+    &lt;option&gt;
+      Venus
+    &lt;/option&gt;
+    &lt;option&gt;
+      Earth
+    &lt;/option&gt;
+    &lt;option&gt;
+      Mars
+    &lt;/option&gt;
+    &lt;option&gt;
+      Jupiter
+    &lt;/option&gt;
+    &lt;option&gt;
+      Saturn
+    &lt;/option&gt;
+    &lt;option&gt;
+      Uranus
+    &lt;/option&gt;
+    &lt;option&gt;
+      Neptune
+    &lt;/option&gt;
+  &lt;/select&gt;
+&lt;/cfpb-multiselect&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+        <div class="m-variation">
+
+            
+            
+            
+            
+
+            
+            <div class="m-variation__name">
+                <h3>
+                    Pagination
+                    
+                </h3>
+            </div>
+            
+
+            
+            <div class="m-variation__description">
+                <p>A pagination component.</p>
+
+            </div>
+            
+
+            <!-- Live code example -->
+            
+            <div class="a-live__code">
+                <div>
+  <cfpb-pagination value="4" max="10"></cfpb-pagination>
+</div>
+            </div>
+            
+
+            
+            
+            
+            
+
+            
+
+            <div class="a-toggle__code">
+                <button href="#details-pagination-a-pagination-componen-10" class="a-btn a-btn--link" data-toggle-details="show">Show details</button>
+                <button href="#details-pagination-a-pagination-componen-10" class="a-btn a-btn--link u-hidden" data-toggle-details="hide">Hide details</button>
+            </div>
+
+            <div class="m-tabs u-hidden" id="details-pagination-a-pagination-componen-10">
+                <ul class="m-tabs__list">
+                    
+                    <li class="m-tabs__list-item m-tabs__list-item-selected">
+                        <a class="m-tabs__tab" href="#details-pagination-a-pagination-componen-html-code-snippet-10">
+                            HTML code snippet
+                        </a>
+                    </li>
+                    
+                    
+                    
+                    
+                </ul>
+
+                <!-- HTML snippet -->
+                
+                <section class="m-tabs__panel" id="details-pagination-a-pagination-componen-html-code-snippet-10">
+                    <div class="variation-code-snippet">
+                        <h4 class="variation-code-snippet-title">HTML code snippet</h4>
+                        <div class="source-code">
+                            <pre><code class="language-html">&lt;cfpb-pagination value="4" max="10"&gt;&lt;/cfpb-pagination&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+                
+
+                <!-- Jinja snippet -->
+                
+
+                <!-- Implementation details -->
+                
+
+                <!-- Specs -->
+                
+
+            </div>
+            
+
+        </div>
+        
+    </section>
+    
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+        <section class="content-l u-mb45">
+            <div class="content-l__col content-l__col-1">
+                <div>
+                    <section>
+                        <h2 id="latest-updates">Latest updates</h2>
+                        <div class="content__line--wide content__line u-mb20"></div>
+                        <strong>Page last edited:</strong>
+                        
+                        
+                        
+                        
+                        <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/elements.md">
+                            <time datetime="2025-10-01 12:13:09 -0400">
+                                12:13:09 PM Oct 01, 2025
+                            </time>
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </section>
+    
+
+    </section>
+</div>
+
+<!-- .content__main --> 
+
+    <div class="o-editor" id="toggle-details">
+      <a class="a-btn" href="#" title="Show all details">
+        <span>Show all details</span>
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--lightbulb" viewbox="0 0 11 19"><path d="M10.328 6.83a5.9 5.9 0 0 1-1.439 3.64 2.9 2.9 0 0 0-.584 1v1.037a.95.95 0 0 1-.95.95h-3.71a.95.95 0 0 1-.95-.95V11.47a2.9 2.9 0 0 0-.584-1A5.9 5.9 0 0 1 .67 6.83a4.83 4.83 0 0 1 9.28-1.878 4.8 4.8 0 0 1 .38 1.88zm-.95 0a3.878 3.878 0 0 0-7.756 0c0 2.363 2.023 3.409 2.023 4.64v1.037h3.71V11.47c0-1.231 2.023-2.277 2.023-4.64M7.83 14.572a.475.475 0 0 1-.475.476h-3.71a.475.475 0 0 1 0-.95h3.71a.475.475 0 0 1 .475.474m-.64 1.262a.24.24 0 0 1-.078.265 2.67 2.67 0 0 1-3.274 0 .237.237 0 0 1 .145-.425h2.983a.24.24 0 0 1 .225.16z"></path></svg>
+      </a>
+    </div>
+
+    
+
+    <div class="o-editor" id="edit-page">
+      <a class="a-btn" href="/design-system/updating-this-website?page=Elements" title="Edit this page in Decap CMS">
+        <span>Edit page</span>
+        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--edit" viewbox="0 0 15 19"><path d="M5.9 4.544 2.534 7.912 1.225 6.604a1.11 1.11 0 0 1 0-1.567l1.8-1.8a1.11 1.11 0 0 1 1.568 0zm7.926 11.565a.5.5 0 0 1-.099-.011l-3.419-.77a1.96 1.96 0 0 1-.77-.412v.001l-3.709-3.71-2.512-2.511 1.71-1.71 6.22 6.221-1.181 1.182a1.3 1.3 0 0 0 .406.213l1.508.339.95-.95-.34-1.508a1.3 1.3 0 0 0-.213-.405l-.345.345-6.222-6.22.874-.875L9.197 7.84l1.751 1.752 1.957 1.958a2 2 0 0 1 .412.77l.77 3.419c.05.22-.065.37-.26.37z"></path></svg>
+      </a>
+    </div>
+  
+</main>
+
+
+  
+  <footer class="ds-footer" role="contentinfo">
+
+    <hr>
+
+    <div class="block block--sub ds-footer__content">
+        <p>
+            We need your help keeping the Design System accurate and up-to-date!
+            If you see something wrong or missing,
+            <a href="/design-system/updating-this-website/#editing-pages">edit the page</a>.
+            If you can’t make those changes yourself,
+            <a href="https://github.com/cfpb/design-system/issues/new?assignees=&amp;labels=content&amp;template=content_issues.md&amp;title=Elements%3A+Add+issue+description">file an issue</a>.
+            If you have a substantial change to an existing page, or a new standard you want to add,
+            <a href="/design-system/updating-this-website/#creating-new-pages">follow these guidelines</a>.
+        </p>
+    </div>
+
+</footer>
+
+  
+  <script src="/design-system/dist/main.js" charset="utf-8"></script>
+
+  
+
+</body>
+</html>
