@@ -1,0 +1,43 @@
+@use '@cfpb/cfpb-design-system/src/utilities' as *;
+
+/* Ensure the custom element host participates in layout so the
+   inner .a-tagline can size itself. Using inline-block keeps the
+   element shrink-wrapped to its contents by default. */
+:host {
+  display: inline-block;
+  /* allow consumers to override sizing via CSS custom properties
+     or utility classes if they want full-width behavior */
+
+
+.a-tagline {
+  display: flex;
+  gap: 10px;
+  height: 16.5px;
+  align-items: center;
+
+  &__flag {
+    position: relative;
+    width: 25px;
+    height: 13px;
+    flex: 0 0 auto;
+
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+      display: block;
+    }
+  }
+
+  &__text {
+    font-size: 12.72px;
+    line-height: 1;
+    color: var(--text, #101820);
+    white-space: nowrap;
+    margin: 0;
+  }
+}
+}

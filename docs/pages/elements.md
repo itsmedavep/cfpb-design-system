@@ -26,6 +26,21 @@ variation_groups:
             <cfpb-button style-as-link href="#">This is a button styled as a link</cfpb-button>
 
             <br>
+
+            <cfpb-tagline imgsrc="http://localhost:3845/assets/2b19e6d60d3f6a40665048c19334f438fa966a88.png" text="An official website of the United States government"></cfpb-tagline>
+
+            <!-- Example using the i18n-service nested inside the element to provide translations -->
+            <cfpb-tagline>
+              <i18n-service>
+                <template>
+                  {
+                    "en": { "tagline": "An official website of the United States government" },
+                    "es": { "tagline": "Un sitio web oficial del gobierno federal de los Estados Unidos" }
+                  }
+                </template>
+              </i18n-service>
+            </cfpb-tagline>
+
             <hr>
             <br>
             <p>
@@ -36,6 +51,7 @@ variation_groups:
             <button id="show-icon">Show icon</button>
             <button id="hide-icon">Hide icon</button>
             </p>
+            
             <script>
             const btn = document.querySelector('#btn-example');
 
@@ -55,6 +71,7 @@ variation_groups:
           <cfpb-button href="#" full-on-mobile>This is a button link</cfpb-button>
           <cfpb-button disabled>This is a disabled button link</cfpb-button>
           <cfpb-button style-as-link href="#">This is a button styled as a link</cfpb-button>
+          <cfpb-tagline imgsrc="http://localhost:3845/assets/2b19e6d60d3f6a40665048c19334f438fa966a88.png" text="An official website of the United States government"></cfpb-tagline>
       - variation_is_deprecated: false
         variation_name: File upload
         variation_description: >-
