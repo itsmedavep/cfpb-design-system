@@ -40,20 +40,7 @@
   <div class="site-header">
 
     <form id="search-form" action="/design-system/search" method="get">
-    <div class="o-search-input">
-        <div class="o-search-input__input">
-            <label for="search-box" class="o-search-input__input-label">
-                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--search" viewbox="0 0 15 19"><path d="M14.147 15.488a1.11 1.11 0 0 1-1.567 0l-3.395-3.395a5.575 5.575 0 1 1 1.568-1.568l3.394 3.395a1.11 1.11 0 0 1 0 1.568m-6.361-3.903a4.488 4.488 0 1 0-1.681.327 4.4 4.4 0 0 0 1.68-.327z"></path></svg>
-            </label>
-            <input aria-label="Search for a term" type="search" id="search-box" name="searchQuery" value="" class="a-text-input a-text-input__full" title="Enter your query" autocomplete="off" maxlength="75">
-            <button type="reset" onclick="document.getElementById('search-box').setAttribute('value','')" aria-label="Clear search" title="Clear search">
-                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--error" viewbox="0 0 12 19"><path d="M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z"></path></svg>
-            </button>
-        </div>
-        <button class="a-btn" type="submit" aria-label="Search for term(s)">
-            Search
-        </button>
-    </div>
+    <cfpb-input-search id="search-box" form="search-form" name="searchQuery"></cfpb-input-search>
 </form>
 
 
@@ -369,19 +356,17 @@ In this layout the heading is a link.</p>
     <ul class="m-list">
 
         <li class="m-list__item">
-            How quickly can I get money after I deposit a check into my
-            checking account? What is a deposit hold?
-            <a href="#" class="a_link">
-                Read answer
+            <a href="#">
+              How quickly can I get money after I deposit a check into my
+              checking account? What is a deposit hold?
             </a>
         </li>
 
         <li class="m-list__item">
-            I would like to be able to have my friend or family member
-            help with my bill-paying and banking.
-            What are my options?
-            <a href="#" class="a_link">
-                Read answer
+            <a href="#">
+              I would like to be able to have my friend or family member
+              help with my bill-paying and banking.
+              What are my options?
             </a>
         </li>
 
@@ -439,19 +424,17 @@ In this layout the heading is a link.</p>
     &lt;ul class="m-list"&gt;
 
         &lt;li class="m-list__item"&gt;
-            How quickly can I get money after I deposit a check into my
-            checking account? What is a deposit hold?
-            &lt;a href="#" class="a_link"&gt;
-                Read answer
+            &lt;a href="#"&gt;
+              How quickly can I get money after I deposit a check into my
+              checking account? What is a deposit hold?
             &lt;/a&gt;
         &lt;/li&gt;
 
         &lt;li class="m-list__item"&gt;
-            I would like to be able to have my friend or family member
-            help with my bill-paying and banking.
-            What are my options?
-            &lt;a href="#" class="a_link"&gt;
-                Read answer
+            &lt;a href="#"&gt;
+              I would like to be able to have my friend or family member
+              help with my bill-paying and banking.
+              What are my options?
             &lt;/a&gt;
         &lt;/li&gt;
 
@@ -1213,19 +1196,17 @@ The <code class="language-plaintext highlighter-rouge">.m-card--breakout</code> 
             <ul class="m-list">
 
                 <li class="m-list__item">
-                    How quickly can I get money after I deposit a check
-                    into my checking account? What is a deposit hold?
-                    <a href="#" class="a_link">
-                        Read answer
+                    <a href="#">
+                      How quickly can I get money after I deposit a check
+                      into my checking account? What is a deposit hold?
                     </a>
                 </li>
 
                 <li class="m-list__item">
-                    I would like to be able to have my friend or family
-                    member help with my bill-paying and banking.
-                    What are my options?
-                    <a href="#" class="a_link">
-                        Read answer
+                    <a href="#">
+                      I would like to be able to have my friend or family
+                      member help with my bill-paying and banking.
+                      What are my options?
                     </a>
                 </li>
 
@@ -1249,19 +1230,17 @@ The <code class="language-plaintext highlighter-rouge">.m-card--breakout</code> 
             <ul class="m-list">
 
                 <li class="m-list__item">
-                    What effect will shopping for
-                    an auto loan have on my credit?
-                    <a href="#" class="a_link">
-                        Read answer
+                    <a href="#">
+                      What effect will shopping for
+                      an auto loan have on my credit?
                     </a>
                 </li>
 
                 <li class="m-list__item">
-                    I owe more on my current loan than my current
-                    vehicle is worth. What do I need to know
-                    if I buy a new vehicle?
-                    <a href="#" class="a_link">
-                        Read answer
+                    <a href="#">
+                      I owe more on my current loan than my current
+                      vehicle is worth. What do I need to know
+                      if I buy a new vehicle?
                     </a>
                 </li>
 
@@ -1285,16 +1264,14 @@ The <code class="language-plaintext highlighter-rouge">.m-card--breakout</code> 
             <ul class="m-list">
 
                 <li class="m-list__item">
-                    What is a credit card interest rate? What does APR mean?
-                    <a href="#" class="a_link">
-                        Read answer
+                    <a href="#">
+                      What is a credit card interest rate? What does APR mean?
                     </a>
                 </li>
 
                 <li class="m-list__item">
-                    How do I dispute a charge on my credit card bill?
-                    <a href="#" class="a_link">
-                        Read answer
+                    <a href="#">
+                      How do I dispute a charge on my credit card bill?
                     </a>
                 </li>
 
@@ -1356,19 +1333,17 @@ The <code class="language-plaintext highlighter-rouge">.m-card--breakout</code> 
             &lt;ul class="m-list"&gt;
 
                 &lt;li class="m-list__item"&gt;
-                    How quickly can I get money after I deposit a check
-                    into my checking account? What is a deposit hold?
-                    &lt;a href="#" class="a_link"&gt;
-                        Read answer
+                    &lt;a href="#"&gt;
+                      How quickly can I get money after I deposit a check
+                      into my checking account? What is a deposit hold?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
                 &lt;li class="m-list__item"&gt;
-                    I would like to be able to have my friend or family
-                    member help with my bill-paying and banking.
-                    What are my options?
-                    &lt;a href="#" class="a_link"&gt;
-                        Read answer
+                    &lt;a href="#"&gt;
+                      I would like to be able to have my friend or family
+                      member help with my bill-paying and banking.
+                      What are my options?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
@@ -1392,19 +1367,17 @@ The <code class="language-plaintext highlighter-rouge">.m-card--breakout</code> 
             &lt;ul class="m-list"&gt;
 
                 &lt;li class="m-list__item"&gt;
-                    What effect will shopping for
-                    an auto loan have on my credit?
-                    &lt;a href="#" class="a_link"&gt;
-                        Read answer
+                    &lt;a href="#"&gt;
+                      What effect will shopping for
+                      an auto loan have on my credit?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
                 &lt;li class="m-list__item"&gt;
-                    I owe more on my current loan than my current
-                    vehicle is worth. What do I need to know
-                    if I buy a new vehicle?
-                    &lt;a href="#" class="a_link"&gt;
-                        Read answer
+                    &lt;a href="#"&gt;
+                      I owe more on my current loan than my current
+                      vehicle is worth. What do I need to know
+                      if I buy a new vehicle?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
@@ -1428,16 +1401,14 @@ The <code class="language-plaintext highlighter-rouge">.m-card--breakout</code> 
             &lt;ul class="m-list"&gt;
 
                 &lt;li class="m-list__item"&gt;
-                    What is a credit card interest rate? What does APR mean?
-                    &lt;a href="#" class="a_link"&gt;
-                        Read answer
+                    &lt;a href="#"&gt;
+                      What is a credit card interest rate? What does APR mean?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
                 &lt;li class="m-list__item"&gt;
-                    How do I dispute a charge on my credit card bill?
-                    &lt;a href="#" class="a_link"&gt;
-                        Read answer
+                    &lt;a href="#"&gt;
+                      How do I dispute a charge on my credit card bill?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
@@ -1510,19 +1481,17 @@ The <code class="language-plaintext highlighter-rouge">.o-card-group--column-2</
             <ul class="m-list">
 
                 <li class="m-list__item">
-                    How quickly can I get money after I deposit a check
-                    into my checking account? What is a deposit hold?
-                    <a href="#" class="a_link">
-                        Read answer
+                    <a href="#">
+                      How quickly can I get money after I deposit a check
+                      into my checking account? What is a deposit hold?
                     </a>
                 </li>
 
                 <li class="m-list__item">
-                    I would like to be able to have my friend or family
-                    member help with my bill-paying and banking.
-                    What are my options?
-                    <a href="#" class="a_link">
-                        Read answer
+                    <a href="#">
+                      I would like to be able to have my friend or family
+                      member help with my bill-paying and banking.
+                      What are my options?
                     </a>
                 </li>
 
@@ -1546,19 +1515,17 @@ The <code class="language-plaintext highlighter-rouge">.o-card-group--column-2</
             <ul class="m-list">
 
                 <li class="m-list__item">
-                    What effect will shopping for
-                    an auto loan have on my credit?
-                    <a href="#" class="a_link">
-                        Read answer
+                    <a href="#">
+                      What effect will shopping for
+                      an auto loan have on my credit?
                     </a>
                 </li>
 
                 <li class="m-list__item">
-                    I owe more on my current loan than my current
-                    vehicle is worth. What do I need to know
-                    if I buy a new vehicle?
-                    <a href="#" class="a_link">
-                        Read answer
+                    <a href="#">
+                      I owe more on my current loan than my current
+                      vehicle is worth. What do I need to know
+                      if I buy a new vehicle?
                     </a>
                 </li>
 
@@ -1582,16 +1549,14 @@ The <code class="language-plaintext highlighter-rouge">.o-card-group--column-2</
             <ul class="m-list">
 
                 <li class="m-list__item">
-                    What is a credit card interest rate? What does APR mean?
-                    <a href="#" class="a_link">
-                        Read answer
+                    <a href="#">
+                      What is a credit card interest rate? What does APR mean?
                     </a>
                 </li>
 
                 <li class="m-list__item">
-                    How do I dispute a charge on my credit card bill?
-                    <a href="#" class="a_link">
-                        Read answer
+                    <a href="#">
+                      How do I dispute a charge on my credit card bill?
                     </a>
                 </li>
 
@@ -1653,19 +1618,17 @@ The <code class="language-plaintext highlighter-rouge">.o-card-group--column-2</
             &lt;ul class="m-list"&gt;
 
                 &lt;li class="m-list__item"&gt;
-                    How quickly can I get money after I deposit a check
-                    into my checking account? What is a deposit hold?
-                    &lt;a href="#" class="a_link"&gt;
-                        Read answer
+                    &lt;a href="#"&gt;
+                      How quickly can I get money after I deposit a check
+                      into my checking account? What is a deposit hold?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
                 &lt;li class="m-list__item"&gt;
-                    I would like to be able to have my friend or family
-                    member help with my bill-paying and banking.
-                    What are my options?
-                    &lt;a href="#" class="a_link"&gt;
-                        Read answer
+                    &lt;a href="#"&gt;
+                      I would like to be able to have my friend or family
+                      member help with my bill-paying and banking.
+                      What are my options?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
@@ -1689,19 +1652,17 @@ The <code class="language-plaintext highlighter-rouge">.o-card-group--column-2</
             &lt;ul class="m-list"&gt;
 
                 &lt;li class="m-list__item"&gt;
-                    What effect will shopping for
-                    an auto loan have on my credit?
-                    &lt;a href="#" class="a_link"&gt;
-                        Read answer
+                    &lt;a href="#"&gt;
+                      What effect will shopping for
+                      an auto loan have on my credit?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
                 &lt;li class="m-list__item"&gt;
-                    I owe more on my current loan than my current
-                    vehicle is worth. What do I need to know
-                    if I buy a new vehicle?
-                    &lt;a href="#" class="a_link"&gt;
-                        Read answer
+                    &lt;a href="#"&gt;
+                      I owe more on my current loan than my current
+                      vehicle is worth. What do I need to know
+                      if I buy a new vehicle?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
@@ -1725,16 +1686,14 @@ The <code class="language-plaintext highlighter-rouge">.o-card-group--column-2</
             &lt;ul class="m-list"&gt;
 
                 &lt;li class="m-list__item"&gt;
-                    What is a credit card interest rate? What does APR mean?
-                    &lt;a href="#" class="a_link"&gt;
-                        Read answer
+                    &lt;a href="#"&gt;
+                      What is a credit card interest rate? What does APR mean?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
                 &lt;li class="m-list__item"&gt;
-                    How do I dispute a charge on my credit card bill?
-                    &lt;a href="#" class="a_link"&gt;
-                        Read answer
+                    &lt;a href="#"&gt;
+                      How do I dispute a charge on my credit card bill?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
@@ -1807,19 +1766,17 @@ The <code class="language-plaintext highlighter-rouge">.o-card-group--column-3</
             <ul class="m-list">
 
                 <li class="m-list__item">
-                    How quickly can I get money after I deposit a check
-                    into my checking account? What is a deposit hold?
-                    <a href="#" class="a_link">
-                        Read answer
+                    <a href="#">
+                      How quickly can I get money after I deposit a check
+                      into my checking account? What is a deposit hold?
                     </a>
                 </li>
 
                 <li class="m-list__item">
-                    I would like to be able to have my friend or family
-                    member help with my bill-paying and banking.
-                    What are my options?
-                    <a href="#" class="a_link">
-                        Read answer
+                    <a href="#">
+                      I would like to be able to have my friend or family
+                      member help with my bill-paying and banking.
+                      What are my options?
                     </a>
                 </li>
 
@@ -1843,19 +1800,17 @@ The <code class="language-plaintext highlighter-rouge">.o-card-group--column-3</
             <ul class="m-list">
 
                 <li class="m-list__item">
-                    What effect will shopping for
-                    an auto loan have on my credit?
-                    <a href="#" class="a_link">
-                        Read answer
+                    <a href="#">
+                      What effect will shopping for
+                      an auto loan have on my credit?
                     </a>
                 </li>
 
                 <li class="m-list__item">
-                    I owe more on my current loan than my current
-                    vehicle is worth. What do I need to know
-                    if I buy a new vehicle?
-                    <a href="#" class="a_link">
-                        Read answer
+                    <a href="#">
+                      I owe more on my current loan than my current
+                      vehicle is worth. What do I need to know
+                      if I buy a new vehicle?
                     </a>
                 </li>
 
@@ -1879,16 +1834,14 @@ The <code class="language-plaintext highlighter-rouge">.o-card-group--column-3</
             <ul class="m-list">
 
                 <li class="m-list__item">
-                    What is a credit card interest rate? What does APR mean?
-                    <a href="#" class="a_link">
-                        Read answer
+                    <a href="#">
+                      What is a credit card interest rate? What does APR mean?
                     </a>
                 </li>
 
                 <li class="m-list__item">
-                    How do I dispute a charge on my credit card bill?
-                    <a href="#" class="a_link">
-                        Read answer
+                    <a href="#">
+                      How do I dispute a charge on my credit card bill?
                     </a>
                 </li>
 
@@ -1950,19 +1903,17 @@ The <code class="language-plaintext highlighter-rouge">.o-card-group--column-3</
             &lt;ul class="m-list"&gt;
 
                 &lt;li class="m-list__item"&gt;
-                    How quickly can I get money after I deposit a check
-                    into my checking account? What is a deposit hold?
-                    &lt;a href="#" class="a_link"&gt;
-                        Read answer
+                    &lt;a href="#"&gt;
+                      How quickly can I get money after I deposit a check
+                      into my checking account? What is a deposit hold?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
                 &lt;li class="m-list__item"&gt;
-                    I would like to be able to have my friend or family
-                    member help with my bill-paying and banking.
-                    What are my options?
-                    &lt;a href="#" class="a_link"&gt;
-                        Read answer
+                    &lt;a href="#"&gt;
+                      I would like to be able to have my friend or family
+                      member help with my bill-paying and banking.
+                      What are my options?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
@@ -1986,19 +1937,17 @@ The <code class="language-plaintext highlighter-rouge">.o-card-group--column-3</
             &lt;ul class="m-list"&gt;
 
                 &lt;li class="m-list__item"&gt;
-                    What effect will shopping for
-                    an auto loan have on my credit?
-                    &lt;a href="#" class="a_link"&gt;
-                        Read answer
+                    &lt;a href="#"&gt;
+                      What effect will shopping for
+                      an auto loan have on my credit?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
                 &lt;li class="m-list__item"&gt;
-                    I owe more on my current loan than my current
-                    vehicle is worth. What do I need to know
-                    if I buy a new vehicle?
-                    &lt;a href="#" class="a_link"&gt;
-                        Read answer
+                    &lt;a href="#"&gt;
+                      I owe more on my current loan than my current
+                      vehicle is worth. What do I need to know
+                      if I buy a new vehicle?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
@@ -2022,16 +1971,14 @@ The <code class="language-plaintext highlighter-rouge">.o-card-group--column-3</
             &lt;ul class="m-list"&gt;
 
                 &lt;li class="m-list__item"&gt;
-                    What is a credit card interest rate? What does APR mean?
-                    &lt;a href="#" class="a_link"&gt;
-                        Read answer
+                    &lt;a href="#"&gt;
+                      What is a credit card interest rate? What does APR mean?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
                 &lt;li class="m-list__item"&gt;
-                    How do I dispute a charge on my credit card bill?
-                    &lt;a href="#" class="a_link"&gt;
-                        Read answer
+                    &lt;a href="#"&gt;
+                      How do I dispute a charge on my credit card bill?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
@@ -2647,8 +2594,8 @@ The <code class="language-plaintext highlighter-rouge">.o-card-group--count-4</c
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/cards.md">
-                            <time datetime="2025-10-01 12:13:09 -0400">
-                                12:13:09 PM Oct 01, 2025
+                            <time datetime="2025-11-13 18:03:53 -0500">
+                                 6:03:53 PM Nov 13, 2025
                             </time>
                         </a>
                     </section>

@@ -40,20 +40,7 @@
   <div class="site-header">
 
     <form id="search-form" action="/design-system/search" method="get">
-    <div class="o-search-input">
-        <div class="o-search-input__input">
-            <label for="search-box" class="o-search-input__input-label">
-                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--search" viewbox="0 0 15 19"><path d="M14.147 15.488a1.11 1.11 0 0 1-1.567 0l-3.395-3.395a5.575 5.575 0 1 1 1.568-1.568l3.394 3.395a1.11 1.11 0 0 1 0 1.568m-6.361-3.903a4.488 4.488 0 1 0-1.681.327 4.4 4.4 0 0 0 1.68-.327z"></path></svg>
-            </label>
-            <input aria-label="Search for a term" type="search" id="search-box" name="searchQuery" value="" class="a-text-input a-text-input__full" title="Enter your query" autocomplete="off" maxlength="75">
-            <button type="reset" onclick="document.getElementById('search-box').setAttribute('value','')" aria-label="Clear search" title="Clear search">
-                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--error" viewbox="0 0 12 19"><path d="M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z"></path></svg>
-            </button>
-        </div>
-        <button class="a-btn" type="submit" aria-label="Search for term(s)">
-            Search
-        </button>
-    </div>
+    <cfpb-input-search id="search-box" form="search-form" name="searchQuery"></cfpb-input-search>
 </form>
 
 
@@ -462,44 +449,69 @@ Example of a non heading element:
                             <table>
   <thead>
     <tr>
-      <th>Heading</th>
-      <th>Specs</th>
-      <th>Responsive behavior at &lt; 601px</th>
+      <th><strong>Heading</strong></th>
+      <th><strong>Font-weight</strong></th>
+      <th><strong>Font-size</strong></th>
+      <th>
+<strong>Font-size-adjust</strong>*</th>
+      <th><strong>Line-height</strong></th>
+      <th> <strong>Responsive behavior at &lt; 601px</strong>
+</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Display</td>
-      <td>Source Sans 3 Regular, 48px / 60px</td>
-      <td>Drops to Heading 1</td>
+      <td><strong>Display</strong></td>
+      <td>400 (Regular)</td>
+      <td>48px</td>
+      <td>0.517</td>
+      <td>60px</td>
+      <td>Drops to H1</td>
     </tr>
     <tr>
-      <td>Heading 1</td>
-      <td>Source Sans 3 Semi Bold, 34px / 42px</td>
-      <td>Drops to Heading 2</td>
+      <td><strong>H1</strong></td>
+      <td> 600 (Semi Bold) </td>
+      <td> 34px </td>
+      <td> 0.517 </td>
+      <td> 60px </td>
+      <td>Drops to H2 </td>
     </tr>
     <tr>
-      <td>Heading 2</td>
-      <td>Source Sans 3 Semi Bold, 26px / 32px</td>
-      <td>Drops to Heading 3</td>
+      <td><strong>H2</strong></td>
+      <td> 600 (Semi Bold) </td>
+      <td>26px </td>
+      <td> 0.517 </td>
+      <td> 42.5px </td>
+      <td>Drops to H3 </td>
     </tr>
     <tr>
-      <td>Heading 3</td>
-      <td>Source Sans 3 Regular, 22px / 28px</td>
-      <td>Drops to Heading 4</td>
+      <td><strong>H3</strong></td>
+      <td> 400 (Regular) </td>
+      <td>22px</td>
+      <td> 0.517 </td>
+      <td>32.5px </td>
+      <td>Drops to H4 </td>
     </tr>
     <tr>
-      <td>Heading 4</td>
-      <td>Source Sans 3 Medium, 18px / 22px</td>
-      <td>Drops to 16px / 18px</td>
+      <td><strong>H4</strong></td>
+      <td> 500 (Medium) </td>
+      <td>18px </td>
+      <td> 0.517 </td>
+      <td>22.5px </td>
+      <td>Drops to 16px</td>
     </tr>
     <tr>
-      <td>Heading 5</td>
-      <td>Source Sans 3 Semi Bold, 14px / 18px, All caps, 1px letter spacing</td>
-      <td>No change</td>
+      <td><strong>H5</strong></td>
+      <td> 600 (Semi Bold) </td>
+      <td>14px all caps</td>
+      <td> 0.517 </td>
+      <td>17.5px, 1px letter spacing </td>
+      <td>No change </td>
     </tr>
   </tbody>
 </table>
+
+<p>*See <a href="https://cfpb.github.io/design-system/foundation/fonts#normalization">Normalization</a> to learn why we use font-size-adjust.</p>
 
                         </div>
                     </div>
@@ -624,42 +636,54 @@ Example of a non heading element:
                             <table>
   <thead>
     <tr>
-      <th>Heading</th>
-      <th>Specs</th>
+      <th><strong>Heading</strong></th>
+      <th><strong>Font weight</strong></th>
+      <th><strong>Font size</strong></th>
+      <th><strong>Line height</strong></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Display</td>
-      <td>Source Sans 3 Medium, 60pt / 66pt</td>
+      <td><strong>Display</strong></td>
+      <td>Medium</td>
+      <td>60pt</td>
+      <td>66pt</td>
     </tr>
     <tr>
-      <td>Heading 1</td>
-      <td>Source Sans 3 Regular, 38pt / 40pt</td>
+      <td><strong>H1</strong></td>
+      <td>Regular</td>
+      <td>38pt</td>
+      <td>40pt</td>
     </tr>
     <tr>
-      <td>Heading 2</td>
-      <td>Source Sans 3 Regular, 26pt / 28pt</td>
+      <td><strong>H2</strong></td>
+      <td>Regular</td>
+      <td>26pt</td>
+      <td>28pt</td>
     </tr>
     <tr>
-      <td> </td>
-      <td> </td>
+      <td><strong>H3</strong></td>
+      <td>Semi Bold</td>
+      <td>16pt</td>
+      <td>18pt</td>
     </tr>
     <tr>
-      <td>Heading 3</td>
-      <td>Source Sans 3 Semi Bold, 16pt / 18pt</td>
+      <td><strong>H4</strong></td>
+      <td>Medium</td>
+      <td>14pt</td>
+      <td>16pt</td>
     </tr>
     <tr>
-      <td>Heading 4</td>
-      <td>Source Sans 3 Medium, 14pt / 16pt</td>
+      <td><strong>H5</strong></td>
+      <td>Semi Bold</td>
+      <td>10pt all caps</td>
+      <td>12pt</td>
     </tr>
     <tr>
-      <td>Heading 5</td>
-      <td>Source Sans 3 Semi Bold, 10pt / 12pt, all caps</td>
-    </tr>
-    <tr>
-      <td>Heading 6</td>
-      <td>Source Sans 3 Medium, 12pt /14 pt</td>
+      <td><strong>H6</strong></td>
+      <td>Medium</td>
+      <td>12pt</td>
+      <td>14pt</td>
     </tr>
   </tbody>
 </table>
@@ -816,10 +840,33 @@ Example of a non heading element:
                     <div>
                         <h4 class="variation-specs-title">Specs</h4>
                         <div style="padding:40px">
-                            <ul>
-  <li>Source Sans 3 Medium, 18px</li>
-  <li>View a <a href="https://cfpb.github.io/design-system/foundation/iconography">list of icons</a>. Icon height is constrained to 19px.</li>
-</ul>
+                            <p>View a <a href="https://cfpb.github.io/design-system/foundation/iconography">list of icons</a>. Icon height is constrained to 19px.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Heading</strong></th>
+      <th><strong>Font-weight</strong></th>
+      <th><strong>Font-size</strong></th>
+      <th>
+<strong>Font-size-adjust</strong>*</th>
+      <th><strong>Line-height</strong></th>
+      <th><strong>Responsive behavior at &lt;601px</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Meta header</td>
+      <td>500 (Medium)</td>
+      <td>18px</td>
+      <td>0.517</td>
+      <td>22.5px</td>
+      <td>Drops to 16px</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>*See <a href="">Normalization</a> to learn why we use font-size-adjust.</p>
 
                         </div>
                     </div>
@@ -922,12 +969,31 @@ Example of a non heading element:
                     <div>
                         <h4 class="variation-specs-title">Specs</h4>
                         <div style="padding:40px">
-                            <ul>
-  <li>Source Sans 3 Semi Bold</li>
-  <li>14px / 18px, 1px letter spacing</li>
-  <li>All caps</li>
-  <li>&lt;601px wide: No change</li>
-</ul>
+                            <table>
+  <thead>
+    <tr>
+      <th><strong>Heading</strong></th>
+      <th><strong>Font-weight</strong></th>
+      <th><strong>Font-size</strong></th>
+      <th>
+<strong>Font-size-adjust</strong>*</th>
+      <th><strong>Line-height</strong></th>
+      <th><strong>Responsive behavior at &lt;601px</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Eyebrow heading</td>
+      <td>600 (Semi Bold)</td>
+      <td>14px all caps</td>
+      <td>0.517</td>
+      <td>17.5px, 1px letter spacing</td>
+      <td>No change</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>*See <a href="">Normalization</a> to learn why we use font-size-adjust.</p>
 
                         </div>
                     </div>
@@ -1034,16 +1100,35 @@ Example of a non heading element:
                         <h4 class="variation-specs-title">Specs</h4>
                         <div style="padding:40px">
                             <ul>
-  <li>
-    <p>Slug title: H5</p>
-  </li>
-  <li>
-    <p>5px thick CFPB Green top border that spans the length of the title</p>
-  </li>
-  <li>
-    <p>1px thick Gray 50 top border that spans the width of the module or column</p>
-  </li>
+  <li>5px thick CFPB Green top border that spans the length of the title</li>
+  <li>1px thick Gray 50 top border that spans the width of the module or column</li>
 </ul>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Heading</strong></th>
+      <th><strong>Font-weight</strong></th>
+      <th><strong>Font-size</strong></th>
+      <th>
+<strong>Font-size-adjust</strong>*</th>
+      <th><strong>Line-height</strong></th>
+      <th><strong>Responsive behavior at &lt;601px</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Slug title</td>
+      <td>600 (Semi Bold)</td>
+      <td>H5 (14px all caps)</td>
+      <td>0.517</td>
+      <td>17.5px, 1px letter spacing</td>
+      <td>No change</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>*See <a href="">Normalization</a> to learn why we use font-size-adjust.</p>
 
                         </div>
                     </div>
@@ -1136,8 +1221,8 @@ Example of a non heading element:
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/heading-hierarchy.md">
-                            <time datetime="2025-10-01 12:13:09 -0400">
-                                12:13:09 PM Oct 01, 2025
+                            <time datetime="2025-11-13 18:03:53 -0500">
+                                 6:03:53 PM Nov 13, 2025
                             </time>
                         </a>
                     </section>

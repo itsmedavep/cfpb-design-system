@@ -40,20 +40,7 @@
   <div class="site-header">
 
     <form id="search-form" action="/design-system/search" method="get">
-    <div class="o-search-input">
-        <div class="o-search-input__input">
-            <label for="search-box" class="o-search-input__input-label">
-                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--search" viewbox="0 0 15 19"><path d="M14.147 15.488a1.11 1.11 0 0 1-1.567 0l-3.395-3.395a5.575 5.575 0 1 1 1.568-1.568l3.394 3.395a1.11 1.11 0 0 1 0 1.568m-6.361-3.903a4.488 4.488 0 1 0-1.681.327 4.4 4.4 0 0 0 1.68-.327z"></path></svg>
-            </label>
-            <input aria-label="Search for a term" type="search" id="search-box" name="searchQuery" value="" class="a-text-input a-text-input__full" title="Enter your query" autocomplete="off" maxlength="75">
-            <button type="reset" onclick="document.getElementById('search-box').setAttribute('value','')" aria-label="Clear search" title="Clear search">
-                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--error" viewbox="0 0 12 19"><path d="M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z"></path></svg>
-            </button>
-        </div>
-        <button class="a-btn" type="submit" aria-label="Search for term(s)">
-            Search
-        </button>
-    </div>
+    <cfpb-input-search id="search-box" form="search-form" name="searchQuery"></cfpb-input-search>
 </form>
 
 
@@ -882,19 +869,17 @@
     &lt;ul class=&quot;m-list&quot;&gt;
 
         &lt;li class=&quot;m-list__item&quot;&gt;
-            How quickly can I get money after I deposit a check into my
-            checking account? What is a deposit hold?
-            &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                Read answer
+            &lt;a href=&quot;#&quot;&gt;
+              How quickly can I get money after I deposit a check into my
+              checking account? What is a deposit hold?
             &lt;/a&gt;
         &lt;/li&gt;
 
         &lt;li class=&quot;m-list__item&quot;&gt;
-            I would like to be able to have my friend or family member
-            help with my bill-paying and banking.
-            What are my options?
-            &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                Read answer
+            &lt;a href=&quot;#&quot;&gt;
+              I would like to be able to have my friend or family member
+              help with my bill-paying and banking.
+              What are my options?
             &lt;/a&gt;
         &lt;/li&gt;
 
@@ -1084,19 +1069,17 @@
             &lt;ul class=&quot;m-list&quot;&gt;
 
                 &lt;li class=&quot;m-list__item&quot;&gt;
-                    How quickly can I get money after I deposit a check
-                    into my checking account? What is a deposit hold?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
+                    &lt;a href=&quot;#&quot;&gt;
+                      How quickly can I get money after I deposit a check
+                      into my checking account? What is a deposit hold?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
                 &lt;li class=&quot;m-list__item&quot;&gt;
-                    I would like to be able to have my friend or family
-                    member help with my bill-paying and banking.
-                    What are my options?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
+                    &lt;a href=&quot;#&quot;&gt;
+                      I would like to be able to have my friend or family
+                      member help with my bill-paying and banking.
+                      What are my options?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
@@ -1120,19 +1103,17 @@
             &lt;ul class=&quot;m-list&quot;&gt;
 
                 &lt;li class=&quot;m-list__item&quot;&gt;
-                    What effect will shopping for
-                    an auto loan have on my credit?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
+                    &lt;a href=&quot;#&quot;&gt;
+                      What effect will shopping for
+                      an auto loan have on my credit?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
                 &lt;li class=&quot;m-list__item&quot;&gt;
-                    I owe more on my current loan than my current
-                    vehicle is worth. What do I need to know
-                    if I buy a new vehicle?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
+                    &lt;a href=&quot;#&quot;&gt;
+                      I owe more on my current loan than my current
+                      vehicle is worth. What do I need to know
+                      if I buy a new vehicle?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
@@ -1156,16 +1137,14 @@
             &lt;ul class=&quot;m-list&quot;&gt;
 
                 &lt;li class=&quot;m-list__item&quot;&gt;
-                    What is a credit card interest rate? What does APR mean?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
+                    &lt;a href=&quot;#&quot;&gt;
+                      What is a credit card interest rate? What does APR mean?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
                 &lt;li class=&quot;m-list__item&quot;&gt;
-                    How do I dispute a charge on my credit card bill?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
+                    &lt;a href=&quot;#&quot;&gt;
+                      How do I dispute a charge on my credit card bill?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
@@ -1195,19 +1174,17 @@
             &lt;ul class=&quot;m-list&quot;&gt;
 
                 &lt;li class=&quot;m-list__item&quot;&gt;
-                    How quickly can I get money after I deposit a check
-                    into my checking account? What is a deposit hold?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
+                    &lt;a href=&quot;#&quot;&gt;
+                      How quickly can I get money after I deposit a check
+                      into my checking account? What is a deposit hold?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
                 &lt;li class=&quot;m-list__item&quot;&gt;
-                    I would like to be able to have my friend or family
-                    member help with my bill-paying and banking.
-                    What are my options?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
+                    &lt;a href=&quot;#&quot;&gt;
+                      I would like to be able to have my friend or family
+                      member help with my bill-paying and banking.
+                      What are my options?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
@@ -1231,19 +1208,17 @@
             &lt;ul class=&quot;m-list&quot;&gt;
 
                 &lt;li class=&quot;m-list__item&quot;&gt;
-                    What effect will shopping for
-                    an auto loan have on my credit?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
+                    &lt;a href=&quot;#&quot;&gt;
+                      What effect will shopping for
+                      an auto loan have on my credit?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
                 &lt;li class=&quot;m-list__item&quot;&gt;
-                    I owe more on my current loan than my current
-                    vehicle is worth. What do I need to know
-                    if I buy a new vehicle?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
+                    &lt;a href=&quot;#&quot;&gt;
+                      I owe more on my current loan than my current
+                      vehicle is worth. What do I need to know
+                      if I buy a new vehicle?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
@@ -1267,16 +1242,14 @@
             &lt;ul class=&quot;m-list&quot;&gt;
 
                 &lt;li class=&quot;m-list__item&quot;&gt;
-                    What is a credit card interest rate? What does APR mean?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
+                    &lt;a href=&quot;#&quot;&gt;
+                      What is a credit card interest rate? What does APR mean?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
                 &lt;li class=&quot;m-list__item&quot;&gt;
-                    How do I dispute a charge on my credit card bill?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
+                    &lt;a href=&quot;#&quot;&gt;
+                      How do I dispute a charge on my credit card bill?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
@@ -1306,19 +1279,17 @@
             &lt;ul class=&quot;m-list&quot;&gt;
 
                 &lt;li class=&quot;m-list__item&quot;&gt;
-                    How quickly can I get money after I deposit a check
-                    into my checking account? What is a deposit hold?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
+                    &lt;a href=&quot;#&quot;&gt;
+                      How quickly can I get money after I deposit a check
+                      into my checking account? What is a deposit hold?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
                 &lt;li class=&quot;m-list__item&quot;&gt;
-                    I would like to be able to have my friend or family
-                    member help with my bill-paying and banking.
-                    What are my options?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
+                    &lt;a href=&quot;#&quot;&gt;
+                      I would like to be able to have my friend or family
+                      member help with my bill-paying and banking.
+                      What are my options?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
@@ -1342,19 +1313,17 @@
             &lt;ul class=&quot;m-list&quot;&gt;
 
                 &lt;li class=&quot;m-list__item&quot;&gt;
-                    What effect will shopping for
-                    an auto loan have on my credit?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
+                    &lt;a href=&quot;#&quot;&gt;
+                      What effect will shopping for
+                      an auto loan have on my credit?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
                 &lt;li class=&quot;m-list__item&quot;&gt;
-                    I owe more on my current loan than my current
-                    vehicle is worth. What do I need to know
-                    if I buy a new vehicle?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
+                    &lt;a href=&quot;#&quot;&gt;
+                      I owe more on my current loan than my current
+                      vehicle is worth. What do I need to know
+                      if I buy a new vehicle?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
@@ -1378,16 +1347,14 @@
             &lt;ul class=&quot;m-list&quot;&gt;
 
                 &lt;li class=&quot;m-list__item&quot;&gt;
-                    What is a credit card interest rate? What does APR mean?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
+                    &lt;a href=&quot;#&quot;&gt;
+                      What is a credit card interest rate? What does APR mean?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
                 &lt;li class=&quot;m-list__item&quot;&gt;
-                    How do I dispute a charge on my credit card bill?
-                    &lt;a href=&quot;#&quot; class=&quot;a_link&quot;&gt;
-                        Read answer
+                    &lt;a href=&quot;#&quot;&gt;
+                      How do I dispute a charge on my credit card bill?
                     &lt;/a&gt;
                 &lt;/li&gt;
 
@@ -1668,7 +1635,7 @@
                     'variation_name2': 'Checkbox (with helper text)',
                     'variation_description2': "%0A",
                     'variation_code_snippet2': `&lt;div class=&quot;m-form-field m-form-field--checkbox&quot;&gt;
-    &lt;input class=&quot;a-radio&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_basic_helper&quot;&gt;
+    &lt;input class=&quot;a-checkbox&quot; type=&quot;checkbox&quot; id=&quot;test_checkbox_basic_helper&quot;&gt;
     &lt;label class=&quot;a-label&quot; for=&quot;test_checkbox_basic_helper&quot;&gt;
 Label
         &lt;small class=&quot;a-label__helper&quot;&gt;
@@ -2238,9 +2205,44 @@ Label
   &lt;/select&gt;
 &lt;/cfpb-multiselect&gt;`,
                 
-                    'variation_name10': 'Pagination',
-                    'variation_description10': "A+pagination+component.%0A",
-                    'variation_code_snippet10': `&lt;cfpb-pagination value=&quot;4&quot; max=&quot;10&quot;&gt;&lt;/cfpb-pagination&gt;`,
+                    'variation_name10': 'Search input',
+                    'variation_description10': "A+search+input+component.%0A",
+                    'variation_code_snippet10': `&lt;cfpb-input-search&gt; &lt;/cfpb-input-search&gt;`,
+                
+                    'variation_name11': 'Form-level alert',
+                    'variation_description11': "A+form-level+alert+component.%0A",
+                    'variation_code_snippet11': `&lt;cfpb-form-alert validation=&quot;error&quot;&gt;An error&lt;/cfpb-form-alert&gt; &lt;cfpb-form-alert validation=&quot;warning&quot;&gt;A warning&lt;/cfpb-form-alert&gt; &lt;cfpb-form-alert validation=&quot;success&quot;&gt;A success message&lt;/cfpb-form-alert&gt;`,
+                
+                    'variation_name12': 'Pagination',
+                    'variation_description12': "A+pagination+component.%0A",
+                    'variation_code_snippet12': `&lt;cfpb-pagination value=&quot;4&quot; max=&quot;10&quot;&gt;
+  &lt;i18n-service&gt;
+    &lt;template&gt;
+      {
+        &quot;en&quot;: {
+          &quot;page number&quot;: &quot;Page number&quot;,
+          &quot;previous&quot;: &quot;Older&quot;,
+          &quot;next&quot;: &quot;Newer&quot;,
+          &quot;page&quot;: &quot;Page&quot;,
+          &quot;out of&quot;: &quot;out of&quot;,
+          &quot;of&quot;: &quot;of&quot;,
+          &quot;total pages&quot;: &quot;total pages&quot;,
+          &quot;go&quot;: &quot;Go&quot;
+        },
+        &quot;es&quot;: {
+          &quot;page number&quot;: &quot;Número de página&quot;,
+          &quot;previous&quot;: &quot;Anterior&quot;,
+          &quot;next&quot;: &quot;Siguiente&quot;,
+          &quot;page&quot;: &quot;Página&quot;,
+          &quot;out of&quot;: &quot;de&quot;,
+          &quot;of&quot;: &quot;de&quot;,
+          &quot;total pages&quot;: &quot;páginas en total&quot;,
+          &quot;go&quot;: &quot;Ir&quot;
+        }
+      }
+    &lt;/template&gt;
+  &lt;/i18n-service&gt;
+&lt;/cfpb-pagination&gt;`,
                 
             
 
@@ -4292,7 +4294,7 @@ Label heading
                     'variation_name3': 'Link with icon',
                     'variation_description3': "Each+icon+should+be+used+exclusively+and+consistently+for+one+action.+An+icon+should+appear+after+the+text+it+represents.+The+only+exception+is+a+link+that+takes+a+user+to+a+previous+step+or+page%2C+where+the+icon+should+appear+before+the+link%E2%80%99s+text.+Icons+should+never+be+underlined.%0A",
                     'variation_code_snippet3': `&lt;!-- Inline --&gt;
-&lt;a class=&quot;a-link&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;a-link__text&quot;&gt;file or document&lt;/span&gt; <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--document" viewBox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.477.477 0 0 1-.475-.475V3.046a.477.477 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.924H8.059a.575.575 0 0 1-.574-.574V3.679H1.95v11.84h8.102zM3.907 4.92a1.03 1.03 0 1 0 1.029 1.03 1.03 1.03 0 0 0-1.03-1.03zm4.958 3.253h-5.87v1.108h5.87zm0 2.354h-5.87v1.109h5.87zm0 2.354h-5.87v1.109h5.87z"/></svg>   
+&lt;a class=&quot;a-link&quot; href=&quot;#&quot;&gt;&lt;span class=&quot;a-link__text&quot;&gt;file or document&lt;/span&gt; <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cf-icon-svg cf-icon-svg--document" viewBox="0 0 12 19"><path d="M11.16 16.153a.477.477 0 0 1-.476.475H1.316a.477.477 0 0 1-.475-.475V3.046a.477.477 0 0 1 .475-.475h6.95l2.893 2.893zm-1.11-9.924H8.059a.575.575 0 0 1-.574-.574V3.679H1.95v11.84h8.102zM3.907 4.92a1.03 1.03 0 1 0 1.029 1.03 1.03 1.03 0 0 0-1.03-1.03zm4.958 3.253h-5.87v1.108h5.87zm0 2.354h-5.87v1.109h5.87zm0 2.354h-5.87v1.109h5.87z"/></svg>
 &lt;/a&gt;
 
 &lt;!-- Standalone --&gt;
@@ -4800,7 +4802,7 @@ ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;`,
 
                 
                     'variation_name1': 'Body text',
-                    'variation_description1': "Source+Sans+3+Regular%2C+11pt+%2F+16pt.+Lorem+ipsum+dolor+sit+amet%2C+ut+labore+et+dolore+magna+aliqua.+Ut+enim+ad+minim+veniam%2C+quis+nostrud+exercitation+ullamco+laboris+nisi+ut+aliquip+ex+ea+commodo+consequat.%0A%0A%0A",
+                    'variation_description1': "Source+Sans+3+Regular%2C+11pt+%2F+16pt.+Lorem+ipsum+dolor+sit+amet%2C+ut+labore+et+dolore+magna+aliqua.+Ut+enim+ad+minim+veniam%2C+quis+nostrud+exercitation+ullamco+laboris+nisi+ut+aliquip+ex+ea+commodo+consequat.%0A",
                     'variation_code_snippet1': ``,
                 
                     'variation_name2': 'Subheading',
@@ -6571,7 +6573,7 @@ abcdefghijklmnopqrstuvwxyz&lt;br&gt;
             'title': 'Fonts',
             'description': "A+clear+typographic+hierarchy+is+critical+to+the+effective+communication+of+our+brand.+Type+should+be+light+and+well-spaced+to+reinforce+that+we+are+transparent%2C+open%2C+and+approachable.+This+system+uses+weight%2C+scale%2C+and+capitalization+to+convey+the+relative+importance+of+each+heading+within+a+document.+Readability%2C+accessibility%2C+and+font+smoothing+to+allow+all+users+to+efficiently+read+and+absorb+textual+information.%0A",
             'use_cases': "%0A",
-            'guidelines': "Readable+text+allows+users+to+efficiently+read+and+take+in+textual+information.+Text+that+is+not+readable+turns+off+readers+or+makes+it+challenging+for+them+to+stay+focused.+The+following+guidelines+promote+good+readability.%0A%0AAlignment%0A%0ATypography+should+be+set+flush+left.+This+provides+the+eye+a+constant+starting+point+for+each+line%2C+making+text+easier+to+read.%0A%0A%0A%0ALine+height%0A%0AAmple+space+between+lines+of+type+promotes+an+open+feeling+and+lends+flow+to+body+copy.+When+setting+body+copy%2C+the+leading+should+be+1.375+times+the+type+size%2C+or+37.5%25+larger.%0A%0A%0A%0ALine+length%0A%0AComfortable+line+length+allows+the+reader%E2%80%99s+eyes+to+flow+easily+from+the+end+of+one+line+to+the+beginning+of+the+next.+The+ideal+line+length+is+66+characters%2C+including+spaces%2C+though+lengths+may+range+from+45+to+90+characters.%0A%0AIn+digital+materials%2C+readers+are+afforded+some+level+of+control+over+line+length+by+narrowing+their+browser+window+or+changing+the+type+size+display+on+their+devices.+In+printed+materials%2C+readers+do+not+have+this+control.+For+this+reason%2C+special+effort+should+be+made+to+use+a+line+length+as+close+as+possible+to+66+characters+in+printed+materials.+This+can+be+achieved+by+using+a+multi-column+layout+or+larger+margins.%0A%0A%0A%0ASpacing%0A%0AWhite+space+affects+how+the+user+focuses+their+attention+on+the+content.+It+makes+it+easier+to+know+what+to+read+and+where+to+begin.+Spacing+between+typographic+elements+should+be+open+enough+to+feel+light%2C+but+close+enough+to+establish+a+proper+relationship+between+elements.%0A%0AHeading+followed+by+body+copy%0A%0AWhen+a+heading+is+followed+by+paragraph+text%2C+include+30px+of+space+below+Display+and+15px+below+Headings+1%E2%80%936.%0A%0A%0A%0ABody+copy+followed+by+a+heading%0A%0AWhen+body+copy+is+followed+by+a+heading%2C+include+45px+of+space+above+Heading+2+and+30px+above+Headings+3%E2%80%936.%0A%0A%0A%0AHeading+followed+by+a+heading%0A%0AFor+stacked+headings%2C+include+30+px+of+space+after+the+primary+heading.%0A%0A%0A%0ABody+copy+spacing%0A%0AFor+multiple+paragraphs+within+the+same+section+set+the+space+between+paragraphs+to+15px.%0A%0A%0A",
+            'guidelines': "Readable+text+allows+users+to+efficiently+read+and+take+in+textual+information.+Text+that+is+not+readable+turns+off+readers+or+makes+it+challenging+for+them+to+stay+focused.+The+following+guidelines+promote+good+readability.%0A%0ANormalization%0A%0AAs+the+U.S.+Web+Design+System+states%2C+typefaces+vary+in+optical+size.+Source+Sans+3+is+more+condensed+and+has+a+smaller+optical+appearance+than+our+previous+typeface%2C+Avenir+Next.+To+address+this+difference+and+ensure+our+site%E2%80%99s+components+and+readability+remain+intact%2C+we+adjusted+Source+Sans+3%E2%80%99s+x-height+to+be+optically+closer+to+Avenir+Next%E2%80%99s+x-height.+To+accomplish+this%2C+we+used+a+font-size-adjust+CSS+property.%0A%0AAlignment%0A%0ATypography+should+be+set+flush+left.+This+provides+the+eye+a+constant+starting+point+for+each+line%2C+making+text+easier+to+read.%0A%0A%0A%0ALine+height%0A%0AAmple+space+between+lines+of+type+promotes+an+open+feeling+and+lends+flow+to+body+copy.+When+setting+body+copy%2C+the+leading+should+be+1.375+times+the+type+size%2C+or+37.5%25+larger.%0A%0A%0A%0ALine+length%0A%0AComfortable+line+length+allows+the+reader%E2%80%99s+eyes+to+flow+easily+from+the+end+of+one+line+to+the+beginning+of+the+next.+The+ideal+line+length+is+66+characters%2C+including+spaces%2C+though+lengths+may+range+from+45+to+90+characters.%0A%0AIn+digital+materials%2C+readers+are+afforded+some+level+of+control+over+line+length+by+narrowing+their+browser+window+or+changing+the+type+size+display+on+their+devices.+In+printed+materials%2C+readers+do+not+have+this+control.+For+this+reason%2C+special+effort+should+be+made+to+use+a+line+length+as+close+as+possible+to+66+characters+in+printed+materials.+This+can+be+achieved+by+using+a+multi-column+layout+or+larger+margins.%0A%0A%0A%0ASpacing%0A%0AWhite+space+affects+how+the+user+focuses+their+attention+on+the+content.+It+makes+it+easier+to+know+what+to+read+and+where+to+begin.+Spacing+between+typographic+elements+should+be+open+enough+to+feel+light%2C+but+close+enough+to+establish+a+proper+relationship+between+elements.%0A%0AHeading+followed+by+body+copy%0A%0AWhen+a+heading+is+followed+by+paragraph+text%2C+include+30px+of+space+below+Display+and+15px+below+Headings+1%E2%80%936.%0A%0A%0A%0ABody+copy+followed+by+a+heading%0A%0AWhen+body+copy+is+followed+by+a+heading%2C+include+45px+of+space+above+Heading+2+and+30px+above+Headings+3%E2%80%936.%0A%0A%0A%0AHeading+followed+by+a+heading%0A%0AFor+stacked+headings%2C+include+30+px+of+space+after+the+primary+heading.%0A%0A%0A%0ABody+copy+spacing%0A%0AFor+multiple+paragraphs+within+the+same+section+set+the+space+between+paragraphs+to+15px.%0A%0A%0A",
             'behavior': "%0A",
             'accessibility': "Web+Content+Accessibility+%28WCAG%29+standards+ensure+that+content+is+accessible+by+everyone%2C+regardless+of+any+disability+or+user+device.+To+learn+more%2C+refer+to+the+http%3A%2F%2Fwww.section508.gov.%0A%0ADon%E2%80%99t+use+type+in+illustrations+or+graphics%0A%0AType+should+generally+not+be+used+within+an+illustration+or+other+graphic%2C+as+assistive+technology+such+as+screen+readers+can%E2%80%99t+make+sense+of+the+words.%0A%0AColored+type+is+restricted%0A%0ANever+use+colored+type%2C+unless+it%E2%80%99s+a+link.++This+restriction+includes+all+brand+colors%2C+including+CFPB+green.%0A%0AAlthough+accessible%2C+the+combinations+of+black+type+on+green+or+green+type+on+black+should+never+be+used.%0A%0AAccessible+and+brand+compliant+combinations%0A%0ATo+ensure+text+remains+compliant+with+WCAG+2.0+standards%2C+use+only+these+permitted+type+and+background+color+combinations%2C+which+fall+within+the+range+of+foreground%2Fbackground+color+contrast+permitted+by+the+Section+508+guidelines.+For+specific+color+values%2C+visit+our+Color+page.%0A%0ABlack+type+on+colored+backgrounds%0A%0ABlack+type+is+accessible+on+all+brand+colors+with+20%25+saturation+or+below+when+using+at+least+14pt+type.+Visit+our+Color+page+for+hex+and+RGB+values.%0A%0AA+few+colors+allow+for+slightly+darker+saturations+while+still+maintaining+accessibility.+If+you%E2%80%99re+looking+to+use+a+combination+not+listed+here%2C+check+WebAIM+Contrast+Checker++to+verify+accessibility.%0A%0A%0A%0AWhite+type+on+colored+backgrounds%0A%0AWhite+type+is+accessible+on+CFPB+brand+colors+at+100%25+saturation+and+their+darker+shades+when+using+at+least+14pt+type%2C+with+the+following+two+exceptions%3A%0A%0A%0A++White+type+is+accessible+on+CFPB+green+at+100%25+saturation+and+its+darker+shades+only+when+using+at+least+14pt+bold+type.+Alternatively%2C+use+at+least+18pt+regular+type.%0A++White+type+is+not+accessible+on+any+CFPB+shade+of+gold.%0A%0A%0AThe+graphic+below+shows+accessible+combinations+of+white+type+on+CFPB+brand+colors+at+100%25+saturation.+Visit+our+Color+page+for+hex+and+RGB+values.%0A%0A%0A",
             'research': "%0A",

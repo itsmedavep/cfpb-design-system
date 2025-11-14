@@ -3,11 +3,13 @@ import AnchorJS from 'anchor-js';
 import {
   CfpbButton,
   CfpbFileUpload,
+  CfpbFormAlert,
   CfpbFormChoice,
   CfpbLabel,
   CfpbTagFilter,
   CfpbTagTopic,
   CfpbTagGroup,
+  CfpbInputSearch,
   CfpbMultiselect,
   CfpbPagination,
   Expandable,
@@ -44,11 +46,13 @@ anchors.remove(`
 
 CfpbButton.init();
 CfpbFileUpload.init();
+CfpbFormAlert.init();
 CfpbFormChoice.init();
 CfpbLabel.init();
 CfpbTagFilter.init();
 CfpbTagTopic.init();
 CfpbTagGroup.init();
+CfpbInputSearch.init();
 CfpbMultiselect.init();
 CfpbPagination.init();
 Summary.init();
