@@ -5,6 +5,8 @@ import {
   CfpbFileUpload,
   CfpbFormAlert,
   CfpbFormChoice,
+  CfpbFormSearchInput,
+  CfpbListItem,
   CfpbLabel,
   CfpbTagFilter,
   CfpbTagTopic,
@@ -48,6 +50,8 @@ CfpbButton.init();
 CfpbFileUpload.init();
 CfpbFormAlert.init();
 CfpbFormChoice.init();
+CfpbFormSearchInput.init();
+CfpbListItem.init();
 CfpbLabel.init();
 CfpbTagFilter.init();
 CfpbTagTopic.init();
