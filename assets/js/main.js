@@ -2,19 +2,20 @@ import { toggleAllDetails, toggleDetails } from './toggle-details.js';
 import AnchorJS from 'anchor-js';
 import {
   CfpbButton,
+  CfpbExpandable,
   CfpbFileUpload,
   CfpbFormAlert,
   CfpbFormChoice,
   CfpbFormSearch,
   CfpbFormSearchInput,
-  CfpbListItem,
   CfpbLabel,
+  CfpbList,
+  CfpbListItem,
   CfpbTagFilter,
   CfpbTagTopic,
   CfpbTagGroup,
-  CfpbInputSearch,
-  CfpbMultiselect,
   CfpbPagination,
+  CfpbSelect,
   Expandable,
   ExpandableGroup,
   Summary,
@@ -48,18 +49,19 @@ anchors.remove(`
 `);
 
 CfpbButton.init();
+CfpbExpandable.init();
 CfpbFileUpload.init();
 CfpbFormAlert.init();
 CfpbFormChoice.init();
 CfpbFormSearch.init();
 CfpbFormSearchInput.init();
-CfpbListItem.init();
 CfpbLabel.init();
+CfpbList.init();
+CfpbListItem.init();
 CfpbTagFilter.init();
 CfpbTagTopic.init();
 CfpbTagGroup.init();
-CfpbInputSearch.init();
-CfpbMultiselect.init();
+CfpbSelect.init();
 CfpbPagination.init();
 Summary.init();
 SummaryMinimal.init();

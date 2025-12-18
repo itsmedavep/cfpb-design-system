@@ -40,7 +40,8 @@
   <div class="site-header">
 
     <form id="search-form" action="/design-system/search" method="get">
-    <cfpb-input-search id="search-box" form="search-form" name="searchQuery"></cfpb-input-search>
+    <cfpb-form-search id="search-box" form="search-form" name="searchQuery">
+    </cfpb-form-search>
 </form>
 
 
@@ -1943,6 +1944,33 @@ Label
         
         
 
+        'development-design-tokens': {
+
+            // Cycle through the variation fields of this page.
+            
+                // Determine the maximum number of variations present overall.
+                
+
+                
+            
+
+
+            'title': 'Design Tokens',
+            'description': "The+design+system+encapsulates+all+of+its+design+choices+into+design+tokens.%0A%0AIntro+to+design+tokens%0A%0AEverything+you+see+on+consumerfinance.gov+consists+of+the+many+design+choices+that+embody+the+CFPB+design+system.+The+site+is+built+from+these+typography%2C+spacing%2C+sizing%2C+opacity%2C+radii%2C+shadows%2C+motion+and+animation%2C+and+icon+decisions.%0A%0AWe+call+these+decisions+design+tokens.+Code+tokens+can+take+many+forms%2C+such+as+SCSS+variables%2C+CSS+custom+properties%2C+or+platform+agnostic+JSON+design+tokens.%0A%0ALegacy+components%0A%0AOur+legacy+component+versions%E2%80%94currently+found+in+the+%E2%80%9CComponents%E2%80%9D+sub+section+of+Components%E2%80%94leverage+SCSS+mixins%2C+variables%2C+etc.%2C+in+the+form+of+%24varible-name%3A+value+or+--variable-name%3A+value.+We%E2%80%99ve+used+this+approach+for+several+years%2C+and+it+has+served+us+well+as+it+delivers+a+familiar+developer+experience.+However%2C+this+approach+requires+knowledge+of+SCSS%2C+is+tied+to+the+platform%2C+and+is+extensive.%0A%0AWeb+components+%28beta%29%0A%0AWe%E2%80%99ve+started+creating+web+component+versions+of+our+legacy+components.+These+can+be+found+on+the+Elements+page+within+the+%E2%80%9CWeb+components+%28beta%29%E2%80%9D+sub+section+of+Components.+These+web+components+utilize+design+tokens+for+color+values+in+the+form+of+platform-agnostic+JSON.+Style+Dictionary+translates+this+JSON+into+.css+custom+properties.+These+tokens+become+easily+parsed+and+consumed%2C+meaning+we+could+deliver+them+into+Android+or+iOS+formats+if+desired.%0A%0AWith+this+move+to+JSON+tokens%2C+we+are+also+centralizing+our+source+of+truth+by+exporting+the+tokens+directly+from+our+Figma+library%2C+enhancing+collaboration+between+design+and+development.+Designers+can+manage+and+maintain+the+tokens+in+Figma%2C+and+developers+can+directly+consume+the+output.%0A%0ACurrently%2C+we+are+using+JSON+design+tokens+in+our+web+components+for+color+values.+We+plan+to+incrementally+create+more+JSON+design+tokens+for+values+such+as+sizing+and+spacing.%0A",
+            'use_cases': "%0A",
+            'guidelines': "%0A",
+            'behavior': "%0A",
+            'accessibility': "%0A",
+            'research': "%0A",
+            'related_items': "%0A",
+            'url': 'development/design-tokens'
+        }
+        ,
+        
+
+        
+        
+
         'development-index': {
 
             // Cycle through the variation fields of this page.
@@ -2178,48 +2206,18 @@ Label
   &lt;div slot=&quot;helper&quot;&gt;With a block-level helper text&lt;/div&gt;
 &lt;/cfpb-label&gt;`,
                 
-                    'variation_name10': 'Multiselect',
-                    'variation_description10': "A+select+component+that+can+have+multiple+selections.%0A",
-                    'variation_code_snippet10': `&lt;cfpb-multiselect&gt;
-  &lt;select multiple&gt;
-    &lt;option&gt;
-      Mercury
-    &lt;/option&gt;
-    &lt;option&gt;
-      Venus
-    &lt;/option&gt;
-    &lt;option&gt;
-      Earth
-    &lt;/option&gt;
-    &lt;option&gt;
-      Mars
-    &lt;/option&gt;
-    &lt;option&gt;
-      Jupiter
-    &lt;/option&gt;
-    &lt;option&gt;
-      Saturn
-    &lt;/option&gt;
-    &lt;option&gt;
-      Uranus
-    &lt;/option&gt;
-    &lt;option&gt;
-      Neptune
-    &lt;/option&gt;
-  &lt;/select&gt;
-&lt;/cfpb-multiselect&gt;`,
-                
-                    'variation_name11': 'Search input',
-                    'variation_description11': "A+search+input+component.%0A",
-                    'variation_code_snippet11': `&lt;cfpb-form-search-input&gt; &lt;/cfpb-form-search-input&gt;
+                    'variation_name10': 'Search input',
+                    'variation_description10': "A+search+input+component.%0A",
+                    'variation_code_snippet10': `&lt;cfpb-form-search-input borderless&gt; &lt;/cfpb-form-search-input&gt;
+&lt;cfpb-form-search-input&gt; &lt;/cfpb-form-search-input&gt;
 &lt;cfpb-form-search-input disabled&gt; &lt;/cfpb-form-search-input&gt;
 &lt;cfpb-form-search-input validation=&quot;error&quot;&gt; &lt;/cfpb-form-search-input&gt;
 &lt;cfpb-form-search-input validation=&quot;warning&quot;&gt; &lt;/cfpb-form-search-input&gt;
 &lt;cfpb-form-search-input validation=&quot;success&quot;&gt; &lt;/cfpb-form-search-input&gt;`,
                 
-                    'variation_name12': 'Search widget',
-                    'variation_description12': "A+search+widget+component.%0A",
-                    'variation_code_snippet12': `&lt;cfpb-form-search&gt;
+                    'variation_name11': 'Search widget',
+                    'variation_description11': "A+search+widget+component.%0A",
+                    'variation_code_snippet11': `&lt;cfpb-form-search&gt;
   &lt;ul&gt;
     &lt;li&gt;How do I add money to my prepaid card?&lt;/li&gt;
     &lt;li&gt;What are credit card “add-on products?”&lt;/li&gt;
@@ -2232,13 +2230,13 @@ Label
   &lt;/ul&gt;
 &lt;/cfpb-form-search&gt;`,
                 
-                    'variation_name13': 'Form-level alert',
-                    'variation_description13': "A+form-level+alert+component.%0A",
-                    'variation_code_snippet13': `&lt;cfpb-form-alert validation=&quot;error&quot;&gt;An error&lt;/cfpb-form-alert&gt; &lt;cfpb-form-alert validation=&quot;warning&quot;&gt;A warning&lt;/cfpb-form-alert&gt; &lt;cfpb-form-alert validation=&quot;success&quot;&gt;A success message&lt;/cfpb-form-alert&gt;`,
+                    'variation_name12': 'Form-level alert',
+                    'variation_description12': "A+form-level+alert+component.%0A",
+                    'variation_code_snippet12': `&lt;cfpb-form-alert validation=&quot;error&quot;&gt;An error&lt;/cfpb-form-alert&gt; &lt;cfpb-form-alert validation=&quot;warning&quot;&gt;A warning&lt;/cfpb-form-alert&gt; &lt;cfpb-form-alert validation=&quot;success&quot;&gt;A success message&lt;/cfpb-form-alert&gt;`,
                 
-                    'variation_name14': 'Pagination',
-                    'variation_description14': "A+pagination+component.%0A",
-                    'variation_code_snippet14': `&lt;cfpb-pagination value=&quot;4&quot; max=&quot;10&quot;&gt;
+                    'variation_name13': 'Pagination',
+                    'variation_description13': "A+pagination+component.%0A",
+                    'variation_code_snippet13': `&lt;cfpb-pagination value=&quot;4&quot; max=&quot;10&quot;&gt;
   &lt;i18n-service&gt;
     &lt;template&gt;
       {
@@ -2267,13 +2265,13 @@ Label
   &lt;/i18n-service&gt;
 &lt;/cfpb-pagination&gt;`,
                 
-                    'variation_name15': 'List item',
-                    'variation_description15': "A+list+item+component.%0A",
-                    'variation_code_snippet15': `&lt;cfpb-list-item disabled&gt;Earth&lt;/cfpb-list-item&gt; &lt;cfpb-list-item checked disabled&gt;Jupiter&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type=&quot;checkbox&quot;&gt;Mercury&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type=&quot;checkbox&quot; checked&gt;Venus&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type=&quot;check&quot;&gt;Mars&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type=&quot;check&quot; checked&gt;Saturn&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type=&quot;plain&quot;&gt;Uranus&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type=&quot;plain&quot; checked&gt;Pluto&lt;/cfpb-list-item&gt;`,
+                    'variation_name14': 'List item',
+                    'variation_description14': "A+list+item+component.%0A",
+                    'variation_code_snippet14': `&lt;cfpb-list-item disabled&gt;Earth&lt;/cfpb-list-item&gt; &lt;cfpb-list-item checked disabled&gt;Jupiter&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type=&quot;checkbox&quot;&gt;Mercury&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type=&quot;checkbox&quot; checked&gt;Venus&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type=&quot;check&quot;&gt;Mars&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type=&quot;check&quot; checked&gt;Saturn&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type=&quot;plain&quot;&gt;Uranus&lt;/cfpb-list-item&gt; &lt;cfpb-list-item type=&quot;plain&quot; checked&gt;Pluto&lt;/cfpb-list-item&gt;`,
                 
-                    'variation_name16': 'Lists',
-                    'variation_description16': "A+list+component.%0A",
-                    'variation_code_snippet16': `&lt;cfpb-list aria-label=&quot;List of planets&quot;&gt;
+                    'variation_name15': 'Lists',
+                    'variation_description15': "A+list+component.%0A",
+                    'variation_code_snippet15': `&lt;cfpb-list aria-label=&quot;List of planets&quot;&gt;
   &lt;cfpb-list-item&gt;Mercury&lt;/cfpb-list-item&gt;
   &lt;cfpb-list-item&gt;Venus&lt;/cfpb-list-item&gt;
   &lt;cfpb-list-item&gt;Earth&lt;/cfpb-list-item&gt;
@@ -2304,11 +2302,37 @@ Label
   &lt;cfpb-list-item&gt;Neptune&lt;/cfpb-list-item&gt;
 &lt;/cfpb-list&gt;`,
                 
+                    'variation_name16': 'Select list',
+                    'variation_description16': "A+select+list+component.%0A",
+                    'variation_code_snippet16': `&lt;cfpb-select multiple&gt;
+  &lt;cfpb-list-item type=&quot;checkbox&quot;&gt;Mercury&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type=&quot;checkbox&quot;&gt;Venus&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type=&quot;checkbox&quot;&gt;Earth&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type=&quot;checkbox&quot; checked&gt;Mars&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type=&quot;checkbox&quot;&gt;Jupiter&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type=&quot;checkbox&quot;&gt;Saturn&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type=&quot;checkbox&quot;&gt;Uranus&lt;/cfpb-list-item&gt;
+  &lt;cfpb-list-item type=&quot;checkbox&quot;&gt;Neptune&lt;/cfpb-list-item&gt;
+&lt;/cfpb-select&gt;`,
+                
+                    'variation_name17': 'Expandables',
+                    'variation_description17': "An+expandable+component.%0A",
+                    'variation_code_snippet17': `&lt;cfpb-expandable&gt;
+  &lt;p&gt;
+      Lorem ipsum dolor sit amet, consectetur adipisicing
+      elit. Neque ipsa voluptatibus soluta nobis unde quisquam
+      temporibus magnam debitis quidem. Ducimus ratione
+      corporis nesciunt earum vel est quaerat blanditiis
+      dolore ipsa?
+      &lt;a href=&quot;#&quot;&gt;Lorem link&lt;/a&gt;.
+  &lt;/p&gt;
+&lt;/cfpb-expandable&gt;`,
+                
             
 
 
             'title': 'Elements',
-            'description': "The+components+are+custom+elements+%28web+components%29.%0A",
+            'description': "These+components+are+custom+elements+%28web+components%29.%0A",
             'use_cases': "%0A",
             'guidelines': "%0A",
             'behavior': "%0A",
@@ -5243,7 +5267,7 @@ Label
     &lt;label class=&quot;a-label a-label--heading&quot; for=&quot;test_select__multiple&quot;&gt;
         Example label
     &lt;/label&gt;
-    &lt;select class=&quot;o-multiselect&quot; id=&quot;test_select__multiple&quot; multiple&gt;
+    &lt;select class=&quot;o-multiselect&quot; id=&quot;test_select__multiple&quot; multiple data-placeholder=&quot;Select an option&quot;&gt;
         &lt;option value=&quot;option1&quot; selected&gt;Option 1&lt;/option&gt;
         &lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
         &lt;option value=&quot;option3&quot;&gt;Option 3&lt;/option&gt;

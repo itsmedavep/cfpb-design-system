@@ -40,7 +40,8 @@
   <div class="site-header">
 
     <form id="search-form" action="/design-system/search" method="get">
-    <cfpb-input-search id="search-box" form="search-form" name="searchQuery"></cfpb-input-search>
+    <cfpb-form-search id="search-box" form="search-form" name="searchQuery">
+    </cfpb-form-search>
 </form>
 
 
@@ -210,7 +211,7 @@
                 </div>
                 
                     <div class="ds-nav ds-nav-2">
-                        <div class="h5">Web Components</div>
+                        <div class="h5">Web Components (beta)</div>
                         
                         <ul class="m-list m-list--links">
                         
@@ -476,7 +477,7 @@
     <label class="a-label a-label--heading" for="test_select__multiple">
         Example label
     </label>
-    <select class="o-multiselect" id="test_select__multiple" multiple>
+    <select class="o-multiselect" id="test_select__multiple" multiple data-placeholder="Select an option">
         <option value="option1" selected>Option 1</option>
         <option value="option2">Option 2</option>
         <option value="option3">Option 3</option>
@@ -532,7 +533,7 @@
     &lt;label class="a-label a-label--heading" for="test_select__multiple"&gt;
         Example label
     &lt;/label&gt;
-    &lt;select class="o-multiselect" id="test_select__multiple" multiple&gt;
+    &lt;select class="o-multiselect" id="test_select__multiple" multiple data-placeholder="Select an option"&gt;
         &lt;option value="option1" selected&gt;Option 1&lt;/option&gt;
         &lt;option value="option2"&gt;Option 2&lt;/option&gt;
         &lt;option value="option3"&gt;Option 3&lt;/option&gt;
@@ -661,8 +662,8 @@
                         
                         
                         <a href="https://github.com/cfpb/design-system/commits/main/docs/pages/selects.md">
-                            <time datetime="2025-12-09 10:12:01 -0500">
-                                10:12:01 AM Dec 09, 2025
+                            <time datetime="2025-12-17 12:43:14 -0500">
+                                12:43:14 PM Dec 17, 2025
                             </time>
                         </a>
                     </section>
