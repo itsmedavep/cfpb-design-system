@@ -1,10 +1,4 @@
 // style-dictionary.config.js — ESM
-// Behavior summary:
-// - One CSS file per token JSON under packages/cfpb-design-system/src/tokens.
-// - Token names are full-path kebab case (no dropped segments).
-// - Colors: prefer hex, otherwise emit lossless rgba; validate RGB inputs and error on malformed values.
-// - Aliases: preserve Figma alias metadata as var(--...), warn on cross-set collisions, and error if a collision lacks set names.
-// - CSS output keeps comma-separated values tight without touching comments.
 import StyleDictionary from 'style-dictionary';
 import fs from 'fs';
 import path from 'path';
@@ -19,27 +13,20 @@ import { fileHeader, formattedVariables } from 'style-dictionary/utils';
 const baseDir = 'packages/cfpb-design-system/src';
 const tokenBase = path.resolve(baseDir, 'tokens');
 const cssFormatName = 'css/variables-no-space-commas';
+const hexPattern = /^#(?:[0-9a-f]{3,4}|[0-9a-f]{6}|[0-9a-f]{8})$/i;
+const rgbaPattern = /^rgba\(/i;
 
 const toPosix = (fsPath) => fsPath.split(path.sep).join('/');
 const toAbsPosix = (fsPath) =>
   toPosix(path.isAbsolute(fsPath) ? fsPath : path.resolve(fsPath));
 const toKebab = (value) =>
-  String(value)
-    .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
-    .replace(/[\s_]+/g, '-')
-    .replace(/-+/g, '-')
-    .toLowerCase();
-const isNumber = (value) => Number.isFinite(value);
-const toNumber = (value) =>
-  typeof value === 'number'
-    ? value
-    : typeof value === 'string' && value.trim() !== ''
-      ? Number(value)
-      : Number.NaN;
-const numOrUndef = (value) =>
-  value === undefined || value === null ? undefined : toNumber(value);
-const hexPattern = /^#(?:[0-9a-f]{3,4}|[0-9a-f]{6}|[0-9a-f]{8})$/i;
+  String(value).replace(/([a-z0-9])([A-Z])/g, '$1-$2').replace(/[\s_]+/g, '-').replace(/-+/g, '-').toLowerCase();
 
+/**
+ * Return nested subdirectories in depth-first order.
+ * @param {string} dirPath
+ * @returns {string[]}
+ */
 function getAllDirs(dirPath) {
   const out = [];
   for (const dirent of fs.readdirSync(dirPath, { withFileTypes: true })) {
@@ -51,67 +38,21 @@ function getAllDirs(dirPath) {
   return out;
 }
 
-const trimTrailingZeros = (value) => {
-  const str = String(value);
-  return !str.includes('.') || str.includes('e') ? str : str.replace(/\.?0+$/, '');
-};
-const formatPercent = (value) => `${trimTrailingZeros(value * 100)}%`;
-
-// Normalize commas only inside CSS value segments (keeps comments untouched).
-const normalizeCommaSpacing = (value) => {
-  const lines = value.split('\n');
-  const out = [];
-  let inValue = false;
-  let valueHasComma = false;
-
-  for (const line of lines) {
-    if (!inValue) {
-      const colonIndex = line.indexOf(':');
-      if (colonIndex === -1) {
-        out.push(line);
-        continue;
-      }
-      const semicolonIndex = line.indexOf(';', colonIndex);
-      const prefix = line.slice(0, colonIndex + 1);
-      if (semicolonIndex !== -1) {
-        const valueSegment = line.slice(colonIndex + 1, semicolonIndex);
-        if (!valueSegment.includes(',')) {
-          out.push(line);
-          continue;
-        }
-        const normalizedValue = valueSegment.replace(/\s*,\s*/g, ',');
-        out.push(`${prefix}${normalizedValue}${line.slice(semicolonIndex)}`);
-        continue;
-      }
-      const valueSegment = line.slice(colonIndex + 1);
-      valueHasComma = valueSegment.includes(',');
-      out.push(
-        `${prefix}${valueHasComma ? valueSegment.replace(/\s*,\s*/g, ',') : valueSegment}`,
-      );
-      inValue = true;
-      continue;
-    }
-
-    const semicolonIndex = line.indexOf(';');
-    const valueSegment =
-      semicolonIndex === -1 ? line : line.slice(0, semicolonIndex);
-    if (valueSegment.includes(',')) {
-      valueHasComma = true;
-    }
-    const normalizedValue = valueHasComma
-      ? valueSegment.replace(/\s*,\s*/g, ',')
-      : valueSegment;
-    if (semicolonIndex === -1) {
-      out.push(normalizedValue);
-      continue;
-    }
-    out.push(`${normalizedValue}${line.slice(semicolonIndex)}`);
-    inValue = false;
-    valueHasComma = false;
+const warn = (options, message) => {
+  if (options.log?.warnings === logWarningLevels.error) throw new Error(message);
+  if (
+    options.log?.warnings !== logWarningLevels.disabled &&
+    options.log?.verbosity !== logVerbosityLevels.silent
+  ) {
+    // eslint-disable-next-line no-console
+    console.warn(message);
   }
-
-  return out.join('\n');
 };
+
+const normalizeCommaSpacing = (value) =>
+  value.replace(/(:[^;\n]*)(;)/g, (match, valuePart, semi) =>
+    valuePart.includes(',') ? `${valuePart.replace(/\s*,\s*/g, ',')}${semi}` : match,
+  );
 
 const buildFilesAndFilters = (basePath) => {
   const tokenDirs = [basePath, ...getAllDirs(basePath)];
@@ -124,27 +65,17 @@ const buildFilesAndFilters = (basePath) => {
       const fullPathAbsPosix = toAbsPosix(path.join(dirPath, jsonFile));
       const relDir = path.relative(basePath, dirPath);
       const cssFileName = `${path.basename(jsonFile, '.json')}.css`;
-      const destination =
-        relDir === '' ? cssFileName : `${toPosix(relDir)}/${cssFileName}`;
+      const destination = relDir === '' ? cssFileName : `${toPosix(relDir)}/${cssFileName}`;
       const filterName = `filter__${(relDir || '_').replace(
         /[^a-zA-Z0-9_/-]/g,
         '_',
-      )}__${jsonFile.replace(/[^a-zA-Z0-9_.-]/g, '_')}`.replace(
-        /[^a-zA-Z0-9_]/g,
-        '_',
-      );
-
+      )}__${jsonFile.replace(/[^a-zA-Z0-9_.-]/g, '_')}`.replace(/[^a-zA-Z0-9_]/g, '_');
       filtersToRegister.push({ filterName, fullPathAbsPosix });
       files.push({
         destination,
         format: cssFormatName,
         filter: filterName,
-        options: {
-          // keep references as var(--...) in the output
-          outputReferences: true,
-          usesDtcg: true,
-          selector: ':root', // <-output to shadow dom
-        },
+        options: { outputReferences: true, usesDtcg: true, selector: ':root' },
       });
     }
   }
@@ -153,146 +84,104 @@ const buildFilesAndFilters = (basePath) => {
 };
 
 const isColorToken = (token) => (token?.$type ?? token?.type) === 'color';
+const getRawTokenValue = (token) =>
+  token?.original?.$value ?? token?.$value ?? token?.original?.value ?? token?.value;
+const isReferenceValue = (value) =>
+  typeof value === 'string' && value.trim().startsWith('{') && value.trim().endsWith('}');
+const getHexValue = (value) => {
+  if (typeof value === 'string') {
+    const trimmed = value.trim();
+    return hexPattern.test(trimmed) ? trimmed : null;
+  }
+  const hex = value && typeof value === 'object' ? value.hex || value.hexa : null;
+  return typeof hex === 'string' && hexPattern.test(hex.trim()) ? hex.trim() : null;
+};
+const parseRgbaParts = (value) => {
+  if (!value) return null;
+  if (typeof value === 'string') {
+    const trimmed = value.trim();
+    if (!rgbaPattern.test(trimmed)) return null;
+    const start = trimmed.indexOf('(');
+    const end = trimmed.lastIndexOf(')');
+    if (start === -1 || end === -1 || end <= start + 1) return null;
+    const body = trimmed.slice(start + 1, end).trim();
+    if (!body) return null;
+    if (body.includes('/')) {
+      const [rgbPart, alphaPart] = body.split('/');
+      const rgbValues = rgbPart.replace(/,/g, ' ').trim().split(/\s+/).filter(Boolean);
+      const alpha = alphaPart.trim();
+      return rgbValues.length === 3 && alpha
+        ? { r: rgbValues[0], g: rgbValues[1], b: rgbValues[2], a: alpha }
+        : null;
+    }
+    const parts = body.split(/[\s,]+/).filter(Boolean);
+    return parts.length === 4 ? { r: parts[0], g: parts[1], b: parts[2], a: parts[3] } : null;
+  }
+  if (typeof value === 'object' && Array.isArray(value.components)) {
+    const [r, g, b] = value.components;
+    const a = value.alpha ?? value.opacity;
+    return a === undefined || a === null ? null : { r, g, b, a };
+  }
+  return null;
+};
+const getColorInfo = (token) => {
+  const raw = getRawTokenValue(token);
+  const hex = getHexValue(raw);
+  const isRef = isReferenceValue(raw);
+  const rgbaParts = !hex && !isRef ? parseRgbaParts(raw) : null;
+  return { raw, hex, rgbaParts, isRef };
+};
 
-// Prefer Figma alias metadata so CSS keeps var(--alias) instead of resolved values.
+const normalizeColorInput = (value) => {
+  if (!value || typeof value !== 'object') return value;
+  if (value.colorSpace === 'srgb' && Array.isArray(value.components)) {
+    const hex = getHexValue(value);
+    if (hex) return hex;
+    const [r, g, b] = value.components;
+    const a = value.alpha ?? value.opacity;
+    const toChannel = (v) => (v <= 1 ? Math.round(v * 255) : Math.round(v));
+    const out = { r: toChannel(r), g: toChannel(g), b: toChannel(b) };
+    if (a !== undefined && a !== null) out.a = a > 1 && a <= 255 ? a / 255 : a;
+    return out;
+  }
+  return value;
+};
+
 const getAliasInfo = (token) => {
   const aliasData =
     token?.$extensions?.['com.figma.aliasData'] ??
     token?.extensions?.['com.figma.aliasData'];
   return aliasData?.targetVariableName
-    ? {
-        name: aliasData.targetVariableName,
-        setName: aliasData.targetVariableSetName,
-      }
+    ? { name: aliasData.targetVariableName, setName: aliasData.targetVariableSetName }
     : null;
-};
-
-const getRawTokenValue = (token) =>
-  token.original?.value ??
-  token.original?.$value ??
-  token.value ??
-  token.$value;
-
-const getHexValue = (value) => {
-  if (typeof value === 'string' && hexPattern.test(value.trim())) {
-    return value.trim();
-  }
-  if (value && typeof value === 'object') {
-    const hex = value.hex || value.hexa;
-    if (typeof hex === 'string' && hexPattern.test(hex.trim())) {
-      return hex.trim();
-    }
-  }
-  return null;
-};
-
-// Detect any RGB-like shape to decide if we should validate strictly.
-const hasRgbShape = (value) => {
-  if (!value || typeof value !== 'object') {
-    return false;
-  }
-  if (Array.isArray(value)) {
-    return value.length >= 3;
-  }
-  if (value.colorSpace === 'srgb' && Array.isArray(value.components)) {
-    return value.components.length >= 3;
-  }
-  if (value.srgb || value.rgb) {
-    return true;
-  }
-  return 'r' in value && 'g' in value && 'b' in value;
-};
-
-// Strict validation: all channels must be numeric; alpha optional.
-const validateRgbValue = ({ r, g, b, a }) =>
-  [r, g, b].every(isNumber) && (a === undefined || a === null || isNumber(a));
-
-const getSrgbValue = (value) => {
-  if (!value || typeof value !== 'object') {
-    return null;
-  }
-  // DTCG-style sRGB with components/alpha.
-  if (value.colorSpace === 'srgb' && Array.isArray(value.components)) {
-    const [r, g, b] = value.components;
-    const a = value.alpha ?? value.opacity;
-    return { r: toNumber(r), g: toNumber(g), b: toNumber(b), a: numOrUndef(a) };
-  }
-  if (Array.isArray(value)) {
-    const [r, g, b, a] = value;
-    return { r: toNumber(r), g: toNumber(g), b: toNumber(b), a: numOrUndef(a) };
-  }
-  if (value.srgb) {
-    return getSrgbValue(value.srgb);
-  }
-  if (value.rgb) {
-    return getSrgbValue(value.rgb);
-  }
-  if ('r' in value && 'g' in value && 'b' in value) {
-    return {
-      r: toNumber(value.r),
-      g: toNumber(value.g),
-      b: toNumber(value.b),
-      a: numOrUndef(value.a),
-    };
-  }
-  return null;
-};
-
-// Emit lossless rgba; allow 0–255 alpha to match common manual edits.
-const formatRgba = ({ r, g, b, a }) => {
-  if (![r, g, b].every(isNumber)) {
-    return null;
-  }
-  let alpha = isNumber(a) ? a : 1;
-  if (alpha > 1 && alpha <= 255) {
-    alpha = alpha / 255;
-  }
-  const usePercent = [r, g, b].every((channel) => channel >= 0 && channel <= 1);
-  const channels = usePercent
-    ? [formatPercent(r), formatPercent(g), formatPercent(b)]
-    : [trimTrailingZeros(r), trimTrailingZeros(g), trimTrailingZeros(b)];
-  return `rgba(${channels.join(',')},${trimTrailingZeros(alpha)})`;
-};
-
-const getFormattingCloneWithoutPrefix = (formatting) => {
-  const clone = structuredClone(formatting) ?? {};
-  delete clone.prefix;
-  return clone;
 };
 
 const { files, filtersToRegister } = buildFilesAndFilters(tokenBase);
 
-const nameKebabFullTransform = {
-  type: 'name',
-  transform: (token) => {
-    const parts = Array.isArray(token.path) ? token.path : [];
-    const basis = parts.length > 0 ? parts.join('-') : token.name || '';
-    return toKebab(basis);
-  },
-};
-
-const colorHexOrRgbaTransform = {
+const colorWarnNormalizeTransform = {
   type: 'value',
-  matcher: isColorToken,
-  transform: (token) => {
-    const rawValue = getRawTokenValue(token);
-    const hexValue = getHexValue(rawValue);
-    if (hexValue) {
-      return hexValue;
-    }
-
-    const srgbValue = getSrgbValue(rawValue);
-    if (hasRgbShape(rawValue) && (!srgbValue || !validateRgbValue(srgbValue))) {
+  filter: isColorToken,
+  transform: (token, _, options = {}) => {
+    const info = getColorInfo(token);
+    const value = normalizeColorInput(info.raw);
+    if (info.raw && typeof info.raw === 'object' && !info.hex && !info.rgbaParts) {
       const tokenName =
         token.name || (Array.isArray(token.path) ? token.path.join('.') : 'unknown');
       const tokenFile = token.filePath || 'unknown file';
-      throw new Error(
-        `Invalid color token value for ${tokenName} in ${tokenFile}: ` +
-          'expected hex or numeric rgb/rgba channels.',
-      );
+      warn(options, `Color token ${tokenName} in ${tokenFile} will be normalized by color/css.`);
     }
-    const rgbaValue = srgbValue ? formatRgba(srgbValue) : null;
-    return rgbaValue ?? rawValue;
+    return value;
+  },
+};
+
+const colorRgbaV4Transform = {
+  type: 'value',
+  filter: isColorToken,
+  transform: (token) => {
+    const info = getColorInfo(token);
+    if (!info.rgbaParts) return token.$value ?? token.value;
+    const { r, g, b, a } = info.rgbaParts;
+    return `rgba(${r} ${g} ${b} / ${a})`;
   },
 };
 
@@ -310,60 +199,37 @@ const cssVariablesNoSpaceCommasFormat = async ({
     options;
   const header = await fileHeader({
     file,
-    formatting: getFormattingCloneWithoutPrefix(formatting),
+    formatting: formatting ? { ...formatting, prefix: undefined } : formatting,
     options,
   });
   const indentation = formatting?.indentation || '  ';
   const nestInSelector = (content, currentSelector, indent) =>
     `${indent}${currentSelector} {\n${content}\n${indent}}`;
-
   const aliasInfoByName = new Map();
   if (outputReferences && usesDtcg) {
     for (const token of dictionary.allTokens) {
       const aliasInfo = getAliasInfo(token);
-      if (!aliasInfo?.name) {
-        continue;
-      }
+      if (!aliasInfo?.name) continue;
       const aliasKey = toKebab(aliasInfo.name);
-      const setName = aliasInfo.setName ? toKebab(aliasInfo.setName) : null;
-      if (!aliasInfoByName.has(aliasKey)) {
-        aliasInfoByName.set(aliasKey, {
-          setNames: new Set(),
-          count: 0,
-          missingSetName: false,
-        });
-      }
-      const record = aliasInfoByName.get(aliasKey);
+      const record = aliasInfoByName.get(aliasKey) || {
+        count: 0,
+        setNames: new Set(),
+        missingSetName: false,
+      };
       record.count += 1;
-      if (setName) {
-        record.setNames.add(setName);
-      } else {
-        record.missingSetName = true;
-      }
+      if (aliasInfo.setName) record.setNames.add(toKebab(aliasInfo.setName));
+      else record.missingSetName = true;
+      aliasInfoByName.set(aliasKey, record);
     }
   }
   const warnedAliases = new Set();
-  const warnAliasCollision = (message) => {
-    if (options.log?.warnings === logWarningLevels.error) {
-      throw new Error(message);
-    }
-    if (
-      options.log?.warnings !== logWarningLevels.disabled &&
-      options.log?.verbosity !== logVerbosityLevels.silent
-    ) {
-      console.warn(message);
-    }
-  };
-
   const dictionaryForAliases =
     outputReferences && usesDtcg
       ? {
           ...dictionary,
           allTokens: dictionary.allTokens.map((token) => {
             const aliasInfo = getAliasInfo(token);
-            if (!aliasInfo) {
-              return token;
-            }
+            if (!aliasInfo) return token;
             const aliasKey = toKebab(aliasInfo.name);
             const record = aliasInfoByName.get(aliasKey);
             const hasCollision = record && record.count > 1;
@@ -374,7 +240,8 @@ const cssVariablesNoSpaceCommasFormat = async ({
               );
             }
             if (hasCollision && record.setNames.size > 1 && !warnedAliases.has(aliasKey)) {
-              warnAliasCollision(
+              warn(
+                options,
                 `Alias name collision for "${aliasInfo.name}". ` +
                   'Multiple collections share the same alias name.',
               );
@@ -385,29 +252,22 @@ const cssVariablesNoSpaceCommasFormat = async ({
               ...token,
               value: aliasVar,
               $value: aliasVar,
-              original: {
-                ...token.original,
-                value: aliasVar,
-                $value: aliasVar,
-              },
+              original: { ...token.original, value: aliasVar, $value: aliasVar },
             };
           }),
         }
       : dictionary;
 
-  const variables = formattedVariables({
-    format: propertyFormatNames.css,
-    dictionary: dictionaryForAliases,
-    outputReferences,
-    outputReferenceFallbacks,
-    formatting: {
-      ...formatting,
-      indentation: indentation.repeat(selector.length),
-    },
-    usesDtcg,
-  });
-  const variablesNoCommaSpaces = normalizeCommaSpacing(variables);
-
+  const variablesNoCommaSpaces = normalizeCommaSpacing(
+    formattedVariables({
+      format: propertyFormatNames.css,
+      dictionary: dictionaryForAliases,
+      outputReferences,
+      outputReferenceFallbacks,
+      formatting: { ...formatting, indentation: indentation.repeat(selector.length) },
+      usesDtcg,
+    }),
+  );
   return (
     header +
     selector
@@ -426,28 +286,16 @@ const cssVariablesNoSpaceCommasFormat = async ({
 };
 
 StyleDictionary.registerTransform({
-  name: 'name/kebab-full',
-  ...nameKebabFullTransform,
+  name: 'value/color-warn-normalize',
+  ...colorWarnNormalizeTransform,
 });
-StyleDictionary.registerTransform({
-  name: 'value/color-hex-or-rgba',
-  ...colorHexOrRgbaTransform,
-});
+StyleDictionary.registerTransform({ name: 'value/color-rgba-v4', ...colorRgbaV4Transform });
 StyleDictionary.registerTransformGroup({
   name: 'css/without-group',
-  transforms: [
-    'name/kebab-full',
-    'value/color-hex-or-rgba',
-    'time/seconds',
-    'size/px',
-  ],
+  transforms: ['name/kebab', 'value/color-warn-normalize', 'color/css', 'value/color-rgba-v4', 'time/seconds', 'size/px'],
 });
-StyleDictionary.registerFormat({
-  name: cssFormatName,
-  format: cssVariablesNoSpaceCommasFormat,
-});
+StyleDictionary.registerFormat({ name: cssFormatName, format: cssVariablesNoSpaceCommasFormat });
 
-// Per-file filters (POSIX-normalized absolute paths keep token file matching stable across OSes)
 for (const { filterName, fullPathAbsPosix } of filtersToRegister) {
   StyleDictionary.registerFilter({
     name: filterName,
@@ -457,22 +305,13 @@ for (const { filterName, fullPathAbsPosix } of filtersToRegister) {
 
 export default {
   usesDtcg: true,
-  // Keep all tokens loaded so references can be resolved / named consistently
   source: [`${toPosix(tokenBase)}/**/*.json`],
-  // Logging behavior equivalent to your build.mjs
   log: {
-    warnings: logWarningLevels.warn, // 'warn' | 'error' | 'disabled'
-    verbosity: logVerbosityLevels.verbose, // 'default' | 'silent' | 'verbose'
-    errors: {
-      brokenReferences: logBrokenReferenceLevels.throw, // 'throw' | 'console'
-    },
+    warnings: logWarningLevels.warn,
+    verbosity: logVerbosityLevels.verbose,
+    errors: { brokenReferences: logBrokenReferenceLevels.throw },
   },
   platforms: {
-    css: {
-      // Use our custom group with full-path kebab names
-      transformGroup: 'css/without-group',
-      buildPath: `${baseDir}/elements/`,
-      files,
-    },
+    css: { transformGroup: 'css/without-group', buildPath: `${baseDir}/elements/`, files },
   },
 };
