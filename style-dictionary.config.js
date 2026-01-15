@@ -152,9 +152,16 @@ const normalizeColorInput = (value) => {
     if (hex) return hex;
     const [r, g, b] = value.components;
     const a = value.alpha ?? value.opacity;
-    const toChannel = (v) => (v <= 1 ? Math.round(v * 255) : Math.round(v));
-    const out = { r: toChannel(r), g: toChannel(g), b: toChannel(b) };
-    if (a !== undefined && a !== null) out.a = a > 1 && a <= 255 ? a / 255 : a;
+    const toChannel = (channelValue) =>
+      channelValue <= 1 ? Math.round(channelValue * 255) : Math.round(channelValue);
+    const out = {
+      r: toChannel(r),
+      g: toChannel(g),
+      b: toChannel(b),
+    };
+    if (a !== undefined && a !== null) {
+      out.a = a > 1 && a <= 255 ? a / 255 : a;
+    }
     return out;
   }
   return value;
