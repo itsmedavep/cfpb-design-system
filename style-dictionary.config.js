@@ -20,20 +20,24 @@ const baseDir = 'packages/cfpb-design-system/src';
 const tokenBase = path.resolve(baseDir, 'tokens');
 const cssFormatName = 'css/variables-no-space-commas';
 
-// ---- helpers ----
 const toPosix = (fsPath) => fsPath.split(path.sep).join('/');
 const toAbsPosix = (fsPath) =>
   toPosix(path.isAbsolute(fsPath) ? fsPath : path.resolve(fsPath));
+const toKebab = (value) =>
+  String(value)
+    .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
+    .replace(/[\s_]+/g, '-')
+    .replace(/-+/g, '-')
+    .toLowerCase();
 const isNumber = (value) => Number.isFinite(value);
-const toNumber = (value) => {
-  if (typeof value === 'number') {
-    return value;
-  }
-  if (typeof value === 'string' && value.trim() !== '') {
-    return Number(value);
-  }
-  return Number.NaN;
-};
+const toNumber = (value) =>
+  typeof value === 'number'
+    ? value
+    : typeof value === 'string' && value.trim() !== ''
+      ? Number(value)
+      : Number.NaN;
+const numOrUndef = (value) =>
+  value === undefined || value === null ? undefined : toNumber(value);
 const hexPattern = /^#(?:[0-9a-f]{3,4}|[0-9a-f]{6}|[0-9a-f]{8})$/i;
 
 function getAllDirs(dirPath) {
@@ -49,13 +53,10 @@ function getAllDirs(dirPath) {
 
 const trimTrailingZeros = (value) => {
   const str = String(value);
-  if (!str.includes('.') || str.includes('e')) {
-    return str;
-  }
-  return str.replace(/\.?0+$/, '');
+  return !str.includes('.') || str.includes('e') ? str : str.replace(/\.?0+$/, '');
 };
-
 const formatPercent = (value) => `${trimTrailingZeros(value * 100)}%`;
+
 // Normalize commas only inside CSS value segments (keeps comments untouched).
 const normalizeCommaSpacing = (value) => {
   const lines = value.split('\n');
@@ -84,10 +85,9 @@ const normalizeCommaSpacing = (value) => {
       }
       const valueSegment = line.slice(colonIndex + 1);
       valueHasComma = valueSegment.includes(',');
-      const normalizedValue = valueHasComma
-        ? valueSegment.replace(/\s*,\s*/g, ',')
-        : valueSegment;
-      out.push(`${prefix}${normalizedValue}`);
+      out.push(
+        `${prefix}${valueHasComma ? valueSegment.replace(/\s*,\s*/g, ',') : valueSegment}`,
+      );
       inValue = true;
       continue;
     }
@@ -112,108 +112,59 @@ const normalizeCommaSpacing = (value) => {
 
   return out.join('\n');
 };
-const toKebab = (value) =>
-  String(value)
-    .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
-    .replace(/[\s_]+/g, '-')
-    .replace(/-+/g, '-')
-    .toLowerCase();
 
-const getTokenDirs = () => [tokenBase, ...getAllDirs(tokenBase)];
-const getJsonFiles = (dirPath) =>
-  fs.readdirSync(dirPath).filter((file) => file.endsWith('.json'));
-
-const getFileDestination = (relDir, jsonFile) => {
-  const cssFileName = `${path.basename(jsonFile, '.json')}.css`;
-  return relDir === '' ? cssFileName : `${toPosix(relDir)}/${cssFileName}`;
-};
-
-const getFilterName = (relDir, jsonFile) =>
-  `filter__${(relDir || '_').replace(
-    /[^a-zA-Z0-9_/-]/g,
-    '_',
-  )}__${jsonFile.replace(/[^a-zA-Z0-9_.-]/g, '_')}`.replace(
-    /[^a-zA-Z0-9_]/g,
-    '_',
-  );
-
-const createFileEntry = (destination, filterName) => ({
-  destination,
-  format: cssFormatName,
-  filter: filterName,
-  options: {
-    // keep references as var(--...) in the output
-    outputReferences: true,
-    usesDtcg: true,
-    selector: ':root', // <-output to shadow dom
-  },
-});
-
-const buildFilesAndFilters = (tokenDirs) => {
+const buildFilesAndFilters = (basePath) => {
+  const tokenDirs = [basePath, ...getAllDirs(basePath)];
   const files = [];
-  const filtersToRegister = []; // store to register after we know full paths
+  const filtersToRegister = [];
 
   for (const dirPath of tokenDirs) {
-    const jsonFiles = getJsonFiles(dirPath);
+    const jsonFiles = fs.readdirSync(dirPath).filter((file) => file.endsWith('.json'));
     for (const jsonFile of jsonFiles) {
       const fullPathAbsPosix = toAbsPosix(path.join(dirPath, jsonFile));
-      const relDir = path.relative(tokenBase, dirPath); // '' if at root
-      const destination = getFileDestination(relDir, jsonFile);
-      const filterName = getFilterName(relDir, jsonFile);
+      const relDir = path.relative(basePath, dirPath);
+      const cssFileName = `${path.basename(jsonFile, '.json')}.css`;
+      const destination =
+        relDir === '' ? cssFileName : `${toPosix(relDir)}/${cssFileName}`;
+      const filterName = `filter__${(relDir || '_').replace(
+        /[^a-zA-Z0-9_/-]/g,
+        '_',
+      )}__${jsonFile.replace(/[^a-zA-Z0-9_.-]/g, '_')}`.replace(
+        /[^a-zA-Z0-9_]/g,
+        '_',
+      );
 
       filtersToRegister.push({ filterName, fullPathAbsPosix });
-      files.push(createFileEntry(destination, filterName));
+      files.push({
+        destination,
+        format: cssFormatName,
+        filter: filterName,
+        options: {
+          // keep references as var(--...) in the output
+          outputReferences: true,
+          usesDtcg: true,
+          selector: ':root', // <-output to shadow dom
+        },
+      });
     }
   }
 
   return { files, filtersToRegister };
 };
 
-const isColorToken = (token) => {
-  const tokenType = token?.$type ?? token?.type;
-  return tokenType === 'color';
-};
-
-// Detect any RGB-like shape to decide if we should validate strictly.
-const hasRgbShape = (value) => {
-  if (!value || typeof value !== 'object') {
-    return false;
-  }
-  if (Array.isArray(value)) {
-    return value.length >= 3;
-  }
-  if (value.colorSpace === 'srgb' && Array.isArray(value.components)) {
-    return value.components.length >= 3;
-  }
-  if (value.srgb || value.rgb) {
-    return true;
-  }
-  return 'r' in value && 'g' in value && 'b' in value;
-};
-
-// Strict validation: all channels must be numeric; alpha optional.
-const validateRgbValue = ({ r, g, b, a }) => {
-  if (![r, g, b].every(isNumber)) {
-    return false;
-  }
-  if (a === undefined || a === null) {
-    return true;
-  }
-  return isNumber(a);
-};
+const isColorToken = (token) => (token?.$type ?? token?.type) === 'color';
 
 // Prefer Figma alias metadata so CSS keeps var(--alias) instead of resolved values.
 const getAliasInfo = (token) => {
   const aliasData =
     token?.$extensions?.['com.figma.aliasData'] ??
     token?.extensions?.['com.figma.aliasData'];
-  if (!aliasData?.targetVariableName) {
-    return null;
-  }
-  return {
-    name: aliasData.targetVariableName,
-    setName: aliasData.targetVariableSetName,
-  };
+  return aliasData?.targetVariableName
+    ? {
+        name: aliasData.targetVariableName,
+        setName: aliasData.targetVariableSetName,
+      }
+    : null;
 };
 
 const getRawTokenValue = (token) =>
@@ -235,6 +186,27 @@ const getHexValue = (value) => {
   return null;
 };
 
+// Detect any RGB-like shape to decide if we should validate strictly.
+const hasRgbShape = (value) => {
+  if (!value || typeof value !== 'object') {
+    return false;
+  }
+  if (Array.isArray(value)) {
+    return value.length >= 3;
+  }
+  if (value.colorSpace === 'srgb' && Array.isArray(value.components)) {
+    return value.components.length >= 3;
+  }
+  if (value.srgb || value.rgb) {
+    return true;
+  }
+  return 'r' in value && 'g' in value && 'b' in value;
+};
+
+// Strict validation: all channels must be numeric; alpha optional.
+const validateRgbValue = ({ r, g, b, a }) =>
+  [r, g, b].every(isNumber) && (a === undefined || a === null || isNumber(a));
+
 const getSrgbValue = (value) => {
   if (!value || typeof value !== 'object') {
     return null;
@@ -243,21 +215,11 @@ const getSrgbValue = (value) => {
   if (value.colorSpace === 'srgb' && Array.isArray(value.components)) {
     const [r, g, b] = value.components;
     const a = value.alpha ?? value.opacity;
-    return {
-      r: toNumber(r),
-      g: toNumber(g),
-      b: toNumber(b),
-      a: a === undefined || a === null ? undefined : toNumber(a),
-    };
+    return { r: toNumber(r), g: toNumber(g), b: toNumber(b), a: numOrUndef(a) };
   }
   if (Array.isArray(value)) {
     const [r, g, b, a] = value;
-    return {
-      r: toNumber(r),
-      g: toNumber(g),
-      b: toNumber(b),
-      a: a === undefined || a === null ? undefined : toNumber(a),
-    };
+    return { r: toNumber(r), g: toNumber(g), b: toNumber(b), a: numOrUndef(a) };
   }
   if (value.srgb) {
     return getSrgbValue(value.srgb);
@@ -270,10 +232,7 @@ const getSrgbValue = (value) => {
       r: toNumber(value.r),
       g: toNumber(value.g),
       b: toNumber(value.b),
-      a:
-        value.a === undefined || value.a === null
-          ? undefined
-          : toNumber(value.a),
+      a: numOrUndef(value.a),
     };
   }
   return null;
@@ -292,7 +251,6 @@ const formatRgba = ({ r, g, b, a }) => {
   const channels = usePercent
     ? [formatPercent(r), formatPercent(g), formatPercent(b)]
     : [trimTrailingZeros(r), trimTrailingZeros(g), trimTrailingZeros(b)];
-
   return `rgba(${channels.join(',')},${trimTrailingZeros(alpha)})`;
 };
 
@@ -302,20 +260,14 @@ const getFormattingCloneWithoutPrefix = (formatting) => {
   return clone;
 };
 
-// ---- discover all token json files and prepare per-file entries ----
-const { files, filtersToRegister } = buildFilesAndFilters(getTokenDirs());
+const { files, filtersToRegister } = buildFilesAndFilters(tokenBase);
 
 const nameKebabFullTransform = {
   type: 'name',
   transform: (token) => {
     const parts = Array.isArray(token.path) ? token.path : [];
     const basis = parts.length > 0 ? parts.join('-') : token.name || '';
-
-    return basis
-      .replace(/([a-z0-9])([A-Z])/g, '$1-$2') // fooBar -> foo-bar
-      .replace(/[\s_]+/g, '-') // spaces/underscores -> hyphen
-      .replace(/-+/g, '-') // collapse repeats
-      .toLowerCase();
+    return toKebab(basis);
   },
 };
 
@@ -330,17 +282,14 @@ const colorHexOrRgbaTransform = {
     }
 
     const srgbValue = getSrgbValue(rawValue);
-    if (hasRgbShape(rawValue)) {
-      if (!srgbValue || !validateRgbValue(srgbValue)) {
-        const tokenName =
-          token.name ||
-          (Array.isArray(token.path) ? token.path.join('.') : 'unknown');
-        const tokenFile = token.filePath || 'unknown file';
-        throw new Error(
-          `Invalid color token value for ${tokenName} in ${tokenFile}: ` +
-            'expected hex or numeric rgb/rgba channels.',
-        );
-      }
+    if (hasRgbShape(rawValue) && (!srgbValue || !validateRgbValue(srgbValue))) {
+      const tokenName =
+        token.name || (Array.isArray(token.path) ? token.path.join('.') : 'unknown');
+      const tokenFile = token.filePath || 'unknown file';
+      throw new Error(
+        `Invalid color token value for ${tokenName} in ${tokenFile}: ` +
+          'expected hex or numeric rgb/rgba channels.',
+      );
     }
     const rgbaValue = srgbValue ? formatRgba(srgbValue) : null;
     return rgbaValue ?? rawValue;
@@ -365,7 +314,6 @@ const cssVariablesNoSpaceCommasFormat = async ({
     options,
   });
   const indentation = formatting?.indentation || '  ';
-
   const nestInSelector = (content, currentSelector, indent) =>
     `${indent}${currentSelector} {\n${content}\n${indent}}`;
 
@@ -395,7 +343,7 @@ const cssVariablesNoSpaceCommasFormat = async ({
     }
   }
   const warnedAliases = new Set();
-const warnAliasCollision = (message) => {
+  const warnAliasCollision = (message) => {
     if (options.log?.warnings === logWarningLevels.error) {
       throw new Error(message);
     }
@@ -481,12 +429,10 @@ StyleDictionary.registerTransform({
   name: 'name/kebab-full',
   ...nameKebabFullTransform,
 });
-
 StyleDictionary.registerTransform({
   name: 'value/color-hex-or-rgba',
   ...colorHexOrRgbaTransform,
 });
-
 StyleDictionary.registerTransformGroup({
   name: 'css/without-group',
   transforms: [
@@ -496,13 +442,12 @@ StyleDictionary.registerTransformGroup({
     'size/px',
   ],
 });
-
 StyleDictionary.registerFormat({
   name: cssFormatName,
   format: cssVariablesNoSpaceCommasFormat,
 });
 
-// Per-file filters (POSIX-normalized absolute paths keep per-file token matching stable across OSes)
+// Per-file filters (POSIX-normalized absolute paths keep token file matching stable across OSes)
 for (const { filterName, fullPathAbsPosix } of filtersToRegister) {
   StyleDictionary.registerFilter({
     name: filterName,
@@ -510,12 +455,10 @@ for (const { filterName, fullPathAbsPosix } of filtersToRegister) {
   });
 }
 
-// ---- export the config object ----
 export default {
   usesDtcg: true,
   // Keep all tokens loaded so references can be resolved / named consistently
   source: [`${toPosix(tokenBase)}/**/*.json`],
-
   // Logging behavior equivalent to your build.mjs
   log: {
     warnings: logWarningLevels.warn, // 'warn' | 'error' | 'disabled'
@@ -524,7 +467,6 @@ export default {
       brokenReferences: logBrokenReferenceLevels.throw, // 'throw' | 'console'
     },
   },
-
   platforms: {
     css: {
       // Use our custom group with full-path kebab names
