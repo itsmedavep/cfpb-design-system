@@ -1,4 +1,10 @@
 // style-dictionary.config.js — ESM
+// Summary:
+// - Builds one CSS file per token JSON under packages/cfpb-design-system/src/tokens.
+// - Uses DTCG $type for transforms; names are full-path kebab-case.
+// - Prefers hex colors, emits CSS v4 rgba() only when RGBA is present and hex is absent.
+// - Preserves Figma alias metadata as var(--...) with collision checks.
+// - Outputs tight comma spacing in CSS values without touching comments.
 import StyleDictionary from 'style-dictionary';
 import fs from 'fs';
 import path from 'path';
@@ -10,6 +16,7 @@ import {
 } from 'style-dictionary/enums';
 import { fileHeader, formattedVariables } from 'style-dictionary/utils';
 
+// Paths and shared constants for token IO and formatting.
 const baseDir = 'packages/cfpb-design-system/src';
 const tokenBase = path.resolve(baseDir, 'tokens');
 const cssFormatName = 'css/variables-no-space-commas';
@@ -38,6 +45,7 @@ function getAllDirs(dirPath) {
   return out;
 }
 
+// Emit warnings in a way that matches Style Dictionary log settings.
 const warn = (options, message) => {
   if (options.log?.warnings === logWarningLevels.error) throw new Error(message);
   if (
@@ -49,11 +57,13 @@ const warn = (options, message) => {
   }
 };
 
+// Normalize comma spacing inside single-line CSS values, leaving comments untouched.
 const normalizeCommaSpacing = (value) =>
   value.replace(/(:[^;\n]*)(;)/g, (match, valuePart, semi) =>
     valuePart.includes(',') ? `${valuePart.replace(/\s*,\s*/g, ',')}${semi}` : match,
   );
 
+// Build one CSS output per token JSON and register per-file filters.
 const buildFilesAndFilters = (basePath) => {
   const tokenDirs = [basePath, ...getAllDirs(basePath)];
   const files = [];
@@ -83,6 +93,7 @@ const buildFilesAndFilters = (basePath) => {
   return { files, filtersToRegister };
 };
 
+// Color helpers for DTCG $value shapes and css rgba passthrough.
 const isColorToken = (token) => (token?.$type ?? token?.type) === 'color';
 const getRawTokenValue = (token) =>
   token?.original?.$value ?? token?.$value ?? token?.original?.value ?? token?.value;
@@ -124,6 +135,7 @@ const parseRgbaParts = (value) => {
   }
   return null;
 };
+// Describe a token's color payload to decide hex vs rgba vs normalization.
 const getColorInfo = (token) => {
   const raw = getRawTokenValue(token);
   const hex = getHexValue(raw);
@@ -132,6 +144,7 @@ const getColorInfo = (token) => {
   return { raw, hex, rgbaParts, isRef };
 };
 
+// Convert DTCG color objects to a shape color/css can consume.
 const normalizeColorInput = (value) => {
   if (!value || typeof value !== 'object') return value;
   if (value.colorSpace === 'srgb' && Array.isArray(value.components)) {
@@ -147,6 +160,7 @@ const normalizeColorInput = (value) => {
   return value;
 };
 
+// Prefer Figma alias metadata so CSS keeps var(--alias) instead of resolved values.
 const getAliasInfo = (token) => {
   const aliasData =
     token?.$extensions?.['com.figma.aliasData'] ??
@@ -158,6 +172,7 @@ const getAliasInfo = (token) => {
 
 const { files, filtersToRegister } = buildFilesAndFilters(tokenBase);
 
+// Warn when we must normalize non-hex color objects (except RGBA passthrough).
 const colorWarnNormalizeTransform = {
   type: 'value',
   filter: isColorToken,
@@ -174,6 +189,7 @@ const colorWarnNormalizeTransform = {
   },
 };
 
+// Emit CSS Color v4 rgba() only when RGBA is present and hex is absent.
 const colorRgbaV4Transform = {
   type: 'value',
   filter: isColorToken,
@@ -185,6 +201,7 @@ const colorRgbaV4Transform = {
   },
 };
 
+// Custom CSS formatter that preserves alias refs and tightens commas.
 const cssVariablesNoSpaceCommasFormat = async ({
   dictionary,
   options = {},
