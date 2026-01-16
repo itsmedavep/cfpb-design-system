@@ -1,0 +1,1185 @@
+.github/ISSUE_TEMPLATE/content_issues.md
+  33: ***Once you've submitted your issue, please add it to the content backlog project board: https://github.com/cfpb/design-system/projects/1***
+
+.github/ISSUE_TEMPLATE/create_new_page.md
+  9: [Follow these instructions in order to add a new page to the Design System](https://cfpb.github.io/design-system/updating-this-website/#creating-new-pages).
+
+.github/workflows/cypress.yml
+  27:           wait-on: 'http://localhost:4000/design-system/' # Waits for above
+
+.github/workflows/pr-preview.yml
+  28:         run: bundle exec jekyll build --baseurl "/design-system/pr-preview/${{ github.event.number }}"
+  39:           pages-base-url: https://cfpb.github.io/design-system
+
+docs/_layouts/variation.html
+  23:         href="/design-system/updating-this-website?page={{ page.title | url_encode }}"
+
+docs/admin/config.yml
+  16: site_url: https://cfpb.github.io/design-system
+  17: logo_url: https://cfpb.github.io/design-system/assets/img/cfpb-cms-logo.png
+  20: public_folder: /design-system/images/uploads
+  21: pull_request_url: https://github.com/cfpb/design-system/pulls
+
+docs/assets/css/main.scss
+  29: @include licensed-font('/design-system/fonts');
+
+docs/assets/js/admin/decap-cms.js
+  17: CMS.registerPreviewStyle('/design-system/dist/main.css');
+
+docs/assets/js/admin/widgets/ReactLiquid.js
+  11: engine.registerFilter('relative_url', (val) => `/design-system/${val}`);
+
+docs/assets/js/admin/widgets/StringWithInstructions.js
+  44:           href="/design-system/updating-this-website/"
+
+docs/pages/alerts.md
+  178:           icons](https://cfpb.github.io/design-system/foundation/iconography) to
+
+docs/pages/animation.md
+  16:           Video](/design-system/images/uploads/video_11.jpg "Example of
+  20:           ![Still from Student Loan Video](/design-system/images/uploads/video_12.jpg "Example of animation in Video")
+
+docs/pages/banner-notification.md
+  98: related_items: "[N﻿otifications](https://cfpb.github.io/design-system/component\
+
+docs/pages/banner-us-gov.md
+  28: related_items: '[Taglines](https://cfpb.github.io/design-system/components/taglines)'
+
+docs/pages/browse-pages.md
+  26:           | ![Browse page example](/design-system/images/uploads/browse_example.jpg) | Example of a browse page: [Buying a House](https://www.consumerfinance.gov/owning-a-home/prepare/check-your-credit/) |
+  59:   * [Text introduction](https://cfpb.github.io/design-system/patterns/text-introductions) is required.
+  95:   | ![Breakpoints 901+](/design-system/images/uploads/browse_behavior_desktop.jpg) | ![Breakpoints 900 and less](/design-system/images/uploads/browse_behavior_mobile.jpg) |
+  100:   * [Text introduction](/design-system/patterns/text-introductions)
+  106:   * [Image and text component](/design-system/patterns/info-unit-groups#image-and-text-1)
+  108:   * [Text component](/design-system/patterns/info-unit-groups#text-only-1)
+  110:   * [Featured content module](/design-system/patterns/featured-content-module)
+  112:   * [Wells](/design-system/patterns/wells)
+  114:   * [Expandables](/design-system/components/expandables)
+  116:   * [Tables](/design-system/components/tables)
+  118:   * [Email signup form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms)
+
+docs/pages/buttons.md
+  9:   [links](https://cfpb.github.io/design-system/components/links) should lead
+  48:           link](https://cfpb.github.io/design-system/components/links#destructive-link)
+  134:           links](https://cfpb.github.io/design-system/components/links#printed-links)
+  138:   In contrast, [links](https://cfpb.github.io/design-system/components/links)
+
+docs/pages/carousel.md
+  26:           ![CFPB carousel](/design-system/images/uploads/carousel.gif)
+  79:   * [Heroes](https://cfpb.github.io/design-system/patterns/heroes)
+  81:   * [Featured content module](https://cfpb.github.io/design-system/patterns/featured-content-module)
+
+docs/pages/checkboxes.md
+  134:   buttons](/design-system/components/radio-buttons) when the user can select
+
+docs/pages/color.md
+  1634:   Use the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) and accessibility guidance on our [Fonts page](https://cfpb.github.io/design-system/foundation/fonts#accessibility) to check and confirm the accessibility of colors at different type sizes. When viewing the contrast checker, you’ll see that normal size text needs a contrast ratio of at least 4.5:1 and large text needs a contrast ratio of at least 3.1 to pass accessibility.  
+  1649:   ![](/design-system/images/uploads/screen-shot-2019-09-04-at-4.29.57-pm.png)
+  1655:   ![](/design-system/images/uploads/screen-shot-2019-09-04-at-4.30.36-pm.png)
+
+docs/pages/conducting-research-3.md
+  17:   ![Illustration of a person sharing their story with a researcher](/design-system/images/uploads/equity_design_conducting_research.png)
+  29:   Consider the unintended consequences of your recruitment approach. For example, recruiting via personal networks can lead to hearing only from people who share similar characteristics, experiences, or beliefs as yourself. Ask yourself whether these people are authentic representatives of the people who will ultimately use your product. Similarly, recruiting via social media can omit people who don’t have internet access at all. These issues are known as [sampling bias](https://cfpb.github.io/design-system/guidelines/conducting-research#be-aware-of-how-bias-can-show-up-during-research).      
+  63:   [The frames of reference activity](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#frames-of-reference) can help you and your team think more broadly about different identities and communities to include in your research.  
+  136:   Collect, record, and share only the bare minimum of information needed to accomplish the goals of your research, and carefully safeguard that information. See the [section below on data handling](https://cfpb.github.io/design-system/guidelines/conducting-research#handle-data-and-stories-with-care) for more information.   
+  145:   Anticipate sensitive questions or topics as best you can, and [look for signs of trauma](https://cfpb.github.io/design-system/guidelines/conducting-research#recognize-and-respond-to-trauma-in-participants). Be prepared to ask your participant if they’d be willing to talk about a topic, and if they’re not, move on, or end the research activity as needed. Note that even if the participant chooses to end research sessions early, they should still be paid for their time.    
+  151:   As part of beginning the project for which you’re conducting research, your team should have spent time [uncovering biases](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#identify-lived-experiences-and-biases) using exercises such as [frames of reference](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#frames-of-reference). If you have not taken those steps yet, consider doing them before conducting research activities. 
+  227:   Realize the impact that trauma has had on individuals and their interactions with people and institutions. Identify historical oppression and policies that have negatively impacted specific groups. If you haven’t already taken the time to learn how [power structures can affect the people you serve](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#learn-how-power-structures-can-affect-the-people-you-serve), now would be a good time to do so.   
+  302:   * [Overview](https://cfpb.github.io/design-system/guidelines/overview)
+  304:   * [Setting the foundation](https://cfpb.github.io/design-system/guidelines/setting-the-foundation)
+  306:   * [Design and development](https://cfpb.github.io/design-system/guidelines/design-and-development)
+
+docs/pages/data-visualization-1.md
+  10:   file](https://github.com/cfpb/design-system/blob/0f22b87804640dfc7d1f1ae1f6a82ad507e9887c/docs/assets/CFPB%20Excel%20Data%20Samples%20v2.0.xlsx).
+  18:           example](/design-system/images/uploads/vertical_bar_chart.png)'
+  23:           example](/design-system/images/uploads/horizontal_bar_chart.png)'
+  28:           example](/design-system/images/uploads/grouped_bar_chart.png)'
+  33:           example](/design-system/images/uploads/stacked_bar_chart.png)'
+  38:           100%](/design-system/images/uploads/bar_chart_stacked_to_100.png)'
+  48:           example](/design-system/images/uploads/simple_line_chart.png)'
+  62:           ![Date/time chart example](/design-system/images/uploads/date_time_chart.png)
+  75:         variation_description: '![Pie chart example](/design-system/images/uploads/pie_chart.png)'
+  87:         variation_description: '![Area chart example](/design-system/images/uploads/area_chart.png)'
+  100:           example](/design-system/images/uploads/tile_grid_map.png)'
+  114:   * **Color:** Refer to our [Data visualization color palettes](https://cfpb.github.io/design-system/foundation/color#data-visualization-palettes) and [Color accessibility guidelines](https://cfpb.github.io/design-system/foundation/color#accessibility) when choosing colors for your visualization. 
+  122:   ![When creating a data visualization, you must include a title, axis labels, downloadable source data, and alt text.](/design-system/images/uploads/data_visualization_required_information.png)
+  141:   ![When creating a data visualization, you may optionally include a figure number, intro text, data source, date published, notes, and supporting text.](/design-system/images/uploads/data_visualization_optional_info.png)
+  177:   * [Accessible colors and patterns](https://cfpb.github.io/design-system/guidelines/data-visualization-guidelines#use-accessible-colors-and-patterns)
+  179:   * [Required information](https://cfpb.github.io/design-system/guidelines/data-visualization-guidelines#required-information) including a chart title, alt text, downloadable source data, download text, and axis labels
+  183:   palettes](https://cfpb.github.io/design-system/foundation/color#data-visualization-palettes-1)
+  185:   * [Color accessibility guidelines](https://cfpb.github.io/design-system/foundation/color#accessibility)
+
+docs/pages/date-picker.md
+  29: related_items: '* [Text inputs ](https://cfpb.github.io/design-system/components/text-inputs)'
+
+docs/pages/design-and-development.md
+  16:   ![Illustration of person sitting and working at a desk](/design-system/images/uploads/equity_design_and_development.png)
+  31:   * [Read our accessibility guidelines](https://cfpb.github.io/design-system/guidelines/accessibility-principles) before you begin the design process.
+  33:   * [Audit your product for Section 508 compliance](https://cfpb.github.io/design-system/guidelines/accessibility-audit-tools) before it is launched. 
+  78:   If you haven’t already, take steps to uncover the assumptions and biases you hold, and to raise awareness of the needs of communities and groups that are different from yourself and your team by running through the [frames of reference exercise](https://cfpb.github.io/design-system/guidelines/setting-the-foundation#frames-of-reference).    
+  93:   Consider the [hazards and harms](https://cfpb.github.io/design-system/guidelines/design-and-development#hazard-mapping) that could occur as a result of your work. In particular, look out for any representations that might unintentionally perpetuate racial profiling or stereotypes, enshrined status quo and power structures, and systemic bias.   
+  276:   * [Overview](https://cfpb.github.io/design-system/guidelines/overview)
+  278:   * [Setting the foundation](https://cfpb.github.io/design-system/guidelines/setting-the-foundation)
+  280:   * [Conducting research](https://cfpb.github.io/design-system/guidelines/conducting-research)
+
+docs/pages/design-tokens.md
+  24:   Our legacy component versions—currently found in the "Components" sub section of [Components](https://cfpb.github.io/design-system/components/)—leverage SCSS mixins, variables, etc., in the form of `$varible-name: value` or `--variable-name: value`. We've used this approach for several years, and it has served us well as it delivers a familiar developer experience. However, this approach requires knowledge of SCSS, is tied to the platform, and is extensive. 
+  30:   We've started creating web component versions of our legacy components. These can be found on the [Elements](https://cfpb.github.io/design-system/components/elements) page within the "Web components (beta)" sub section of [Components](https://cfpb.github.io/design-system/components/). These web components utilize design tokens for color values in the form of platform-agnostic JSON. Style Dictionary translates this JSON into .css custom properties. These tokens become easily parsed and consumed, meaning we could deliver them into Android or iOS formats if desired. 
+
+docs/pages/document-detail-pages.md
+  18:       | ![](/design-system/images/uploads/docdetail_top_example.jpg) | Example: [2019 Consumer Response annual report](https://www.consumerfinance.gov/data-research/research-reports/2019-consumer-response-annual-report/)
+  31:   * When providing the full text of an article or detailed content, but not specifically focused on a document for download, use the more general [Learn page template](https://cfpb.github.io/design-system/pages/learn-pages).
+  44:   * Using the [item introduction](https://cfpb.github.io/design-system/patterns/item-introductions) is required.
+  76:   ![Possible metadata inputs shown](/design-system/images/uploads/post_style.jpg)
+  107:   | ![Breakpoints 901+](/design-system/images/uploads/docdetail_behavior_desktop.jpg) | ![Breakpoints 900 and less](/design-system/images/uploads/docdetail_behavior_mobile.jpg) |
+  123:   | ![Post preview within a filterable list at breakpoints 601+](/design-system/images/uploads/post_preview_desktop_1.jpg) | ![Post preview within a filterable list at breakpoints 600 and less](/design-system/images/uploads/post_preview_mobile_1.jpg) |
+  128:   * [Learn page](https://cfpb.github.io/design-system/pages/learn-pages)
+  130:   * [Filterable list page](https://cfpb.github.io/design-system/pages/filterable-list-pages)
+  136:   * [Item introduction](https://cfpb.github.io/design-system/patterns/item-introductions)
+  142:   * [Tables](/design-system/components/tables)
+  144:   * [Expandables](/design-system/components/expandables)
+  148:   * [Email sign-up form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms)
+
+docs/pages/e-mail-signup-forms.md
+  87:   The most common placement for the email signup form is in the sidebar. This placement is possible on [Learn](https://cfpb.github.io/design-system/pages/learn-pages) and [Sublanding](https://cfpb.github.io/design-system/pages/sublanding-pages) pages. Because [Browse](https://cfpb.github.io/design-system/pages/browse-pages) pages do not have a sidebar, the email signup form can be placed in the prefooter at the bottom of the page.
+  93:   An inset email signup form appears in the main content area of a page and is possible on [Learn](https://cfpb.github.io/design-system/pages/learn-pages) and [Sublanding](https://cfpb.github.io/design-system/pages/sublanding-pages) pages. Consider using an inset email signup form when the email call to action (CTA) is more important to the purpose of the page than the sidebar or prefooter placement reflects. When using an inset email signup form, ensure its placement on the page does not interfere with the primary page goal. Users respond better to follow-on requests that happen after their primary goal has been met.
+
+docs/pages/expandables.md
+  160:           expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
+  255:           expandable](https://cfpb.github.io/design-system/components/expandables#standard-expandables).
+  382:           Patterns](https://cfpb.github.io/design-system/patterns/transition-patterns)
+
+docs/pages/featured-content-modules.md
+  72:     * See the [behavior guidelines](https://cfpb.github.io/design-system/patterns/featured-content-module#behavior) below regarding how the image will crop as the browser width changes.   
+  79:   * Can appear on any [page type](https://cfpb.github.io/design-system/pages/) 
+
+docs/pages/fieldsets.md
+  11:   * [Legend](https://cfpb.github.io/design-system/components/labels-and-legends)
+  13:   * [Block helper text](https://cfpb.github.io/design-system/components/helper-text) (if necessary)
+  15:   * [Inline labels](https://cfpb.github.io/design-system/components/labels-and-legends)
+  17:   * Set of controls such as [checkboxes](https://cfpb.github.io/design-system/components/checkboxes) or [radio buttons](https://cfpb.github.io/design-system/components/radio-buttons)
+
+docs/pages/filterable-list-control-panels.md
+  183:   * Lives within in an [expandable](https://cfpb.github.io/design-system/components/expandables) allowing controls to be hidden when not in use or needed. The filterable list is expanded on page load. 
+  189:   [Notifications](https://cfpb.github.io/design-system/components/notifications)
+  191:   * [Filterable list pages](https://cfpb.github.io/design-system/pages/filterable-list-pages)
+
+docs/pages/filterable-list-pages.md
+  23:       | ![Sublanding page filterable list mockup](/design-system/images/uploads/filterable-list-sublanding-wireframe.png)                                                                                                 | ![Browse page filterable list mockup](/design-system/images/uploads/filterable-list-browse-wireframe.png)                  |
+  34:     ![](/design-system/images/uploads/filterable-list-sublanding-wireframe.png)
+  76:   page](https://cfpb.github.io/design-system/pages/sublanding-pages) and [browse
+  77:   page](https://cfpb.github.io/design-system/pages/browse-pages).
+  82:   * [Document detail pages](https://cfpb.github.io/design-system/pages/document-detail-pages)
+  84:   * [Sublanding page](https://cfpb.github.io/design-system/pages/sublanding-pages) 
+  86:   * [Browse page](https://cfpb.github.io/design-system/pages/browse-pages)
+  92:   * [Heroes](https://cfpb.github.io/design-system/patterns/heroes)
+  94:   * [Text introduction](https://cfpb.github.io/design-system/patterns/text-introductions)
+  100:   * [Filterable list control panels](https://cfpb.github.io/design-system/patterns/filterable-list-control-panels)
+  102:   * [Featured content module](https://cfpb.github.io/design-system/patterns/featured-content-module)
+  104:   * Post preview of [document detail pages](https://cfpb.github.io/design-system/pages/document-detail-pages)
+  106:   * [Pagination](https://cfpb.github.io/design-system/patterns/pagination)
+  108:   * [Email sign-up form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms)
+
+docs/pages/forms.md
+  44:           ![Diagram showing all sections on a page](/design-system/images/uploads/effectiveforms1-2x.png)
+  77:           ![Diagram showing each section on its own page](/design-system/images/uploads/effectiveforms2-2x.png)
+  129:           ![Diagram showing an accordion form](/design-system/images/uploads/effectiveforms3-2x.png)
+  163:           ![Diagram showing a hybrid form](/design-system/images/uploads/effectiveforms4-2x.png)
+
+docs/pages/getting-started.md
+  9:   Setting up the framework for your project and creating new components should be quick and easy. [Learn how to integrate CFPB Design System into your project](/design-system/development/integrating-the-design-system-into-your-project).
+  21:   We are constantly updating our documentation. If you can help, review our directions to [get started editing and adding pages](/design-system/updating-this-website/index). We also provide complete instructions on how to [contribute to code base](https://github.com/cfpb/design-system/blob/main/CONTRIBUTING.md).
+
+docs/pages/heading-hierarchy.md
+  42:           \*See [Normalization](https://cfpb.github.io/design-system/foundation/fonts#normalization) to learn why we use font-size-adjust.
+  113:           icons](https://cfpb.github.io/design-system/foundation/iconography).
+  191:   Refer to the [Guidelines section of the Fonts page](https://cfpb.github.io/design-system/foundation/fonts#guidelines) for information about heading spacing.
+  204:   * [Paragraphs](https://cfpb.github.io/design-system/foundation/paragraphs)
+  205:   * [Fonts](https://cfpb.github.io/design-system/foundation/fonts)
+
+docs/pages/helper-text.md
+  72:   legends](https://cfpb.github.io/design-system/components/labels-and-legends)
+  74:   * [Designing forms](https://cfpb.github.io/design-system/patterns/designing-forms)
+
+docs/pages/heroes.md
+  41:                           url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png');
+  43:                           url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png') 1x,
+  44:                           url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png') 2x
+  47:                           url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png') 1x,
+  48:                           url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png') 2x
+  75:                           url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png');
+  77:                           url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png') 1x,
+  78:                           url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png') 2x
+  81:                           url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png') 1x,
+  82:                           url('https://cfpb.github.io/design-system/images/uploads/hero_illustration_example_keys.png') 2x
+  112:           ![Image of large non-bleed hero graphic with dimensions](/design-system/images/uploads/hero_style_non-bleed_large.png "Image of large non-bleed hero graphic with dimensions")
+  115:           ![Image of smaller non-bleed hero graphics with dimensions](/design-system/images/uploads/hero_style_non-bleed_small.png "Image of smaller non-bleed hero graphics with dimensions")
+  136:           ![Image of larger bleeding hero graphic with dimensions](/design-system/images/uploads/hero_style_bleed_large.png "Image of larger bleeding hero graphic with dimensions")
+  139:           ![Image of smaller bleeding hero graphics with dimensions](/design-system/images/uploads/hero_style_bleed_small.png "Image of smaller bleeding hero graphics with dimensions")
+  159:           | Image          | ![hero desktop style](/design-system/images/uploads/hero_style_desktop.png) | ![hero tablet style](/design-system/images/uploads/hero_style_tablet.png) | ![hero mobile style](/design-system/images/uploads/hero_style_mobile.png) |
+  316:           ![Image of larger photographic hero graphic with dimensions](/design-system/images/uploads/hero_style_photo_large.png "Image of larger photographic hero graphic with dimensions")
+  319:           ![Image of smaller photographic hero graphic with dimensions](/design-system/images/uploads/hero_style_photo_small.png "Image of smaller photographic hero graphic with dimensions")
+  360:                       url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg');
+  362:                       url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+  363:                       url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
+  366:                       url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+  367:                       url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
+  375:                           url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg');
+  377:                           url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+  378:                           url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
+  381:                           url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+  382:                           url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
+  403:                           url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg');
+  405:                           url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+  406:                           url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
+  409:                           url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+  410:                           url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
+  418:                               url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg');
+  420:                               url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+  421:                               url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
+  424:                               url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 1x,
+  425:                               url('/design-system/images/uploads/jumbo_hero_image_wide.jpeg') 2x
+  488:                       url('/design-system/images/uploads/jumbo-hero-image.png');
+  490:                       url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
+  491:                       url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+  494:                       url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
+  495:                       url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+  503:                           url('/design-system/images/uploads/jumbo-hero-image.png');
+  505:                           url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
+  506:                           url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+  509:                           url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
+  510:                           url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+  531:                           url('/design-system/images/uploads/jumbo-hero-image.png');
+  533:                           url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
+  534:                           url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+  537:                           url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
+  538:                           url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+  546:                               url('/design-system/images/uploads/jumbo-hero-image.png');
+  548:                               url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
+  549:                               url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+  552:                               url('/design-system/images/uploads/jumbo-hero-image.png') 1x,
+  553:                               url('/design-system/images/uploads/jumbo-hero-image.png') 2x
+  631:                           url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png');
+  633:                           url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
+  634:                           url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
+  637:                           url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
+  638:                           url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
+  646:                               url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png');
+  648:                               url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
+  649:                               url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
+  652:                               url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
+  653:                               url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
+  682:                           url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png');
+  684:                           url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
+  685:                           url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
+  688:                           url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
+  689:                           url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
+  697:                               url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png');
+  699:                               url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
+  700:                               url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
+  703:                               url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 1x,
+  704:                               url('https://cfpb.github.io/design-system/images/uploads/design_system_hero_example.png') 2x
+  769:   introduction](https://cfpb.github.io/design-system/patterns/text-introductions)
+  775:   * When orienting a user to a new section or topic (using the [landing](https://cfpb.github.io/design-system/pages/landing-pages) or [sublanding page template](https://cfpb.github.io/design-system/pages/sublanding-pages))
+  783:   * When introducing a specific piece of content, like a blog, press release, or other lengthy or detailed content, use the [text introduction](https://cfpb.github.io/design-system/patterns/text-introductions) or [item introduction](https://cfpb.github.io/design-system/patterns/item-introductions).
+  787:   - [Landing pages](https://cfpb.github.io/design-system/pages/landing-pages)
+  789:   - [Sublanding pages](https://cfpb.github.io/design-system/pages/sublanding-pages)
+  791:   - [Text introductions](https://cfpb.github.io/design-system/patterns/text-introductions)
+  793:   - [Item introductions](https://cfpb.github.io/design-system/patterns/item-introductions)
+
+docs/pages/iconography.md
+  522:           [buttons](https://cfpb.github.io/design-system/components/buttons)
+  525:           [notification](https://cfpb.github.io/design-system/components/notifications).
+  571:   ![Diagram of illustrator artboard icon grid](/design-system/images/uploads/icon_artboard.png)
+  577:   When typing or placing an icon next to Source Sans 3 in print or web, all icons should have a similar size. Refer to our guidelines on [how type should scale relative to neighboring text](https://cfpb.github.io/design-system/foundation/iconography#scale).
+  583:   ![Diagram of illustrator artboard icon grid showing a circle icon and open icon](/design-system/images/uploads/icons_relative_sizing.png)
+  595:   ![Vertical alignment of icon with Source Sans 3 text](/design-system/images/uploads/icon_artboard_alignment.png)
+  647:      href="https://github.com/cfpb/design-system/tree/main/packages/cfpb-design-system/src/components/cfpb-icons/icons">
+  659:   The [cfpb-icons](https://github.com/cfpb/design-system/tree/main/packages/cfpb-design-system/src/components/cfpb-icons/icons) component provides Scalable Vector Graphic (SVG) icons. The filenames of the SVGs included with cfpb-icons match the names in the [icon library](https://cfpb.github.io/design-system/foundation/iconography#icon-library-1) section. We encourage using your templating system to inject the SVG icon files, as opposed to copying and pasting the raw SVG.
+  668:   If you look in [cfpb-icons.scss](https://github.com/cfpb/design-system/blob/main/packages/cfpb-design-system/src/components/cfpb-icons/src/cfpb-icons.scss) you can see that we have encoded `class="cf-icon-svg"` in the root element of each of our SVG icons. As a result, the CSS rule gets applied to all of the SVGs on the page, just like any other HTML element.
+  682:   Please reference the [Links](https://cfpb.github.io/design-system/components/links#links-with-icons) page for guidance regarding icons paired with links.
+
+docs/pages/illustration.md
+  13:           ![Paying for College illustration](/design-system/images/uploads/illustration5_-2.png)
+  26:           ![Paying for College illustration](/design-system/images/uploads/illustration6_-2.png)
+  33:   The color palette should use the full range of primary and secondary colors, but selectively use a maximum of three to four colors, using midtones and tints to differentiate components. Illustrations should also make use of 100% white and black. Visit the [color page](https://cfpb.github.io/design-system/foundation/color) for color values. 
+  51:   ![Illustration composition](/design-system/images/uploads/illustration7_-2.png)
+  69:   ![Illustration form](/design-system/images/uploads/illustration10_-2.png)
+  90:   ![Illustration shading and highlights](/design-system/images/uploads/illustration9_-2.png)
+  108:   ![Illustration shadows](/design-system/images/uploads/illustration8_-2.png)
+
+docs/pages/info-unit-groups-link-blobs.md
+  9:         variation_description: '![25/75 info unit group](/design-system/images/uploads/25-75.png)'
+  14:         variation_description: '![50/50 info unit group](/design-system/images/uploads/50-50.png)'
+  24:           group](/design-system/images/uploads/33-33-33.png)'
+  151:   * [Links](https://cfpb.github.io/design-system/components/links)
+  152:   * [Paragraphs](https://cfpb.github.io/design-system/foundation/paragraphs)
+
+docs/pages/integrating-the-design-system-into-your-project.md
+  24:   [SVG icons directory](https://github.com/cfpb/design-system/tree/main/packages/cfpb-design-system/src/components/cfpb-icons/icons). Your build will need to
+  27:   A esbuild script for processing the icons can be [found in the Design System project](https://github.com/cfpb/design-system/blob/main/esbuild/plugins/postcss-process-icons.js).
+
+docs/pages/item-introductions.md
+  12:           ![Example of an item introduction](/design-system/images/uploads/item_introduction.png)
+  23:   [learn](https://cfpb.github.io/design-system/pages/learn-pages) and [document
+  25:   pages](https://cfpb.github.io/design-system/pages/document-detail-pages)
+  27:   pages](https://cfpb.github.io/design-system/pages/filterable-list-pages).
+  43:   * [Learn pages](https://cfpb.github.io/design-system/pages/learn-pages) 
+  45:   * [Document detail pages](https://cfpb.github.io/design-system/pages/document-detail-pages)  
+  47:   * [Heroes](https://cfpb.github.io/design-system/patterns/heroes)
+  49:   * [Text introductions](https://cfpb.github.io/design-system/patterns/text-introductions)
+
+docs/pages/labels.md
+  44:           [fieldset](https://cfpb.github.io/design-system/components/fieldsets).
+  53:   [fieldsets](https://cfpb.github.io/design-system/components/fieldsets). '
+  58:   * [Helper text](https://cfpb.github.io/design-system/components/helper-text)
+  60:   * [Fieldsets](https://cfpb.github.io/design-system/components/fieldsets)
+  62:   * [Designing forms](https://cfpb.github.io/design-system/patterns/designing-forms)
+
+docs/pages/landing-pages.md
+  23:       | ![Landing page with hero](/design-system/images/uploads/landing_top_examplea_2x.jpg) | ![Landing page with text introduction](/design-system/images/uploads/landing_top_exampleb_2x.jpg) |
+  38:   * When a new page is needed within a navigation section, rather than at the top-level, consider using a [Sublanding page](https://cfpb.github.io/design-system/pages/sublanding-pages). 
+  40:   * When page content includes paragraph copy or more detailed definitions or explanations, consider using a [Learn page](https://cfpb.github.io/design-system/pages/learn-pages).
+  57:   * Choose between a [hero](https://cfpb.github.io/design-system/patterns/heroes) or [text introduction](https://cfpb.github.io/design-system/patterns/text-introductions) for this area.
+  65:   * Recommended hierarchy of patterns: [image & text components](https://cfpb.github.io/design-system/patterns/info-unit-groups#image-and-text-1), [well](https://cfpb.github.io/design-system/patterns/wells), [text components](https://cfpb.github.io/design-system/patterns/info-unit-groups#text-only).
+  67:   * [Wells](/design-system/patterns/wells) should not be used at the top of this area if the introduction area contains a hero.
+  86:   | ![Breakpoints 901+](/design-system/images/uploads/landing_behavior_desktop_2x.jpg) | ![Breakpoints 900 and less](/design-system/images/uploads/landing_behavior_mobile_2x.jpg) |
+  91:   * [Heroes](/design-system/patterns/heroes)
+  93:   * [Text introduction](/design-system/patterns/text-introductions)
+  99:   * [Image and text components](/design-system/patterns/info-unit-groups#image-and-text-1)
+  101:   * [Wells](/design-system/patterns/wells)
+  103:   * [Text components](/design-system/patterns/info-unit-groups#text-only)
+  105:   * [Email signup form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms)
+
+docs/pages/learn-pages.md
+  24:           | ![Learn page example](/design-system/images/uploads/learn_example.jpg) | Example: [What is a personal line of credit?](https://www.consumerfinance.gov/ask-cfpb/what-is-a-personal-line-of-credit-en-901/) |
+  42:   * When the primary goal of the page is to encourage users to download a resource or understand the context around a document, and the page is a child of a filterable list of items, use the [document detail page](https://cfpb.github.io/design-system/pages/document-detail-pages) instead.
+  62:   * Choose either a [text introduction](https://cfpb.github.io/design-system/patterns/text-introductions) or [item introduction](https://cfpb.github.io/design-system/patterns/item-introductions) depending on whether the template is being used to house an article or post.
+  70:   * Permissible patterns include full width body text, [tables](https://cfpb.github.io/design-system/components/tables), [expandables](https://cfpb.github.io/design-system/components/expandables), 25/75 image and text info unit groups, [wells](https://cfpb.github.io/design-system/patterns/wells).
+  88:   | ![Breakpoints 901+](/design-system/images/uploads/learn_behavior_desktop.jpg) | ![Breakpoints 90o and less](/design-system/images/uploads/learn_behavior_mobile.jpg) |
+  93:   * [Document detail pages](https://cfpb.github.io/design-system/pages/document-detail-pages)
+  99:   * [Text introduction](/design-system/patterns/text-introductions)
+  101:   * [Item introduction](https://cfpb.github.io/design-system/patterns/item-introductions)
+  107:   * [Tables](/design-system/components/tables)
+  109:   * [Expandables](/design-system/components/expandables)
+  111:   * [25/75 image & text component](/design-system/patterns/info-unit-groups#25-75-image-and-text-component)
+  113:   * [Wells](/design-system/patterns/wells)
+  115:   * [Email signup form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms)
+
+docs/pages/links.md
+  147:           [cards](https://cfpb.github.io/design-system/patterns/cards) and [info
+  149:           groups](https://cfpb.github.io/design-system/patterns/info-unit-groups),
+  187:   contrast, [buttons](/design-system/components/buttons) are used to signal
+  217:   * [Buttons](https://cfpb.github.io/design-system/components/buttons)
+  218:   * [Typography](https://cfpb.github.io/design-system/foundation/fonts)
+  219:   * [Iconography](https://cfpb.github.io/design-system/foundation/iconography)
+
+docs/pages/lists.md
+  101:           href="/design-system/components/links#list-link">links page</a>. '
+
+docs/pages/logo.md
+  26:           ![Horizontal lockup logo](/design-system/images/uploads/logo_horizontal_071720.png "Horizontal lockup logo")
+  108:           ![Vertical lockup logo](/design-system/images/uploads/logo_vertical_071720.png "Vertical lockup logo")
+  127:           ![Isolated logo](/design-system/images/uploads/logo_isolated_071720.png "Isolated logo")
+  145:           ![Small execution logo](/design-system/images/uploads/logo1_small-execution.png "Small execution logo")
+  170:           ![Spanish logo](/design-system/images/uploads/logo1_spanish.png "Spanish logo")
+  188:           ![One color logo](/design-system/images/uploads/logo1_one-color.png "One color logo")
+  216:   ![Isolated logo clear space](/design-system/images/uploads/isolated_logo_clearspace_072120.png)
+  225:   ![Isolated logo clear space](/design-system/images/uploads/isolated_logo_clearspace_guides_072120.png)
+  240:   ![Vertical logo clear space](/design-system/images/uploads/vertical_logo_clearspace_072120.png)
+  249:   ![Vertical logo clear space](/design-system/images/uploads/vertical_logo_clearspace_guides_072120.png)
+  264:   ![Horizontal logo clear space](/design-system/images/uploads/horizontal_logo_clearspace_072120.png)
+  273:   ![Horizontal logo clear space](/design-system/images/uploads/horizontal_logo_clearspace_guides_072120.png)
+  306:   ![Desktop scale](/design-system/images/uploads/logo_desktop_scale.png)
+  325:   ![Mobile scale](/design-system/images/uploads/logo_mobile_scale.png)
+  365:   ![8.5x11" documents](/design-system/images/uploads/logo_print_scale.png)
+  384:   ![8.5x11" documents](/design-system/images/uploads/logo_print_scale_2.png)
+  423:   ![Logo on color background](/design-system/images/uploads/logo_background_color.png)
+  429:   ![Logo on pattern background](/design-system/images/uploads/logo_background_pattern.png)
+  435:   ![Logo on photo background](/design-system/images/uploads/logo_background_photo.png)
+  465:   ![Beam pattern green background](/design-system/images/uploads/beam_pattern_1.png)
+  471:   ![Beam pattern white background](/design-system/images/uploads/beam_pattern_2.png)
+  495:   ![Beam base shapes](/design-system/images/uploads/base_shape_beam.png)
+  531:   ![Example of misuse: logo with beam](/design-system/images/uploads/logo_misuse_no_beam_071720.png)
+  549:   ![Example of misuse: stretched logo](/design-system/images/uploads/logo_misuse_stretch_071720.png)
+  567:   ![Example of misuse: logo with drop shadow](/design-system/images/uploads/logo_misuse_shadow_071720.png)
+  585:   ![Example of misuse: outlined logo](/design-system/images/uploads/logo_misuse_color_071720.png)
+  603:   ![Example of misuse: rotated logo](/design-system/images/uploads/logo_misuse_rotate_071720.png)
+  625:   ![Example of misuse: logo directly on color background](/design-system/images/uploads/logo_misuse_background_071720.png)
+
+docs/pages/manual-accessibility-audit.md
+  31:       [Download the CFPB manual accessibility audit](/design-system/assets/files/CFPB.manual.accessibility.audit.open.source.v1.0_09.30.21.xlsx)
+  34:       If you have any feedback, please let us know [by filing a issue](https://github.com/cfpb/design-system/issues).
+
+docs/pages/motion-graphics-and-animation.md
+  66:       ![Animated car with blur](/design-system/images/uploads/motionblur9.png)
+  72:       ![Animated mouse](/design-system/images/uploads/scene-2.png)
+  78:       ![Footage of computer with the text "Find your local rental assistance program" in the lower third of the screen on a green box](/design-system/images/uploads/lower-third.png)
+  84:       ![Footage of David Uejio with the text "David Uejio Acting Director, Consumer Financial Protection Bureau" on top of the footage](/design-system/images/uploads/screen-shot-2022-02-10-at-10.12.50-am.png)
+  90:       ![Woman holding up a phone with a graphic attached to the phone that says "urgent"](/design-system/images/uploads/tracking.png)
+  108:       ![Footage of man with an illustrated background of wallpaper, a shelf, and a hanging picture](/design-system/images/uploads/greenscreen1.png)
+  120:       ![Illustration of a cab driving past buildings on the left side. Illustration of a map of the United States with a car driving across it on the right side.](/design-system/images/uploads/split-screen-graphics.png)
+
+docs/pages/overview.md
+  54:   * [Setting the foundation](https://cfpb.github.io/design-system/guidelines/setting-the-foundation)
+  56:   * [C﻿onducting research](https://cfpb.github.io/design-system/guidelines/conducting-research)
+  58:   * [D﻿esign and development](https://cfpb.github.io/design-system/guidelines/design-and-development)
+
+docs/pages/paragraphs.md
+  99:   page](https://cfpb.github.io/design-system/foundation/fonts#guidelines) for
+  110:   * [Headings](https://cfpb.github.io/design-system/foundation/headings)
+  111:   * [Fonts](https://cfpb.github.io/design-system/foundation/fonts)
+
+docs/pages/photography.md
+  21:           ![Consumer opening a bank account](/design-system/images/uploads/photography_editorial_example_2.png)
+  24:           ![Consumers discussing a financial decision](/design-system/images/uploads/photography_editorial_example_3.png)
+  37:           ![CFPB employee speaking at event](/design-system/images/uploads/photography_event_example_1.jpg)
+  40:           ![Consumer speaking at event](/design-system/images/uploads/photography_event_example_2.jpg)
+  43:           ![Consumer speaking at event](/design-system/images/uploads/photography_event_example_3.jpg)
+  51:   An image’s dimensions can also impact what’s possible. If the image appears in the [hero pattern](https://cfpb.github.io/design-system/patterns/heroes), text will sit on top of it and need to be readable across breakpoints. If the image accompanies body copy in an [info unit group](https://cfpb.github.io/design-system/patterns/info-unit-groups), it will have limited space.  
+  89:   | **Natural interaction** <br/>If the photo shows people, their body language and facial expressions feel natural and not staged.                                                                                                           | ![Consumers discussing a financial decision](/design-system/images/uploads/photography_editorial_example_3.png)                                                                 |
+  91:   | **Authentic atmosphere** <br/>The photo’s atmosphere feels warm, relatable, and like you’re glimpsing into a real scenario.                                                                                                               | ![Consumer taking a financial action](/design-system/images/uploads/tone_example_2.png)                                                                                         |
+  93:   | **Inclusive** <br/>When photographing or choosing images, consider skin color, age, gender identity, income level, and range of ability. Be inclusive and representative of the American public. Be mindful not to reinforce stereotypes. | ![Consumer taking a financial action](/design-system/images/uploads/tone_example_3.jpg) ![Consumer taking a financial action](/design-system/images/uploads/tone_example_4.jpg) |
+  95:   | **Feeling of being in control** <br/>When showing a person accomplishing a task, the composition feels organized and actionable.                                                                                                          | ![Consumer taking a financial action](/design-system/images/uploads/tone_example_5.png)                                                                                         |
+  109:   Illustration can help explain complex processes. Illustration also has the ability to be socially and politically neutral. Visit the [Illustration page](https://cfpb.github.io/design-system/foundation/illustration) for more guidance. 
+
+docs/pages/print-styles.md
+  25:   URLs for links, buttons, and videos display when printed. This ensures a user can access the linked content if desired. Visit  [Links](https://cfpb.github.io/design-system/components/links) and [Buttons](https://cfpb.github.io/design-system/components/buttons) for specifications.  
+  31:   Patterns such as [info unit groups](https://cfpb.github.io/design-system/patterns/info-unit-groups) and [featured content modules](https://cfpb.github.io/design-system/patterns/featured-content-module) print in their large-screen layouts. Printing patterns in this format enables multi-column layouts with readable line lengths and reasonably sized images.  
+  43:   For pages with single-column layouts, column width is reduced when printed to ensure readable line lengths on paper. Whereas as a reader may have control over aspects such as browser width and text size in a digital setting, they do not have this control when reading a printed piece, so it’s important that line lengths are as readable as possible. See the section "Line lengths" on the [Fonts](https://cfpb.github.io/design-system/foundation/fonts) page for more information.
+
+docs/pages/radio-buttons.md
+  63:   [checkboxes](https://cfpb.github.io/design-system/components/checkboxes) when
+
+docs/pages/reference-for-component-states.md
+  6:   This is a reference page for various states of the <a href="/design-system/components/">components found within the
+
+docs/pages/sample-component-page.md
+  27:       * *Use the label "Standard \[component]" if there is **one** standard default component. See [checkboxes](https://cfpb.github.io/design-system/components/checkboxes) and [tables](https://cfpb-sandbox.github.io/design-system/components/tables) as examples.*
+  30:       * *Use the label "Types" if there is **more than one** standard component with different use cases. See [buttons](https://cfpb.github.io/design-system/components/buttons) as an example.*
+  138:       * *Use the label "Groups" if you're showing component groupings. See [expandables](https://cfpb.github.io/design-system/components/expandables#groups) for an example.*
+  140:       * *Use the label "Sizes" if you're showing alternate component sizes. See [checkboxes](https://cfpb.github.io/design-system/components/checkboxes#sizes) for an example.*
+  142:       * *One-off labels may also be appropriate (for example, "[Responsive tables](https://cfpb.github.io/design-system/components/tables#responsive-tables)", "[Links with icons](https://cfpb.github.io/design-system/components/links#links-with-icons))*
+
+docs/pages/seal.md
+  22:           ![CFPB primary seal](/design-system/images/uploads/seal_071620.png)
+  133:           ![CFPB one-color seal](/design-system/images/uploads/seal_one-color_071620.png)
+  181:   ![Seal clearspace](/design-system/images/uploads/seal_clearspace_071620.png)
+  202:   ![Seal benchmark size](/design-system/images/uploads/seal_size_071620.png)
+  223:   ![Seal backgrounds](/design-system/images/uploads/seal_background_071620.png)
+  244:   ![Misuse: stretched seal](/design-system/images/uploads/seal_misuse_stretch_071620.png)
+  262:   ![Misuse: drop shadow on seal](/design-system/images/uploads/seal_misuse_shadow_071620.png)
+  280:   ![Misuse: seal color](/design-system/images/uploads/seal_misuse_color_071620.png)
+  298:   ![Misuse: rotated seal](/design-system/images/uploads/seal_misuse_rotate_071620.png)
+  316:   ![Misuse: seal background](/design-system/images/uploads/seal_misuse_background_071620.png)
+
+docs/pages/selects.md
+  69:     * If the list is shorter than around six items, [radio buttons](https://cfpb.github.io/design-system/components/radio-buttons) or [checkboxes](https://cfpb.github.io/design-system/components/checkboxes) might work better.
+  70:     * If the options include something open ended, a [text input](https://cfpb.github.io/design-system/components/text-inputs) field is better.
+
+docs/pages/setting-the-foundation.md
+  16:   ![Illustration of people working together](/design-system/images/uploads/equity_design_setting_the_foundation.png)
+  46:   {% include icons/favorite.svg %} <b>Ready to conduct research for your project?</b> Learn how to [check your biases when moderating a research session](https://cfpb.github.io/design-system/guidelines/conducting-research#check-your-biases).
+  71:         <a href="/design-system/images/uploads/frames-of-reference-template.pdf" aria-label="Download the frames of reference template as a PDF">PDF</a>
+  74:         <a href="/design-system/images/uploads/frames-of-reference-template.png" aria-label="Download the frames of reference template as a PNG">PNG</a>
+  77:         <a href="/design-system//guidelines/frames-of-reference-mural-template" aria-label="Use the frames of reference template in Mural">Mural</a>
+  331:   {% include icons/favorite.svg %} <b>Ready to conduct research for your project?</b> [Learn how to recognize and respond to trauma during a research session.](https://cfpb.github.io/design-system/guidelines/conducting-research#recognize-and-respond-to-trauma-in-participants)
+  349:   * [Overview](https://cfpb.github.io/design-system/guidelines/overview)
+  351:   * [Conducting research](https://cfpb.github.io/design-system/guidelines/conducting-research)
+  353:   * [Design and development](https://cfpb.github.io/design-system/guidelines/design-and-development)
+
+docs/pages/sidebars-prefooters.md
+  285:   * [Blocks](https://cfpb.github.io/design-system/development/blocks)
+  287:   * [Grid](https://cfpb.github.io/design-system/foundation/grid)
+
+docs/pages/story-pages.md
+  22:           example](/design-system/images/uploads/story_page_example.jpg) |
+  29:           size](https://cfpb.github.io/design-system/foundation/headings#web-headings-1)
+  47:   * You want to quickly direct readers to specific content on a given topic. Use the [sublanding](https://cfpb.github.io/design-system/pages/sublanding-pages) or [browse page](https://cfpb.github.io/design-system/pages/browse-pages) instead. 
+  49:   * The content is informational and text-heavy, such as an article or blog post. Use the [learn page](https://cfpb.github.io/design-system/pages/learn-pages) instead.
+
+docs/pages/sublanding-pages.md
+  10:   page](/design-system/pages/landing-pages) template.
+  25:           | ![Sublanding page with hero](/design-system/images/uploads/sublanding_examplea.jpg) | ![Sublanding page with text introduction](/design-system/images/uploads/sublanding_examplec.jpg) | ![Sublanding page with breakout sidebar](/design-system/images/uploads/sublanding_exampleb.jpg) |
+  64:   * Choose between a [hero](/design-system/patterns/heroes) or [text introduction](/design-system/patterns/text-introductions) for this area.
+  72:   * Must contain at least 1 pattern, though the [featured content module](/design-system/patterns/featured-content-module) or [well](/design-system/patterns/wells) should not stand on their own.
+  74:   * Recommended hierarchy of patterns: [featured content module](/design-system/patterns/featured-content-module), [info unit groups](/design-system/patterns/info-unit-groups), [wells](/design-system/patterns/wells), and full width body copy.
+  76:   * [Wells](/design-system/patterns/wells)  should not be used at the top of this area if the hero is used to introduce the page.
+  94:   | ![Sublanding behavior desktop](/design-system/images/uploads/sublanding_behavior_desktop.jpg) | ![Sublanding behavior mobile](/design-system/images/uploads/sublanding_behavior_mobile.jpg) |
+  99:   * [Heroes](/design-system/patterns/heroes)
+  101:   * [Text introduction (with optional breakout sidebar)](/design-system/patterns/text-introductions)
+  107:   * [Info unit groups](/design-system/patterns/info-unit-groups)
+  109:   * [Featured content module](/design-system/patterns/featured-content-module)
+  111:   * [Wells](/design-system/patterns/wells)
+  113:   * [Email signup form](https://cfpb.github.io/design-system/patterns/e-mail-signup-forms)
+
+docs/pages/tables.md
+  270:           ![image showing a table with pagination](/design-system/images/uploads/table_pagination.png)
+
+docs/pages/tags.md
+  78:           [multiselects](https://cfpb.github.io/design-system/components/selects#multiselect)
+  81:           panel](https://cfpb.github.io/design-system/patterns/filterable-list-control-panels).
+  107:   [Multiselect](https://cfpb.github.io/design-system/components/selects#multiselect)
+  109:   * [Filterable list control panels](https://cfpb.github.io/design-system/patterns/filterable-list-control-panels)
+
+docs/pages/text-inputs.md
+  128:   Text should be in sentence case. Use placeholder text for formatting examples only. Don’t use for instructions. Placeholder text disappears once a user begins typing in the field. For more information, see [Design System guidance on placeholder text](https://cfpb.github.io/design-system/components/helper-text#placeholder-text-1).
+
+docs/pages/text-introductions.md
+  33:           [hero](https://cfpb.github.io/design-system/patterns/heroes) or [item
+  34:           introduction](https://cfpb.github.io/design-system/patterns/item-introductions)
+  40:           specs](/design-system/images/uploads/text_introduction-spacing.png)
+  60:           specs ](/design-system/images/uploads/breakout_sidebar_with_specs.png)
+  70:           On [landing](https://cfpb.github.io/design-system/pages/landing-pages)
+  72:           [sub-landing](https://cfpb.github.io/design-system/pages/sublanding-pages)
+  86:           ![Image of a text introduction component with a "breakout" highlight in the right sidebar](/design-system/images/uploads/breakout_sidebar.png)
+  122:   The optional call-to-action link should be one line; about 40 characters or less. Link content should follow [link guidelines](https://cfpb.github.io/design-system/components/links).
+  127:   [hero](https://cfpb.github.io/design-system/patterns/heroes) or [item
+  128:   introduction](https://cfpb.github.io/design-system/patterns/item-introductions).
+  142:   | ![Mockup of 900 pixel and above layout](/design-system/images/uploads/text_introduction_breakpoint_large.png)                                            | ![Mockup of 901 pixel and below layout](/design-system/images/uploads/text_introduction_breakpoint_small.png)|
+  154:   | ![Mockup of 900+ pixel layout](/design-system/images/uploads/breakout_sidebar_breakpoint_large.png) | ![Mockup of 900 pixel and below layout](/design-system/images/uploads/breakout_sidebar_breakpoint_small.png) |
+  157:   * [Heroes](https://cfpb.github.io/design-system/patterns/heroes)
+  159:   * [Item introductions](https://cfpb.github.io/design-system/patterns/item-introductions)
+
+docs/pages/typography.md
+  63:   ![Alignment](/design-system/images/uploads/fonts_alignment.png)
+  72:   ![Line height](/design-system/images/uploads/fonts_line_height.png)
+  84:   ![Line length](/design-system/images/uploads/fonts_line_length.png)
+  99:   ![](/design-system/images/uploads/fonts_heading_followed_by_body_copy.png)
+  108:   ![Body copy followed by heading](/design-system/images/uploads/fonts_body_copy_followed_by_heading.png)
+  117:   ![Heading followed by heading](/design-system/images/uploads/fonts_heading_followed_by_heading.png)
+  126:   ![Body copy spacing](/design-system/images/uploads/fonts_body_copy_spacing.png)
+  161:   To ensure text remains compliant with [WCAG 2.0 standards](http://www.w3.org/TR/WCAG20/), use only these permitted type and background color combinations, which fall within the range of foreground/background color contrast permitted by the Section 508 guidelines. For specific color values, visit our [Color page](https://cfpb.github.io/design-system/foundation/color).
+  167:   Black type is accessible on all brand colors with 20% saturation or below when using at least 14pt type. [Visit our Color page](https://cfpb.github.io/design-system/foundation/color#tints) for hex and RGB values. 
+  173:   ![Chart showing accessible combinations of black type on brand colors with 20% saturation](/design-system/images/uploads/black_type.png)
+  190:   ![Chart showing accessible combinations of white type on brand colors at 100% saturation](/design-system/images/uploads/white_type.png)
+  192:   * [Headings](https://cfpb.github.io/design-system/foundation/headings)
+  193:   * [Paragraphs](https://cfpb.github.io/design-system/foundation/paragraphs)
+
+docs/pages/video.md
+  104:   ![Script Sample](/design-system/images/uploads/screen-shot-2021-02-16-at-4.45.23-pm.png)
+  192:   ![Symmetry](/design-system/images/uploads/symmetry_shutterstock_1519755446.jpg)
+  214:   ![Rule of Thirds Grid](/design-system/images/uploads/ruleofthirds_shutterstock_1519755446.jpg)
+  236:   ![Extreme close-up](/design-system/images/uploads/shutterstock_155373893.jpg)
+  253:   ![Close-up](/design-system/images/uploads/shutterstock_1606121245.jpg)
+  271:   ![Medium shot](/design-system/images/uploads/shutterstock_1721092123.jpg)
+  289:   ![Wide shot](/design-system/images/uploads/shutterstock_1493322572.jpg)
+  307:   ![Extreme wide shot](/design-system/images/uploads/shutterstock_1866128347.jpg)
+  331:   ![Too Much Headroom](/design-system/images/uploads/toomuchheadroom_shutterstock_1519755446.jpg) ![Not Enough Headroom](/design-system/images/uploads/notenoughheadroom_shutterstock_1519755446.jpg)
+  349:   ![Lead room](/design-system/images/uploads/shutterstock_1363938809.jpg)
+  371:   ![Framing note: bad crop](/design-system/images/uploads/shutterstock_1159269319.jpg)
+  561:   ![Still from Video title slide](/design-system/images/uploads/video_5.jpg "Logo in video")
+  570:   ![Watermark Sample Image](/design-system/images/uploads/screen-shot-2021-02-16-at-5.05.58-pm.png "Watermark sample image")
+  576:   We often feature motion graphics in our videos, whether full-screen or superimposed over footage. Please refer to our [Motion Graphics](https://cfpb.github.io/design-system/foundation/animation) page for specific motion graphics guidance.
+  647:   ![open caption example 1](/design-system/images/uploads/unknown.png "Open captions with CFPB font, weight, and colors")
+  650:   ![open caption example 2](/design-system/images/uploads/unknown-1.png "An example of using color within the open caption in order to accentuate the content")
+  653:   ![open caption example 3](/design-system/images/uploads/unknown-4.png "An example of using a 50% transparency box beneath the open caption")
+
+docs/pages/wells.md
+  28:   module](/design-system/patterns/featured-content-module) instead.
+  45:   [browse](https://cfpb.github.io/design-system/pages/browse-pages),
+  46:   [learn](https://cfpb.github.io/design-system/pages/learn-pages), and [document
+  48:   pages](https://cfpb.github.io/design-system/pages/document-detail-pages).
+  55: related_items: '* [Featured content module](/design-system/patterns/featured-content-module)'
+
+docs/special-pages/frames-of-reference.md
+  16:   <img alt="Frames of reference Mural screenshot" src="https://cfpb.github.io/design-system/images/uploads/frames-of-reference-template.png">
+
+docs/special-pages/home.md
+  19:   ![Homepage image](/design-system/images/uploads/cfpb_ds_home.png)
+  28:   Start with our [general principles](https://cfpb.github.io/design-system/general-principles), which form the strategic underpinnings for the CFPB’s design and development standards. Also check out our [accessibility principles](https://cfpb.github.io/design-system/guidelines/accessibility-principles), which lay the foundation for ensuring that our web content is available for all users.
+  39:   <p>The Design System provides a set of modular HTML, CSS, and JavaScript patterns that can be integrated into your project. <a href="https://cfpb.github.io/design-system/development/integrating-the-design-system-into-your-project">Integrate the Design System into your project</a>.</p>
+  43:   Learn how to contribute to the Design System code base and update the documentation.  <a href="https://github.com/cfpb/design-system/blob/main/CONTRIBUTING.md">Get started</a>.
+  85:   <p><a href="https://cfpb.github.io/design-system/foundation/">Browse foundation</a></p></div>
+  95:   <p><a href="https://cfpb.github.io/design-system/components/">Browse components</a></p>
+  107:   <p><a href="https://cfpb.github.io/design-system/patterns/">Browse patterns</a></p>
+  119:   <p><a href="https://cfpb.github.io/design-system/pages/">Browse pages</a></p>
+  131:   <p><a href="https://cfpb.github.io/design-system/development/">Browse development</a></p>
+  143:   <p><a href="https://cfpb.github.io/design-system/guidelines/">Browse guidelines</a></p>
+  158:   <p><a href="https://cfpb.github.io/design-system/updating-this-website/">View instructions for contributing to the Design System</a></p>
+
+docs/special-pages/updating-this-website.md
+  56:                   <img src="/design-system/images/uploads/cms-demo1.gif" alt="Screenshot showing how to edit a Design System page" />
+  83:                   <img src="/design-system/images/uploads/cms-demo2.gif" alt="Screenshot showing how to log into Decap CMS" />
+  104:                   Edit content in the left hand pane of the CMS. Preview your changes in the right hand pane. Check out our <a href="/design-system/sample-component-page">sample component page</a> for tips on how to structure a typical page.
+  107:                   <img src="/design-system/images/uploads/cms-demo3.gif" alt="Screenshot showing how to edit a page in Decap CMS" />
+  134:                   <img src="/design-system/images/uploads/cms-demo4.gif" alt="Screenshot showing how to save changes in Decap CMS" />
+  161:                   <img src="/design-system/images/uploads/cms-demo5.gif" alt="Screenshot showing how to preview Decap CMS changes" />
+  187:                   After you publish, our servers will re-deploy the live website and you'll see your changes in a few minutes at https://cfpb.github.io/design-system.
+  190:                   <img src="/design-system/images/uploads/cms-demo6.gif" alt="Screenshot showing how to publish Decap CMS changes" />
+  204:         <a href="/design-system/admin" class="a-btn" data-interstitial-redirect-button>Continue to Decap CMS</a>
+  222:   1. If you're unsure what sort of content you should add to a new Design System page, check out our [sample component page](/design-system/sample-component-page). Click its "edit" button to view the sample content laid out in the CMS.
+  228:         <a href="/design-system/admin/#/collections/pages/new" class="a-btn" title="Create a new page for this website in Decap CMS">Create new page</a>
+  241:         <a href="/design-system/admin/#/collections/navigation/entries/side-navigation" class="a-btn" title="Edit the side navigation">Edit the side navigation</a>
+  254:   CMS](/design-system/images/uploads/uploading-cms-images.png "Screenshot of
+
+packages/cfpb-design-system/CHANGELOG.md
+  5: ## [4.3.2](https://github.com/cfpb/design-system/compare/v4.3.1..v4.3.2) - December 30, 2025
+  9: - Force source sans (#2472) - ([706b8e8](https://github.com/cfpb/design-system/commit/706b8e80c9a6985dd60e1c15e89e8341f45cdffe)) - itsmedavep
+  10: - Re-generate assets - ([ee2de2c](https://github.com/cfpb/design-system/commit/ee2de2ce107f97ce208425c4fcce622f84179688)) - Ans
+  12: ## [4.3.1](https://github.com/cfpb/design-system/compare/v4.3.0..vv4.3.1) - December 30, 2025
+  16: - PR #[2469](https://github.com/cfpb/design-system/pull/2469): FIxes to cfpb-icon-text and cfpb-button divider coloring | bump dependencies and fix examples - Ans
+  17: - PR #[2470](https://github.com/cfpb/design-system/pull/2470): Add event proxies to cfpb-select - Ans
+  18: - PR #[2471](https://github.com/cfpb/design-system/pull/2471): Fix focus state - Ans
+  22: - Update cypress, esbuild | Update elements docs - ([6bbc2c1](https://github.com/cfpb/design-system/commit/6bbc2c1b79ca77fef1bf11ed275c22acf9cfb980)) - Ans
+  23: - FIxes to cfpb-icon-text and cfpb-button divider coloring - ([898c6da](https://github.com/cfpb/design-system/commit/898c6da4a73c11a67e197d3254969a3fa71fb066)) - Ans
+  24: - Add event proxies to cfpb-select - ([13807e8](https://github.com/cfpb/design-system/commit/13807e8717c01d7c2d29b1c2af6806d2e3def7b7)) - Ans
+  25: - Regenerate assets - ([95d2e3d](https://github.com/cfpb/design-system/commit/95d2e3d24b36e93527d1d2fa27bf27bed9db1c2a)) - Ans
+  26: - Fix focus state - ([d6ea63c](https://github.com/cfpb/design-system/commit/d6ea63c2ca0178baa6e3d656b1b02e1feffec16e)) - Ans
+  27: - Re-build assets - ([3b9bd43](https://github.com/cfpb/design-system/commit/3b9bd4383957ca2ac5527639c3610b337b1cf477)) - Ans
+  28: - Fix mixin name duplicate error (#2468) - ([d9ea070](https://github.com/cfpb/design-system/commit/d9ea0703abfc1d7af4b81e02f2c36a890f36677d)) - itsmedavep
+  29: - Re-generate assets - ([6ba5ca6](https://github.com/cfpb/design-system/commit/6ba5ca6eecb0fb68a20a9238b993c19e587934d0)) - Ans
+  30: - Run linter - ([8f58656](https://github.com/cfpb/design-system/commit/8f58656ffb0593568c56c3b2574e557e1d027f3f)) - Ans
+  32: ## [4.3.0](https://github.com/cfpb/design-system/compare/v4.2.4..vv4.3.0) - December 16, 2025
+  36: - PR #[2410](https://github.com/cfpb/design-system/pull/2410): Add search input component - Ans
+  37: - PR #[2409](https://github.com/cfpb/design-system/pull/2409): Update decap-cms-app, liquidjs, react, cssnano, cypress, esbuild, eslint, eslint-plugin-jsdoc, globals, sass - Ans
+  38: - PR #[2412](https://github.com/cfpb/design-system/pull/2412): Add cfpb-form-alert component - Ans
+  39: - PR #[2413](https://github.com/cfpb/design-system/pull/2413): Add checkbox-icon component - Ans
+  40: - PR #[2414](https://github.com/cfpb/design-system/pull/2414): Move checkbox-icon to cfpb-checkbox-icon - Ans
+  41: - PR #[2415](https://github.com/cfpb/design-system/pull/2415): Fix focus/blur/hover states of checkboxes - Ans
+  42: - PR #[2418](https://github.com/cfpb/design-system/pull/2418): Fix linter issues - Ans
+  43: - PR #[2420](https://github.com/cfpb/design-system/pull/2420): Fix a11y issues - Ans
+  44: - PR #[2427](https://github.com/cfpb/design-system/pull/2427): Fix icon and text show/hide icon api - Ans
+  45: - PR #[2428](https://github.com/cfpb/design-system/pull/2428): Update marked, cypress, eslint-plugin-jsdoc, glob, sass - Ans
+  46: - PR #[2430](https://github.com/cfpb/design-system/pull/2430): Refactor cfpb-icon-text - Ans
+  47: - PR #[2432](https://github.com/cfpb/design-system/pull/2432): Add API examples - Ans
+  48: - PR #[2434](https://github.com/cfpb/design-system/pull/2434): Update @types/react, eslint-plugin-jsdoc, prettier, stylelint - Ans
+  49: - PR #[2435](https://github.com/cfpb/design-system/pull/2435): Add cfpb-list-item - Ans
+  50: - PR #[2436](https://github.com/cfpb/design-system/pull/2436): Add `<cfpb-form-search-input>` component - Ans
+  51: - PR #[2438](https://github.com/cfpb/design-system/pull/2438): Upgrade cypress, prettier | update cfpb-form-search with search-service - Ans
+  52: - PR #[2440](https://github.com/cfpb/design-system/pull/2440): Add cfpb-list interactive example - Ans
+  53: - PR #[2457](https://github.com/cfpb/design-system/pull/2457): Enhancements to `cfpb-list` and `cfpb-form-search-input` - Ans
+  54: - PR #[2458](https://github.com/cfpb/design-system/pull/2458): Lists - Add visibleCheckedItems property and add a filtered event - Ans
+  55: - PR #[2459](https://github.com/cfpb/design-system/pull/2459): Add parse-child-data utility - Ans
+  56: - PR #[2460](https://github.com/cfpb/design-system/pull/2460): Update react, react-dom, esbuild, eslint-plugin-jsdoc, prettier, sass - Ans
+  57: - PR #[2461](https://github.com/cfpb/design-system/pull/2461): Add cfpb-select - Ans
+  58: - PR #[2462](https://github.com/cfpb/design-system/pull/2462): Add cfpb-expandable - Ans
+  59: - PR #[2463](https://github.com/cfpb/design-system/pull/2463): Remove cfpb-multiselect - Ans
+  60: - PR #[2464](https://github.com/cfpb/design-system/pull/2464): CSS and accessibility fixes - Ans
+  61: - PR #[2465](https://github.com/cfpb/design-system/pull/2465): Update react, react-dom, eslint, release-it, sass - Ans
+  62: - PR #[2355](https://github.com/cfpb/design-system/pull/2355): Multiselect: Fix erroneous placeholder reference - Ans
+  66: - Add search input component - ([6adf6b5](https://github.com/cfpb/design-system/commit/6adf6b5513c1abf7ff477f654d95f01dbfe15771)) - Ans
+  67: - Refactor search input CSS - ([024e75e](https://github.com/cfpb/design-system/commit/024e75ed17b2ced0f8d326579f4f2f57462e4057)) - Ans
+  68: - Up min-width to 300px to satisfy Firefox - ([d07b103](https://github.com/cfpb/design-system/commit/d07b1031b4655d021e1d59b04f999be360f758bc)) - Ans
+  69: - Lint files - ([db5fc8c](https://github.com/cfpb/design-system/commit/db5fc8c7bddf910087528f37b84193fe0eb50b1b)) - Ans
+  70: - Add cfpb-form-alert component - ([9273bf8](https://github.com/cfpb/design-system/commit/9273bf8d2cd836d4b1ace42caf0aaa5fdd8d654c)) - Ans
+  72: - Add checkbox-icon component - ([41f2fcf](https://github.com/cfpb/design-system/commit/41f2fcf31c67099db9965b716e7992668a2c9cab)) - Ans
+  73: - Move checkbox-icon to cfpb-checkbox-icon - ([61380a3](https://github.com/cfpb/design-system/commit/61380a33b6348c9827ce38fa7156908d2e0596d3)) - Ans
+  74: - Fix focus/blur/hover states of checkboxes - ([1971c0c](https://github.com/cfpb/design-system/commit/1971c0c4e4f960bc2f8b58786c4f35dba9e1e2a6)) - Ans
+  75: - Fix linter issues - ([6ae04ee](https://github.com/cfpb/design-system/commit/6ae04ee3d83a196cdfb456bd83d19c752335726d)) - Ans
+  76: - Fix a11y issues - ([928626e](https://github.com/cfpb/design-system/commit/928626e8b2117c6001e46683d513c3f9b2b39720)) - Ans
+  77: - Fix icon and text show/hide icon api - ([3bb9401](https://github.com/cfpb/design-system/commit/3bb94011e9a7ef8a67bca69133076610647d2f96)) - Ans
+  78: - Lint files - ([3dd91b1](https://github.com/cfpb/design-system/commit/3dd91b108601c6ed69ea6aff98b039fdb58b8265)) - Ans
+  79: - Refactor cfpb-icon-text - ([70f10be](https://github.com/cfpb/design-system/commit/70f10be9b5aa4d43e68db0618ae4245a535b89b4)) - Ans
+  106: 5) Fixed contributing.md to use code blocks for paths - ([7e10857](https://github.com/cfpb/design-system/commit/7e108577294fae15c2bea85b988f147226a76b6b)) - itsmedavep
+  107: - Add API examples - ([d45c474](https://github.com/cfpb/design-system/commit/d45c4740ca3504c2f66687da3803adee59ebbcd1)) - Ans
+  127: * getting rid of the leftover js files in dist - ([b7e4922](https://github.com/cfpb/design-system/commit/b7e49228169d30d0593f63c791f7320b252f0077)) - itsmedavep
+  128: - Lint files - ([e04fb1a](https://github.com/cfpb/design-system/commit/e04fb1a6d05ea87ea1e804758714f7c7410ccefc)) - Ans
+  129: - Add cfpb-list-item - ([24292f2](https://github.com/cfpb/design-system/commit/24292f2bba1b64e2e9ee0d6180aa3570dd13bb2b)) - Ans
+  130: - Add `<cfpb-form-search-input>` - ([71b1303](https://github.com/cfpb/design-system/commit/71b1303f542810c624bd8fa5121e6c302ea883c3)) - Ans
+  131: - Upgrade cypress, prettier | update cfpb-form-search with search-service - ([28e2395](https://github.com/cfpb/design-system/commit/28e23956d01aac0fd0f27c4a99681f2ab9f13d71)) - Ans
+  132: - Update elements example - ([4da9e69](https://github.com/cfpb/design-system/commit/4da9e69763c3505f674c408743f5b9c33d0cea75)) - Ans
+  135: Co-authored-by: Ans <git@anselmbradford.com> - ([8bc75bf](https://github.com/cfpb/design-system/commit/8bc75bfe9b4613f1b37ad521d50c0bff8089c7e0)) - itsmedavep
+  136: - Add cfpb-list interactive example - ([4e960c4](https://github.com/cfpb/design-system/commit/4e960c472f134517bacb01879f28ab73791050c9)) - Ans
+  137: - Add correct ARIA attributes - ([8f9600f](https://github.com/cfpb/design-system/commit/8f9600f6f75e068f2f979ea74813c47000cd4efd)) - Ans
+  138: - Fixed issue with checked items - ([b28ac05](https://github.com/cfpb/design-system/commit/b28ac057283a441d47d6e5cdbb1a71d890b677ba)) - Ans
+  139: - Rewire import to use tokens from elements - ([06e7a5e](https://github.com/cfpb/design-system/commit/06e7a5e48ae3aaffe1a6e7d87ccf5043cd97fcfd)) - itsmedavep
+  142: This reverts commit 06e7a5e48ae3aaffe1a6e7d87ccf5043cd97fcfd. - ([6ac5c22](https://github.com/cfpb/design-system/commit/6ac5c226b6da878f9055d921085bd6f59d9bdee9)) - itsmedavep
+  143: - Enhancements to lists - ([46619cd](https://github.com/cfpb/design-system/commit/46619cd4c7b01ff62273d6e34e35fe0b6e60a46d)) - Ans
+  144: - Lists-Add visibleCheckedItems property and add a filtered event - ([929c30e](https://github.com/cfpb/design-system/commit/929c30e2d02751676792b5cfb1bbbe9225741956)) - Ans
+  145: - Add parse-child-data utility - ([527570f](https://github.com/cfpb/design-system/commit/527570faf97367bb9f0353130c3dd3751969ecf8)) - Ans
+  146: - Lint files - ([9e53195](https://github.com/cfpb/design-system/commit/9e53195e797da125797b957fd0ef7fc4ae5e9378)) - Ans
+  147: - Add cfpb-select - ([c25851d](https://github.com/cfpb/design-system/commit/c25851dc8b29f404fe60301e3e4a173912efe261)) - Ans
+  148: - Fix search - ([53fbe96](https://github.com/cfpb/design-system/commit/53fbe96534c2e53eb92c17361bd6d8b66c1dd816)) - Ans
+  149: - Add cfpb-expandable - ([f3231c5](https://github.com/cfpb/design-system/commit/f3231c5b766f0c5ec4a8985b570b14a48340a086)) - Ans
+  150: - Remove cfpb-multiselect - ([8a93942](https://github.com/cfpb/design-system/commit/8a9394202918a2988c9c2e2378b0fe6f44c48898)) - Ans
+  153: Updating import to use src/elements/abstracts - ([05bb28a](https://github.com/cfpb/design-system/commit/05bb28a749540bfee2363224167ed51b5e5870d5)) - itsmedavep
+  154: - Rewire imports to use new location and css output from JSON (#2442) - ([dcea912](https://github.com/cfpb/design-system/commit/dcea912494d9282b69c71cfb2231105546c6872b)) - itsmedavep
+  155: - Change to import so that things now point at the JSON versions of tokens (#2443) - ([e58f88b](https://github.com/cfpb/design-system/commit/e58f88be2f766dcaf82da6610baae66954766d36)) - itsmedavep
+  165: To use css custom props instead of SCSS variables - ([d6acf40](https://github.com/cfpb/design-system/commit/d6acf40f7866bce841f03a5729cee1e2c1e5bfbb)) - itsmedavep
+  166: - Rewired cfpb-form-search to import css translated from JSON tokens (#2445) - ([ed4ada5](https://github.com/cfpb/design-system/commit/ed4ada55be7d6acea8fa5f5aae985678b8d360f8)) - itsmedavep
+  167: - Cfpb-form-search-input rewired to import from css translated from JSON tokens (#2446) - ([7e4c6e3](https://github.com/cfpb/design-system/commit/7e4c6e35df6d03b6a7d81adf447c614614427e0a)) - itsmedavep
+  170: updated @use to point at src/elements/abstracts in order to use our JSON translated css - ([53b9e9a](https://github.com/cfpb/design-system/commit/53b9e9a3aa1ce4ec604c5526eecfc40edc834fed)) - itsmedavep
+  175: label-helper to use CSS custom properties - ([a995053](https://github.com/cfpb/design-system/commit/a9950532aeacf40ad37d6b69d0307a20e395ce37)) - itsmedavep
+  178: Updated @use to point oat elements/abstracts - ([1f6e10d](https://github.com/cfpb/design-system/commit/1f6e10d6aa28196343da4d478fc0c9eec315bc02)) - itsmedavep
+  179: - Rewired import to use elements/abstracts (#2451) - ([b6919c5](https://github.com/cfpb/design-system/commit/b6919c571bfdb0a1f48c6a0ea41e2d23e95c0f8d)) - itsmedavep
+  185: Same thing goes for the icons. We currently are not duplicating them into elements so I did not update that import - ([f0f7e53](https://github.com/cfpb/design-system/commit/f0f7e538f662901aed6b25e05ce1ffcd1a054042)) - itsmedavep
+  188: Updated @use imports to point at our JSON translated css files - ([9862c9c](https://github.com/cfpb/design-system/commit/9862c9c8c5bad80ec404c365fd55625da946ef24)) - itsmedavep
+  191: Updated @use to point at src/elements/abstracts & src/elements/cfpb-button/vars - ([ca4b57a](https://github.com/cfpb/design-system/commit/ca4b57abd716085b7469e8032a9f6649073e80fd)) - itsmedavep
+  192: - CSS and accessibility fixes - ([85c59d8](https://github.com/cfpb/design-system/commit/85c59d805f37523183886be9a070d017bd12ab04)) - Ans
+  193: - Linter fixes - ([e3d73a5](https://github.com/cfpb/design-system/commit/e3d73a5572e52e57fa4e8c4d868e367f103720bb)) - Ans
+  194: - Fix erroneous placeholder reference - ([80fe377](https://github.com/cfpb/design-system/commit/80fe377c4c62d35d04b1307d3c046f3282c80865)) - Ans
+  195: - Re-build assets - ([133fe55](https://github.com/cfpb/design-system/commit/133fe55e86ca592ae0c8df470adedef500939ed6)) - Ans
+  197: ## [4.2.4](https://github.com/cfpb/design-system/compare/v4.2.3..vv4.2.4) - October 16, 2025
+  201: - PR #[2402](https://github.com/cfpb/design-system/pull/2402): Update yarn, cypress, esbuild, eslint-plugin-jsdoc - Ans
+  202: - PR #[2403](https://github.com/cfpb/design-system/pull/2403): Fix link consistency issues - Ans
+  206: - Build assets - ([5c62585](https://github.com/cfpb/design-system/commit/5c62585effaa9b796b06d4709d07394c30fae486)) - Ans
+  207: - Fix link consistency issues - ([5c175cf](https://github.com/cfpb/design-system/commit/5c175cf56e67df55745dafecd45c31de8c467383)) - Ans
+  209: ## [4.2.3](https://github.com/cfpb/design-system/compare/v4.2.2..vv4.2.3) - October 15, 2025
+  213: - PR #[2391](https://github.com/cfpb/design-system/pull/2391): Remove "read more" links from card pattern - Ans
+  217: - Remove links from card headings - ([7fc4db4](https://github.com/cfpb/design-system/commit/7fc4db490acebe060be1cb311546481a05077521)) - Ans
+  218: - Revert card heading links - ([f53fa8f](https://github.com/cfpb/design-system/commit/f53fa8fe36285f73e16f65de3323336d34cf21f3)) - Ans
+  220: ## [4.2.2](https://github.com/cfpb/design-system/compare/v4.2.1..vv4.2.2) - October  8, 2025
+  224: - PR #[2394](https://github.com/cfpb/design-system/pull/2394): Fix hover on a-link class - Ans
+  228: - Fix hover on a-link class - ([a87497b](https://github.com/cfpb/design-system/commit/a87497b986ebb16e6edaba1c54bae437233a9739)) - Ans
+  230: ## [4.2.1](https://github.com/cfpb/design-system/compare/v4.2.0..vv4.2.1) - October  8, 2025
+  234: - PR #[2392](https://github.com/cfpb/design-system/pull/2392): Cards: Migrate border to text-decoration - Ans
+  235: - PR #[2393](https://github.com/cfpb/design-system/pull/2393): Fix alignment and underline bugs - Ans
+  239: - Migrate border to text-decoration - ([b2fd4aa](https://github.com/cfpb/design-system/commit/b2fd4aab629bc7b279ae46705417c52e717f5906)) - Ans
+  240: - Fix alignment and underline bugs - ([7acdece](https://github.com/cfpb/design-system/commit/7acdece0f6d692e83bbff654dc30b7386f84176e)) - Ans
+  242: ## [4.2.0](https://github.com/cfpb/design-system/compare/v4.1.0..vv4.2.0) - October  8, 2025
+  246: - PR #[2375](https://github.com/cfpb/design-system/pull/2375): Add cfpb-text-icon component - Ans
+  247: - PR #[2376](https://github.com/cfpb/design-system/pull/2376): Remove unused `$pagination-btn-min-width-px` - Ans
+  248: - PR #[2378](https://github.com/cfpb/design-system/pull/2378): Create media-query-service.js - Ans
+  249: - PR #[2379](https://github.com/cfpb/design-system/pull/2379): Refactor media-query-service and add tests - Ans
+  250: - PR #[2381](https://github.com/cfpb/design-system/pull/2381): Update browserslist-config, cypress, eslint-plugin-jsdoc, git-cliff, sass - Ans
+  251: - PR #[2383](https://github.com/cfpb/design-system/pull/2383): Add pagination component | Update eslint-plugin-cypress, eslint-plugin-jsdoc - Ans
+  252: - PR #[2384](https://github.com/cfpb/design-system/pull/2384): cfpb-pagination refactor | Add i18n-service component - Ans
+  253: - PR #[2385](https://github.com/cfpb/design-system/pull/2385): cfpb-pagination refactor - Ans
+  254: - PR #[2386](https://github.com/cfpb/design-system/pull/2386): Add i18n-service jest tests - Ans
+  255: - PR #[2387](https://github.com/cfpb/design-system/pull/2387): Update eslint-plugin-jsdoc, eslint-plugin-wc - Ans
+  256: - PR #[2388](https://github.com/cfpb/design-system/pull/2388): Add classes to pagination buttons - Ans
+  257: - PR #[2389](https://github.com/cfpb/design-system/pull/2389): Move link underlines to text-decoration instead of borders - Ans
+  261: - Add cfpb-text-icon component - ([35c67a3](https://github.com/cfpb/design-system/commit/35c67a304ae3bdbc5e0721ee497c6d767e583e37)) - Ans
+  262: - Remove unused $pagination-btn-min-width-px - ([0bf9fc7](https://github.com/cfpb/design-system/commit/0bf9fc723473973160948024ccd085040615279c)) - Ans
+  263: - Create media-query-service.js - ([03be1ec](https://github.com/cfpb/design-system/commit/03be1ec30a17fdc92c6521230093a3166d0985b2)) - Ans
+  264: - Refactor media-query-service and add tests - ([191c521](https://github.com/cfpb/design-system/commit/191c521328711d817f9596d4d0aced61c370f46b)) - Ans
+  265: - Update media-query-service.spec.js - ([b627150](https://github.com/cfpb/design-system/commit/b62715081947ed8010f4e3581baa45ced3076beb)) - Ans
+  266: - Update media-query-service.spec.js - ([77184bc](https://github.com/cfpb/design-system/commit/77184bc0d5534771d08fe4bd939d722c67eb7bd3)) - Ans
+  267: - Update browserslist-config, cypress, eslint-plugin-jsdoc, git-cliff, sass - ([58b74ff](https://github.com/cfpb/design-system/commit/58b74ffa89d14cc3f1a6e6a5ff1506610bdd0e5f)) - Ans
+  268: - Add pagination component | Update eslint-plugin-cypress, eslint-plugin-jsdoc - ([e4db118](https://github.com/cfpb/design-system/commit/e4db1186f11105c81eb760095794e65d0db28481)) - Ans
+  269: - Refactor pagination - ([dc99494](https://github.com/cfpb/design-system/commit/dc99494d9beb264464474d4860b4942d594a0fbf)) - Ans
+  270: - Add i18n service - ([28476cc](https://github.com/cfpb/design-system/commit/28476ccc9094e9a303fa021c034294e3a5d61fcf)) - Ans
+  271: - Refactor pagination - ([26c922f](https://github.com/cfpb/design-system/commit/26c922f286f93ea6892d8198535b55013db8819d)) - Ans
+  272: - Add i18n-service jest tests - ([61a43ef](https://github.com/cfpb/design-system/commit/61a43ef528ad5ceb1f950e659003a86302916cdc)) - Ans
+  273: - Lint files - ([8c290be](https://github.com/cfpb/design-system/commit/8c290bed57ecc2335f5c6c03b6070ca467067873)) - Ans
+  274: - Add classes to pagination buttons - ([037e380](https://github.com/cfpb/design-system/commit/037e380c774b033b9de034d7429911d4160b81ca)) - Ans
+  275: - Move link underlines to text-decoration instead of borders - ([c7f0ae9](https://github.com/cfpb/design-system/commit/c7f0ae93a69ba3b3b18e41bb47584dc11b58bbf5)) - Ans
+  277: ## [4.1.0](https://github.com/cfpb/design-system/compare/v4.0.4..vv4.1.0) - September 23, 2025
+  281: - PR #[2369](https://github.com/cfpb/design-system/pull/2369): Add more options to cfpb-buttons - Ans
+  282: - PR #[2370](https://github.com/cfpb/design-system/pull/2370): Refactor cfpb-button - Ans
+  283: - PR #[2367](https://github.com/cfpb/design-system/pull/2367): Add multiselect and label web component - Ans
+  284: - PR #[2372](https://github.com/cfpb/design-system/pull/2372): Refactor cfpb-choice and cfpb-multiselect - Ans
+  285: - PR #[2373](https://github.com/cfpb/design-system/pull/2373): Update eslint, eslint-plugin-jsdoc - Ans
+  286: - PR #[2374](https://github.com/cfpb/design-system/pull/2374): Implement font-size-adjust calculation - Ans
+  290: - Add more options to cfpb-buttons - ([2e1bde4](https://github.com/cfpb/design-system/commit/2e1bde4bef284f5627a3d1c986a76e83619bbc83)) - Ans
+  291: - Remove unused class modifier - ([052ad99](https://github.com/cfpb/design-system/commit/052ad99fae57bfb5d11c50a875c3a5873b074c8f)) - Ans
+  292: - Remove unused class - ([ac7f765](https://github.com/cfpb/design-system/commit/ac7f7658b87f0741de7954ad5512ef8a468993d6)) - Ans
+  293: - Add missing jsdoc - ([3afa670](https://github.com/cfpb/design-system/commit/3afa670eac815013bc4876006254a029940e7669)) - Ans
+  294: - Refactor cfpb-button - ([a2fb1ae](https://github.com/cfpb/design-system/commit/a2fb1ae8206c3dd13a7110f3d28978ac363fe996)) - Ans
+  295: - Enable test - ([a518170](https://github.com/cfpb/design-system/commit/a5181709e92a784b039789e3161624cc0aa25a3b)) - Ans
+  296: - Add multiselect web component - ([77cdbe0](https://github.com/cfpb/design-system/commit/77cdbe0e8c564b109ee0c1ce6c39950caa4e9036)) - Ans
+  297: - Refactor cfpb-choice and cfpb-multiselect - ([7cbe534](https://github.com/cfpb/design-system/commit/7cbe534bc9791761a330c9f90cd6a54d664617eb)) - Ans
+  298: - Linter fixes - ([fdd3941](https://github.com/cfpb/design-system/commit/fdd3941e00476586458eadc4288fcf1b1a4d0ac2)) - Ans
+  299: - Implement font-size-adjust calculation - ([7056cd8](https://github.com/cfpb/design-system/commit/7056cd833a73ff436b68204917ec7d6a4fc582aa)) - Ans
+  301: ## [4.0.4](https://github.com/cfpb/design-system/compare/v4.0.3..vv4.0.4) - September 17, 2025
+  305: - PR #[2357](https://github.com/cfpb/design-system/pull/2357): cfpb-button/cfpb-file-upload: Adjust lit syntax - Ans
+  309: - Adjustments to lit syntax - ([6a0982e](https://github.com/cfpb/design-system/commit/6a0982e130f25046da9aa14ee91bf2fdd20adcd7)) - Ans
+  311: ## [4.0.3](https://github.com/cfpb/design-system/compare/v4.0.2..vv4.0.3) - September 17, 2025
+  315: - PR #[2339](https://github.com/cfpb/design-system/pull/2339): Update dependencies: esbuild and eslint - Ans
+  316: - PR #[2335](https://github.com/cfpb/design-system/pull/2335): Button WC: Update `isDisabled` property to `disabled` - Ans
+  317: - PR #[2359](https://github.com/cfpb/design-system/pull/2359): Update Cypress to v15 | Update concurrently, cssnano, eslint, sass - Ans
+  318: - PR #[2356](https://github.com/cfpb/design-system/pull/2356): Add checkbox/radio web components - Ans
+  319: - PR #[2337](https://github.com/cfpb/design-system/pull/2337): Add tag web components - Ans
+  320: - PR #[2362](https://github.com/cfpb/design-system/pull/2362): Add Jest unit tests for web components - Ans
+  321: - PR #[2363](https://github.com/cfpb/design-system/pull/2363): Update dependencies: eslint, eslint-plugin-jsdoc, sass, stylelint - Ans
+  322: - PR #[2366](https://github.com/cfpb/design-system/pull/2366): Refactor cfpb-tag-group - Ans
+  323: - PR #[2365](https://github.com/cfpb/design-system/pull/2365): Update eslint-plugin-jsdoc, stylelint-config-standard-scss - Ans
+  324: - PR #[2368](https://github.com/cfpb/design-system/pull/2368): Multiselect: Add padding to no results found state - Ans
+  329: - Re-built assets - ([eac70a1](https://github.com/cfpb/design-system/commit/eac70a10e87ea98db86b527349c637a840993c74)) - Ans
+  330: - Update `isDisabled` property to `disabled` - ([4aa6e47](https://github.com/cfpb/design-system/commit/4aa6e4792b5d58da06dca427404760cd729facdd)) - Ans
+  331: - Lint and build project - ([97e4e99](https://github.com/cfpb/design-system/commit/97e4e998870c613b8965a1ac202ef0537a645438)) - Ans
+  332: - Add checkbox/radio web components - ([35f6f83](https://github.com/cfpb/design-system/commit/35f6f83668deebd4b05cdedac5bf0e9d55345aff)) - Ans
+  333: - Add tag web components - ([eea7eb7](https://github.com/cfpb/design-system/commit/eea7eb71cea53390a461a56a2ebeeddeeb04ccb4)) - Ans
+  334: - Update tag group to add API to add and remove tags - ([9bbc3fc](https://github.com/cfpb/design-system/commit/9bbc3fcff6c73c3221027807143255e33b17b401)) - Ans
+  335: - Add custom click event for filter tag - ([25dbb22](https://github.com/cfpb/design-system/commit/25dbb22288fe9b769eb6f73482a4b3ee88f5fb40)) - Ans
+  336: - Add tag web components - ([b7549b4](https://github.com/cfpb/design-system/commit/b7549b41e0a04d98a566b8428f9a108896967330)) - Ans
+  337: - Add tests - ([1f200a9](https://github.com/cfpb/design-system/commit/1f200a902389d94f4ba776ddd28106963b9522fb)) - Ans
+  338: - Autolint files - ([fb354e6](https://github.com/cfpb/design-system/commit/fb354e6cca6b43a1de29bd56d82907a719cf9401)) - Ans
+  339: - Refactor cfpb-tag-group - ([d0437db](https://github.com/cfpb/design-system/commit/d0437db13a127f27f2ed427659f78905a79ce2c9)) - Ans
+  340: - Lint files - ([f540aaa](https://github.com/cfpb/design-system/commit/f540aaa80985413f2f8f027e21ee9045ba57654c)) - Ans
+  341: - Rebuilt dist files - ([6a06cb6](https://github.com/cfpb/design-system/commit/6a06cb6703bb05deb534b110e53750ec49298de3)) - Ans
+  342: - Add padding to no results found state - ([ae74ae5](https://github.com/cfpb/design-system/commit/ae74ae5b61d112868d1616e1df79e5401fd33b3a)) - Ans
+  343: - Fix linting error - ([dbcbc94](https://github.com/cfpb/design-system/commit/dbcbc942042c91d7e86e4c0c3f2eaba642e45206)) - Ans
+  345: ## [4.0.2](https://github.com/cfpb/design-system/compare/v4.0.1..vv4.0.2) - August  5, 2025
+  351: delete icon font folder and file - ([5bd827b](https://github.com/cfpb/design-system/commit/5bd827b849e9d933d64a755ca6f4637c845d6d0c)) - jenn-franklin
+  353: ## [4.0.1](https://github.com/cfpb/design-system/compare/v4.0.0..vv4.0.1) - July 15, 2025
+  357: - PR #[2320](https://github.com/cfpb/design-system/pull/2320): Update lit, cssnano, eslint, eslint-plugin-jsdoc | Move @fontsource-variable/source-sans-3 to published project - Ans
+  361: - Update lit, cssnano, eslint, eslint-plugin-jsdoc | Move @fontsource-variable/source-sans-3 to published project - ([3427ba9](https://github.com/cfpb/design-system/commit/3427ba96b1ee5a106573361a3c4fed28e72759be)) - Ans
+  363: ## [4.0.0](https://github.com/cfpb/design-system/compare/v3.14.1..vv4.0.0) - July 15, 2025
+  367: - PR #[2316](https://github.com/cfpb/design-system/pull/2316): Add flexbox to summary buttons - Ans
+  368: - PR #[2309](https://github.com/cfpb/design-system/pull/2309): Replace Avenir Next with Source Sans 3 - Ans
+  372: - Add flexbox to summary buttons - ([6ad127f](https://github.com/cfpb/design-system/commit/6ad127fc848fa811d5886f51b9c55377ece1411c)) - Ans
+  373: - Update font.scss - ([ed2b12c](https://github.com/cfpb/design-system/commit/ed2b12ceb9490001a109d17f8e94c1e8e0a7ece5)) - Ans
+  374: - Add `@fontsource/source-sans-3` - ([3c6a5e9](https://github.com/cfpb/design-system/commit/3c6a5e9cefa86821f117dafa652ef5f92333e42d)) - Ans
+  375: - Add additional font weight of 700 - ([55028fc](https://github.com/cfpb/design-system/commit/55028fc876c1c8e155fe111807344ad783f496ad)) - Ans
+  376: - Switch to Source Sans Variable - ([da47dc7](https://github.com/cfpb/design-system/commit/da47dc7dc2220b18181c57d5b456091ee38c13c2)) - Ans
+  377: - Swap Avenir with Source Sans 3 - ([607f872](https://github.com/cfpb/design-system/commit/607f8726355ba5d899caa61a4e4e19fcc3296693)) - Ans
+  378: - Switch font-display to fallback, from swap - ([ac18f86](https://github.com/cfpb/design-system/commit/ac18f868340ca0351d1aa470ea4dcea8d8cdbb06)) - Ans
+  379: - Adjust CSS line height defaults - ([facb436](https://github.com/cfpb/design-system/commit/facb436481f0cc0fea8c8ce762586d26cc584866)) - Ans
+  380: - Adjust line-height - ([15abd3f](https://github.com/cfpb/design-system/commit/15abd3fe7bd8f0fa056dfad626897ca191afde3c)) - Ans
+  381: - Adjust line-height - ([93a3d8a](https://github.com/cfpb/design-system/commit/93a3d8aecb41ed83f0945adaadbd3019e2d4f1c7)) - Ans
+  382: - Adjust gradient for summary | Adjust tag size - ([7447419](https://github.com/cfpb/design-system/commit/7447419278919db9a2bb3f5988ca1a06027a1ef3)) - Ans
+  384: - Re-build /dist/ - ([5b5e3e6](https://github.com/cfpb/design-system/commit/5b5e3e6c82f939c84d95b06f4075244e6af5337c)) - Ans
+  386: ## [3.14.1](https://github.com/cfpb/design-system/compare/v3.14.0..vv3.14.1) - July  1, 2025
+  390: - PR #[2308](https://github.com/cfpb/design-system/pull/2308): Add sideEffects: false to package.json and add init to web components - Ans
+  394: - Add sideEffects: false to package.json and add init to web components - ([561eac0](https://github.com/cfpb/design-system/commit/561eac03b2ab566e06dece1162e4aade971a9250)) - Ans
+  395: - Re-build assets - ([51f04d4](https://github.com/cfpb/design-system/commit/51f04d40c118b9a73edd31373a44a9315dcbc14d)) - Ans
+  397: ## [3.14.0](https://github.com/cfpb/design-system/compare/v3.13.1..vv3.14.0) - July  1, 2025
+  401: - PR #[2307](https://github.com/cfpb/design-system/pull/2307): Update outdated SASS utility syntax in docs | remove unused mixins - Ans
+  405: - Update u-link utility syntax in docs | remove unused `u-link-border` - ([f812998](https://github.com/cfpb/design-system/commit/f81299826b532b02efc874eb0c78eaa0a1306494)) - Ans
+  407: ## [3.13.1](https://github.com/cfpb/design-system/compare/v3.13.0..vv3.13.1) - June 18, 2025
+  411: - PR #[2304](https://github.com/cfpb/design-system/pull/2304): Additional polish to the file upload web component - Ans
+  415: - Additional polish to the file upload web component - ([6fc24e6](https://github.com/cfpb/design-system/commit/6fc24e68cfc5b3dd0ce04c2d7494dac0b19ea5bd)) - Ans
+  416: - Add accept attribute - ([e53f469](https://github.com/cfpb/design-system/commit/e53f4695f80a1766740edf330c23b12c32d78e60)) - Ans
+  417: - Re-build dist assets - ([8ad0ed9](https://github.com/cfpb/design-system/commit/8ad0ed9bdb85796f496dfc628dd4c3b6113aa2f7)) - Ans
+  419: ## [3.13.0](https://github.com/cfpb/design-system/compare/v3.12.1..vv3.13.0) - June 13, 2025
+  423: - PR #[2264](https://github.com/cfpb/design-system/pull/2264): Add `lit` and initial web components - Ans
+  424: - PR #[2302](https://github.com/cfpb/design-system/pull/2302): Add linter plugins for web components - Ans
+  425: - PR #[2301](https://github.com/cfpb/design-system/pull/2301): Optimize web component code - Ans
+  429: - Add cfpb-button and cfpb-file-upload web components - ([454eac3](https://github.com/cfpb/design-system/commit/454eac3004574bfaac6788c7d5f9e98d86a5e088)) - Ans
+  430: - Add postcss-minify - ([d9ad251](https://github.com/cfpb/design-system/commit/d9ad251b4d10fa0e4478adc7a051ff5e9dc240bc)) - Ans
+  431: - Update internal imports - ([09f0434](https://github.com/cfpb/design-system/commit/09f043437ec290990d690571fa971dd6ddfc7223)) - Ans
+  432: - Autolint files - ([c271f67](https://github.com/cfpb/design-system/commit/c271f671661810862511f17779df88cfab9567d9)) - Ans
+  433: - Update documentation - ([5fab397](https://github.com/cfpb/design-system/commit/5fab3973d25b9bf39c9be9847e28e3a10250cd31)) - Ans
+  434: - Replace postcss-minify with cssnano - ([d3bdd83](https://github.com/cfpb/design-system/commit/d3bdd83f2b06d29427804ddbbe1897530cfa66bb)) - Ans
+  435: - Add minifyHTMLLiteralsPlugin - ([44c6618](https://github.com/cfpb/design-system/commit/44c6618b8200229133501f52196656842ebcc874)) - Ans
+  437: ## [3.12.1](https://github.com/cfpb/design-system/compare/v3.12.0..vv3.12.1) - June 12, 2025
+  441: - PR #[2296](https://github.com/cfpb/design-system/pull/2296): Move tags to reference page - Ans
+  445: - Fix filter tag as link hover state - ([3ff21a7](https://github.com/cfpb/design-system/commit/3ff21a7efb0cad117edb9e95a9db3e5a6aacb6bf)) - Ans
+  447: ## [3.12.0](https://github.com/cfpb/design-system/compare/v3.11.0..vv3.12.0) - June  6, 2025
+  451: - PR #[2284](https://github.com/cfpb/design-system/pull/2284): Fix version link in changelog - Ans
+  452: - PR #[2286](https://github.com/cfpb/design-system/pull/2286): Migrate form alert variables to CSS custom properties - Ans
+  453: - PR #[2285](https://github.com/cfpb/design-system/pull/2285): Remove legacy form input CSS - Ans
+  454: - PR #[2287](https://github.com/cfpb/design-system/pull/2287): Migrate checkbox/radio button variables to CSS custom props - Ans
+  455: - PR #[2288](https://github.com/cfpb/design-system/pull/2288): Update text inputs to use CSS properties - Ans
+  456: - PR #[2289](https://github.com/cfpb/design-system/pull/2289): Tweak radio buttons to have consistent dot color - Ans
+  457: - PR #[2226](https://github.com/cfpb/design-system/pull/2226): Add `u-print-only` and `u-screen-only` utilities - Ans
+  461: - Fix version link in changelog - ([51cbbab](https://github.com/cfpb/design-system/commit/51cbbab41692f5261463a2a2238ea8b97b0bb9a8)) - Ans
+  462: - Migrate form alert variables to CSS custom properties - ([2f8e6a0](https://github.com/cfpb/design-system/commit/2f8e6a0ce18f011355c3f064faedacd26f90f0de)) - Ans
+  463: - Remove legacy form input CSS - ([9d9e14d](https://github.com/cfpb/design-system/commit/9d9e14d88365668dcbefc0823b7553664cb6c567)) - Ans
+  464: - Migrate checkbox/radio button variables to CSS custom props - ([e90486e](https://github.com/cfpb/design-system/commit/e90486e307d931b720ce9e3843d08691ffb18a94)) - Ans
+  465: - Update text inputs to use CSS properties - ([80bf7fe](https://github.com/cfpb/design-system/commit/80bf7fe6b3e458f8ad0d1d7537f6ee36f72c421b)) - Ans
+  466: - Tweak radio buttons to have consistent dot color - ([0f7442b](https://github.com/cfpb/design-system/commit/0f7442bf169199604d6d8ee55277d34accf1537b)) - Ans
+  467: - Add `u-print-only` and `u-screen-only` utilities - ([586f276](https://github.com/cfpb/design-system/commit/586f27613bec9896ce1810b139df0ee34e1f1d4a)) - Ans
+  468: - Refactor utilities - ([8177aa9](https://github.com/cfpb/design-system/commit/8177aa99043b96e171ed1b1671e9ffc03bef2c8c)) - Ans
+  470: ## [3.11.0](https://github.com/cfpb/design-system/compare/v3.10.0..vv3.11.0) - June  5, 2025
+  474: - PR #[2248](https://github.com/cfpb/design-system/pull/2248): Refactor `u-show-on-mobile` to not force display state when visible - Ans
+  475: - PR #[2250](https://github.com/cfpb/design-system/pull/2250): Move links over to reference page - Ans
+  476: - PR #[2252](https://github.com/cfpb/design-system/pull/2252): Tweaks to the reference page - Ans
+  477: - PR #[2255](https://github.com/cfpb/design-system/pull/2255): Fix the hover states on selected/disabled radio buttons - Ans
+  478: - PR #[2276](https://github.com/cfpb/design-system/pull/2276): Add error state for select component - Ans
+  482: - Refactor `u-show-on-mobile` to not force display state when visible - ([7ac51d9](https://github.com/cfpb/design-system/commit/7ac51d96e54526554d1c5c8aab0e96e40f556da2)) - Ans
+  483: - Move links over to reference page - ([f509860](https://github.com/cfpb/design-system/commit/f5098606bd0efed07ae457c4e6dbaf32e131c37a)) - Ans
+  484: - Tweaks to the reference page - ([6e31f7d](https://github.com/cfpb/design-system/commit/6e31f7df9b6af78f4763b10c3df61f6b57761078)) - Ans
+  485: - Fix the hover states on selected/disabled radio buttons - ([a8ec6c3](https://github.com/cfpb/design-system/commit/a8ec6c3afa29c9bbc6d535affca06dc28e935cc4)) - Ans
+  486: - Add error state for select component - ([c7e86d6](https://github.com/cfpb/design-system/commit/c7e86d6972c1cf212ed0b75d8e29af0ad68e4ee9)) - Ans
+  487: - Update multiselect - ([316e953](https://github.com/cfpb/design-system/commit/316e9538649ee0aad3bc94efcca1374b71b4ee26)) - Ans
+  488: - Re-build assets - ([c75ce77](https://github.com/cfpb/design-system/commit/c75ce778ca08e2b8add9d1bbe69b07cdde157ce5)) - Ans
+  490: ## [3.10.0](https://github.com/cfpb/design-system/compare/v3.9.0..vv3.10.0) - May 21, 2025
+  494: - PR #[2237](https://github.com/cfpb/design-system/pull/2237): Remove `m-list--spaced` - Ans
+  495: - PR #[2246](https://github.com/cfpb/design-system/pull/2246): Fix full width button with icon example - Ans
+  499: - Remove `m-list--spaced` - ([be7a408](https://github.com/cfpb/design-system/commit/be7a4081a69e2b3c2dd710a8a7b53de67e02ded2)) - Ans
+  500: - Fix full width button with icon example - ([605340e](https://github.com/cfpb/design-system/commit/605340e635fdd00e23dd50fb683aa6142e9ad92f)) - Ans
+  502: ## [3.9.0](https://github.com/cfpb/design-system/compare/v3.8.0..vv3.9.0) - May 13, 2025
+  506: - PR #[2220](https://github.com/cfpb/design-system/pull/2220): Update the a-tag-filter active color to teal-60 from teal - Ans
+  507: - PR #[2219](https://github.com/cfpb/design-system/pull/2219): Remove `respond-to-print` and set media query helpers to `only screen` - Ans
+  508: - PR #[2228](https://github.com/cfpb/design-system/pull/2228): Update deps - Ans
+  512: - Update the a-tag-filter active color to teal-60 from teal - ([d20089d](https://github.com/cfpb/design-system/commit/d20089db42b158134cf336a054ca296f5a9c4ebc)) - Ans
+  513: - Remove `respond-to-print` and set media query helpers to `only screen` - ([3ce77bd](https://github.com/cfpb/design-system/commit/3ce77bd9b28eb0ea3ac761b506e48931db2fcd14)) - Ans
+  514: - Linter fixes - ([39e5fbb](https://github.com/cfpb/design-system/commit/39e5fbb8bb62eac48eebe88cb4224e2485a7f9d1)) - Ans
+  515: - Re-build assets - ([5944749](https://github.com/cfpb/design-system/commit/59447498a713b9eb4a6ba8ceb9307244a914cf9b)) - Ans
+  517: ## [3.8.0](https://github.com/cfpb/design-system/compare/v3.7.1..vv3.8.0) - April 25, 2025
+  521: - PR #[2196](https://github.com/cfpb/design-system/pull/2196): Globally remove inset border style from HR elements - Ans
+  522: - PR #[2194](https://github.com/cfpb/design-system/pull/2194): Convert notifications to use flexbox for layout - Ans
+  526: - Globally remove inset border style from HR elements - ([136a5a1](https://github.com/cfpb/design-system/commit/136a5a15837883a7f41569530e7992773794c854)) - Ans
+  527: - Convert notifications to use flexbox for layout - ([9c424e8](https://github.com/cfpb/design-system/commit/9c424e8dd31dcedaeb782a84a8e3e5e77b66da46)) - Ans
+  529: ## [3.7.1](https://github.com/cfpb/design-system/compare/v3.7.0..vv3.7.1) - April 18, 2025
+  533: - PR #[2192](https://github.com/cfpb/design-system/pull/2192): Buttons: Adjust secondary button hover color - Ans
+  537: - Adjust secondary button hover color - ([358f328](https://github.com/cfpb/design-system/commit/358f328ce680e42d18679f738adc485dafda8a91)) - Ans
+  538: - Add active state - ([2870e7a](https://github.com/cfpb/design-system/commit/2870e7a57caabf9574c067149ee479cd55ac53c7)) - Ans
+  539: - Rebuild assets - ([a0bbaf7](https://github.com/cfpb/design-system/commit/a0bbaf77dbac5b0ef8878a9683bf579c59b26f23)) - Ans
+  541: ## [3.7.0](https://github.com/cfpb/design-system/compare/v3.6.3..vv3.7.0) - April 17, 2025
+  545: - PR #[2142](https://github.com/cfpb/design-system/pull/2142): Update browserslist-config, cypress, eslint, eslint-config-prettier, eslint-plugin-react, git-cliff, postcss, release-it, sass, stylelint - Ans
+  546: - PR #[2187](https://github.com/cfpb/design-system/pull/2187): Increase gap in button groups - Ans
+  547: - PR #[2185](https://github.com/cfpb/design-system/pull/2185): Update secondary button appearance - Ans
+  548: - PR #[2186](https://github.com/cfpb/design-system/pull/2186): Notifications: Set max-width of content - Ans
+  552: - Update browserslist-config, cypress, eslint, eslint-config-prettier, eslint-plugin-react, git-cliff, postcss, release-it, sass, stylelint - ([b90f42a](https://github.com/cfpb/design-system/commit/b90f42a6278acf8f815505c2b60829010db40d12)) - Ans
+  554: : - ([9e09997](https://github.com/cfpb/design-system/commit/9e09997aa7d358ddd49b389e9c333570da7dad1c)) - Ans
+  555: - Update secondary button appearance - ([3327b25](https://github.com/cfpb/design-system/commit/3327b255d8d85584c282cd07ecb0d5e77101a81a)) - Ans
+  556: - Update secondary button divider to pacific-60 - ([bff0461](https://github.com/cfpb/design-system/commit/bff0461328a242a307959b499b61643a902c98c8)) - Ans
+  557: - Correct active state - ([7b120d5](https://github.com/cfpb/design-system/commit/7b120d51da12b89658639e2b7e31ed4474e3d197)) - Ans
+  558: - Set max-width of notification content - ([05121be](https://github.com/cfpb/design-system/commit/05121be6bb953e63da5ae64f4b1066e0aff10b4c)) - Ans
+  559: - Re-build assets - ([dbeb169](https://github.com/cfpb/design-system/commit/dbeb16934dced1e50137664fff270fb48c1066b6)) - Ans
+  561: ## [3.6.3](https://github.com/cfpb/design-system/compare/v3.6.2..vv3.6.3) - January  8, 2025
+  565: - PR #[2139](https://github.com/cfpb/design-system/pull/2139): Provide instantiated tooltip object on initialized component - Wyatt Pearsall
+  569: - Provide instantiated tooltip object on initialized component - ([c4fee52](https://github.com/cfpb/design-system/commit/c4fee5263ea4869c914e980cbc8b9ce3beb9178b)) - Wyatt Pearsall
+  570: - Update jsdoc - ([72163a3](https://github.com/cfpb/design-system/commit/72163a3ac16e801179f32a5c8fbaa07cdba2dea1)) - Wyatt Pearsall
+  571: - Add tooltip update dist - ([4a3916b](https://github.com/cfpb/design-system/commit/4a3916bc13d5076153e6e3008f4bf18aa1c27a36)) - Wyatt Pearsall
+  573: ## [3.6.2](https://github.com/cfpb/design-system/compare/v3.6.1..vv3.6.2) - December 18, 2024
+  577: - PR #[2137](https://github.com/cfpb/design-system/pull/2137): Provide icon exports - Wyatt Pearsall
+  581: - Update CHANGELOG.md - ([bfd91e3](https://github.com/cfpb/design-system/commit/bfd91e39d31d829ea8a2dcb296bea0fd9c36cbbd)) - Chris Contolini
+  582: - Provide icon exports - ([9eccdc4](https://github.com/cfpb/design-system/commit/9eccdc415730d3f0e3b42c28ba51fda00d3aa7f6)) - Wyatt Pearsall
+  584: ## [3.6.1](https://github.com/cfpb/design-system/compare/v3.5.0..vv3.6.1) - December  4, 2024
+  588: - PR #[2054](https://github.com/cfpb/design-system/pull/2054): Add new tooltip component to DS - Chris Contolini
+  589: - PR #[2133](https://github.com/cfpb/design-system/pull/2133): Add ESLint typescript resolver to fix exports issue - Chris Contolini
+  598: Tippy.js. - ([b718f49](https://github.com/cfpb/design-system/commit/b718f4925b35a1f0e396663dfa455fb9ed68d2de)) - Chris Contolini
+  599: - Rebuild dist bundles - ([e7d8d57](https://github.com/cfpb/design-system/commit/e7d8d5790b50d9eb4c2abe204ee1a70899876231)) - Chris Contolini
+  609: See https://nodejs.org/api/packages.html#package-entry-points - ([005bce9](https://github.com/cfpb/design-system/commit/005bce900a9652fff77c746c108e05b5a9a778ab)) - Chris Contolini
+  610: - Hide tooltip trigger elements if JS is disabled - ([eb584f8](https://github.com/cfpb/design-system/commit/eb584f8dca6a07f9b1bb5a570ce9431a6136468c)) - Chris Contolini
+  611: - Change cursor to pointer on tooltip trigger hover - ([979f268](https://github.com/cfpb/design-system/commit/979f268281721fa6aca5900e1b90fa3d2e100f4d)) - CFPBot
+  612: - Rebuild assets, move new packages to yarn cache dir - ([e0e9531](https://github.com/cfpb/design-system/commit/e0e95310cf3d94706ec143e23caa90157f7129f2)) - Chris Contolini
+  613: - Remove erroneous auto-changelog dependency and config - ([980d9eb](https://github.com/cfpb/design-system/commit/980d9eb65147732323ce42f56014e17ffc638d5a)) - Chris Contolini
+  614: - Return Tooltip instance to match JSDoc description - ([290b87e](https://github.com/cfpb/design-system/commit/290b87e4889c16c5e846e3039a7266ebb7c09e99)) - Chris Contolini
+  616: ## [3.5.0](https://github.com/cfpb/design-system/compare/v3.4.14..vv3.5.0) - November 26, 2024
+  620: - PR #[2127](https://github.com/cfpb/design-system/pull/2127): Update hero text margin to `auto 0` - Ans
+  621: - PR #[2128](https://github.com/cfpb/design-system/pull/2128): Remove `o-featured-content-module--left` - Ans
+  625: - Update hero text margin to `auto 0` - ([a731483](https://github.com/cfpb/design-system/commit/a73148309e7d36ce20ed786f0b57b47d1acfa0d0)) - Ans
+  626: - Remove `o-featured-content-module--left` - ([c12548f](https://github.com/cfpb/design-system/commit/c12548feea774c37c781a7f1268551be3703094b)) - Ans
+  628: ## [3.4.14](https://github.com/cfpb/design-system/compare/v3.4.13..vv3.4.14) - November 21, 2024
+  632: - PR #[2122](https://github.com/cfpb/design-system/pull/2122): Add non-clickable filter tag - Ans
+  636: - Add non-clickable filter tag - ([b0b50c1](https://github.com/cfpb/design-system/commit/b0b50c1fe0b980273ee2f9b79e322b781f850ee8)) - Ans
+  638: ## [3.4.13](https://github.com/cfpb/design-system/compare/v3.4.12..vv3.4.13) - November 21, 2024
+  642: - PR #[2123](https://github.com/cfpb/design-system/pull/2123): Adjust date picker min-height/min-width to prevent size difference between empty and filled date picker - Ans
+  646: - Adjust date picker min-height to prevent size difference between empty and filled date picker - ([1bb457a](https://github.com/cfpb/design-system/commit/1bb457a727354b5d154e19e08f7b41dcaf231ac4)) - Ans
+  647: - Date picker: Adjust min-width to be a nice round number - ([5d41c85](https://github.com/cfpb/design-system/commit/5d41c859fb91d0b3b7df79061415716a5b9e7a09)) - Ans
+  648: - Remove top/bottom padding - ([30f215c](https://github.com/cfpb/design-system/commit/30f215ccb0fd5d7df1c2424ab587dbb5fe3281c4)) - Ans
+  649: - Date picker: Reduce height by 1px - ([ef7a039](https://github.com/cfpb/design-system/commit/ef7a03962b400fcd0eca1a2308048ad16c876fee)) - Ans
+  650: - Regenerate assets - ([56ca4fd](https://github.com/cfpb/design-system/commit/56ca4fd28bd026feb140f4308dd2e47b441e2c2a)) - Ans
+  652: ## [3.4.12](https://github.com/cfpb/design-system/compare/v3.4.11..vv3.4.12) - November 21, 2024
+  656: - PR #[2117](https://github.com/cfpb/design-system/pull/2117): Add overflow-wrap: break-word to `a-link__text` - Ans
+  657: - PR #[2121](https://github.com/cfpb/design-system/pull/2121): Tweak and consolidate date picker - Ans
+  661: - Add overflow-wrap: break-word to `a-link__text` - ([362af9b](https://github.com/cfpb/design-system/commit/362af9b39034f31ca54bf4f84b3eae769aa36868)) - Ans
+  662: - Rebuild assets - ([696aa1d](https://github.com/cfpb/design-system/commit/696aa1d51e14bce883e7bdfd6084d50572b59104)) - Ans
+  663: - Tweak and consolidate date picker - ([b950e9d](https://github.com/cfpb/design-system/commit/b950e9d051b0d1ebc7d4e031012784dd43ccac0f)) - Ans
+  664: - Update date-picker.md - ([62cc483](https://github.com/cfpb/design-system/commit/62cc483290cc3e6fb1ebb9e8806ab4c29366450c)) - Ans
+  665: - More tweaks to wrangle aligning iOS with everyone else - ([c41101f](https://github.com/cfpb/design-system/commit/c41101f6be4994c8532b884191525df269529a9d)) - Ans
+  667: ## [3.4.11](https://github.com/cfpb/design-system/compare/v3.4.10..vv3.4.11) - November 19, 2024
+  671: - PR #[2118](https://github.com/cfpb/design-system/pull/2118): Add `u-w65pct` and `u-w15pct` utilities - Ans
+  672: - PR #[2116](https://github.com/cfpb/design-system/pull/2116): Adds date input example and adjusts baseline appearance - Ans
+  676: - Add `u-w65pct` and `u-w15pct` utilities - ([ea2e45b](https://github.com/cfpb/design-system/commit/ea2e45bb961d4cd3fc1e5551c0b9ccf4fce74725)) - Ans
+  677: - Shrink demo width utility text size to fit on one line each - ([5b80eaa](https://github.com/cfpb/design-system/commit/5b80eaa670f1a32ce47f006c8d0d0fb02dd890b1)) - Ans
+  678: - Rebuild assets - ([533f0c6](https://github.com/cfpb/design-system/commit/533f0c640029664ccb44459b3859fe03f28ee64d)) - Ans
+  679: - Adds date input example and adjusts baseline appearance - ([0cd1019](https://github.com/cfpb/design-system/commit/0cd1019a10ecb2a35776d26778cfe60b15511c04)) - Ans
+  680: - Rebuild assets - ([869583a](https://github.com/cfpb/design-system/commit/869583add82cf0c4b6000ce28078aa88e8ff1e91)) - Ans
+  682: ## [3.4.10](https://github.com/cfpb/design-system/compare/v3.4.9..vv3.4.10) - November 19, 2024
+  686: - PR #[2120](https://github.com/cfpb/design-system/pull/2120): Add filter tag anchor markup example - Ans
+  690: - Add filter tag link example - ([195cf5c](https://github.com/cfpb/design-system/commit/195cf5c3c16d6a755c4b482d227a75d229726790)) - Ans
+  692: ## [3.4.9](https://github.com/cfpb/design-system/compare/v3.4.8..vv3.4.9) - November 13, 2024
+  696: - PR #[2112](https://github.com/cfpb/design-system/pull/2112): Pagination: move z-index to buttons - Ans
+  700: - Move z-index to buttons - ([48e4c68](https://github.com/cfpb/design-system/commit/48e4c68cda895e8b7103b4091627e6d31e859a88)) - Ans
+  702: ## [3.4.8](https://github.com/cfpb/design-system/compare/v3.4.7..vv3.4.8) - November 13, 2024
+  706: - PR #[2110](https://github.com/cfpb/design-system/pull/2110): Fix z-index on pagination - Ans
+  710: - Fix z-index on pagination - ([1b26267](https://github.com/cfpb/design-system/commit/1b2626760824f74c333b7ea4d24bbfc0f5760cdb)) - Ans
+  712: ## [3.4.7](https://github.com/cfpb/design-system/compare/v3.4.6..vv3.4.7) - November 13, 2024
+  716: - PR #[2108](https://github.com/cfpb/design-system/pull/2108): Add text-free icon button examples - Ans
+  717: - PR #[2109](https://github.com/cfpb/design-system/pull/2109): Add button link state examples - Ans
+  721: - Add text-free icon buttons - ([8527b37](https://github.com/cfpb/design-system/commit/8527b37bbaa56611d2883d43289c4a6c2d2e078a)) - Ans
+  722: - Tweak button dimensions - ([8595c33](https://github.com/cfpb/design-system/commit/8595c33afd3b92557c02d4494200e3d08729c053)) - Ans
+  723: - Rebuild assets - ([a27795f](https://github.com/cfpb/design-system/commit/a27795fe7fe0072e42b217f5e331a2736e1bcb5a)) - Ans
+  725: ## [3.4.6](https://github.com/cfpb/design-system/compare/v3.4.5..vv3.4.6) - November 13, 2024
+  729: - PR #[2106](https://github.com/cfpb/design-system/pull/2106): Refine button links - add icon examples - Ans
+  733: - Refine button with link - ([5edc8e5](https://github.com/cfpb/design-system/commit/5edc8e5cc7124e4654a86f065b28d94e70bd45f7)) - Ans
+  735: ## [3.4.5](https://github.com/cfpb/design-system/compare/v3.4.4..vv3.4.5) - November 12, 2024
+  739: - PR #[2105](https://github.com/cfpb/design-system/pull/2105): Buttons: add `justify-content: center` - Ans
+  743: - Add `justify-content: center` - ([c7993b5](https://github.com/cfpb/design-system/commit/c7993b5281ed84dd301c3640f9ce9ef0cce14c68)) - Ans
+  744: - Rebuild assets - ([2f1ab96](https://github.com/cfpb/design-system/commit/2f1ab964c1cfab0d4ad6b914baaac68382073d41)) - Ans
+  746: ## [3.4.4](https://github.com/cfpb/design-system/compare/v3.4.3..vv3.4.4) - November 12, 2024
+  750: - PR #[2103](https://github.com/cfpb/design-system/pull/2103): Add `a-btn--hide-icon` class - Ans
+  754: - Add `a-btn--hide-icon` class - ([d4bf92c](https://github.com/cfpb/design-system/commit/d4bf92c4a6583b3a5b852ca67eb63c86c31a611c)) - Ans
+  756: ## [3.4.3](https://github.com/cfpb/design-system/compare/v3.4.2..vv3.4.3) - November  7, 2024
+  760: - PR #[2104](https://github.com/cfpb/design-system/pull/2104): Fix npm badge image URL - Ans
+  764: - Fix badge URL - ([ce2a58a](https://github.com/cfpb/design-system/commit/ce2a58a6b4b82b6dee28725e502462bd8ed67e47)) - Ans
+  766: ## [3.4.2](https://github.com/cfpb/design-system/compare/v3.4.1..vv3.4.2) - November  7, 2024
+  770: - PR #[2102](https://github.com/cfpb/design-system/pull/2102): Remove extraneous button-with-icon.scss reference - Ans
+  774: - Remove button-with-icon reference - ([ee36f36](https://github.com/cfpb/design-system/commit/ee36f3676c2160415c8e75cf0c8affffad9a7f22)) - Ans
+  776: ## [3.4.1](https://github.com/cfpb/design-system/compare/v3.4.0..vv3.4.1) - November  6, 2024
+  780: - PR #[2101](https://github.com/cfpb/design-system/pull/2101): Add behavior JS unit tests - Ans
+  784: - Add behavior specs - ([dd956be](https://github.com/cfpb/design-system/commit/dd956be595a500b2fd654faa9c88700851057eb1)) - Ans
+  786: ## [3.4.0](https://github.com/cfpb/design-system/compare/v3.3.1..vv3.4.0) - November  6, 2024
+  790: - PR #[2100](https://github.com/cfpb/design-system/pull/2100): Update behavior method names - Ans
+  794: - Update behavior method names - ([8ae891d](https://github.com/cfpb/design-system/commit/8ae891de2b6d0f3f3f6fd5744f174302ac3b0465)) - Ans
+  795: - Adjust release-it process - ([222f302](https://github.com/cfpb/design-system/commit/222f30216e47e36ca3f01d2835fe53280af8ba4e)) - Ans
+  797: ## [3.3.1](https://github.com/cfpb/design-system/compare/v3.3.0..vv3.3.1) - November  6, 2024
+  801: - PR #[2099](https://github.com/cfpb/design-system/pull/2099): Point to the right npm repo in the DS - Ans
+  805: - Point to the right npm repo in the DS - ([f61ef71](https://github.com/cfpb/design-system/commit/f61ef71e4bdd0e7df503d6d8afade621ca561a75)) - Ans
+  807: ## [3.3.0](https://github.com/cfpb/design-system/compare/v3.2.11..vv3.3.0) - November  6, 2024
+  811: - PR #[2095](https://github.com/cfpb/design-system/pull/2095): Remove `u-break-word` - Ans
+  815: - Remove `u-break-word` - ([e9df86d](https://github.com/cfpb/design-system/commit/e9df86d6ae6e0c5c800222a738da905e4ad86e83)) - Ans
+  817: ## [3.2.11](https://github.com/cfpb/design-system/compare/v3.2.10..vv3.2.11) - November  6, 2024
+  821: - PR #[2091](https://github.com/cfpb/design-system/pull/2091): Refactor buttons and pagination to fix alignment issues - Ans
+  822: - PR #[2098](https://github.com/cfpb/design-system/pull/2098): Linter fixes | Patch bump Cypress - Ans
+  826: - Refactor buttons to fix alignment issues - ([3ee904e](https://github.com/cfpb/design-system/commit/3ee904ef5d1b45c149f6bde964d2cacb70675f8e)) - Ans
+  827: - Add `row-gap` - ([d6ea4c1](https://github.com/cfpb/design-system/commit/d6ea4c1480dfbf043a4dd0f37d59e73bbb9ed94f)) - Ans
+  828: - Linter fixes - ([6f84a1b](https://github.com/cfpb/design-system/commit/6f84a1b12fbd32720cd5f109d8d5ac0da683e51a)) - Ans
+  830: ## [3.2.10](https://github.com/cfpb/design-system/compare/v3.2.9..vv3.2.10) - November  6, 2024
+  834: - PR #[2096](https://github.com/cfpb/design-system/pull/2096): Remove `u-inline-block` - Ans
+  838: - Bump changelog - ([ad0f6dc](https://github.com/cfpb/design-system/commit/ad0f6dc23d18cad72f3ff953e857a30261bebc60)) - Ans
+  839: - Remove `u-inline-block` - ([ad8824d](https://github.com/cfpb/design-system/commit/ad8824d097d77ce5291170b5ac8752e9c0499d3a)) - Ans
+  841: ## [3.2.9](https://github.com/cfpb/design-system/compare/v3.2.8..vv3.2.9) - November  6, 2024
+  845: - PR #[2097](https://github.com/cfpb/design-system/pull/2097): Add `u-small-text--subtle` - Ans
+  849: - Tweak changelog config - ([e944523](https://github.com/cfpb/design-system/commit/e944523ee676c529483bb2583f74d2d380f7f411)) - Ans
+  850: - Add `u-small-text--subtle` - ([3108763](https://github.com/cfpb/design-system/commit/31087639e456f52370dfcaea57f0d14d48572e79)) - Ans
+  851: - Rebuild assets - ([6a6f917](https://github.com/cfpb/design-system/commit/6a6f91724677614eda3e2d0d474ec9912e450192)) - Ans
+  853: ## [3.2.8](https://github.com/cfpb/design-system/compare/v3.2.7..vv3.2.8) - November  1, 2024
+  857: - PR #[2083](https://github.com/cfpb/design-system/pull/2083): Update to ESLint@9.x - Ans
+  858: - PR #[2085](https://github.com/cfpb/design-system/pull/2085): Add button link example | Correctly vertically align button group link buttons - Ans
+  862: - Update to ESLint@9.x - ([b7fff18](https://github.com/cfpb/design-system/commit/b7fff18ecbc44e9916d65738a52ed24e7cce9d75)) - Ans
+  863: - Add button link example | Correctly vertically align button group link buttons - ([3da715a](https://github.com/cfpb/design-system/commit/3da715a64b907cc71dc753395db42148408519fc)) - Ans
+  864: - Add button color to hover - ([5acef20](https://github.com/cfpb/design-system/commit/5acef20549ef2d2c224dfc767f24af740bf10fa2)) - Ans
+  865: - Change to center alignment - ([7f38dc7](https://github.com/cfpb/design-system/commit/7f38dc76307f4c9d00b581892259d676cb1fd867)) - Ans
+  866: - Switch to git-cliff from auto-changelog - ([2488161](https://github.com/cfpb/design-system/commit/2488161f3a13019778cec325c22870a0a7841933)) - Ans
+  867: - Rebuild assets - ([a6ff4d9](https://github.com/cfpb/design-system/commit/a6ff4d9740c7606a2740e30be6d27a28c6e5c4f8)) - Ans
+  869: ## [3.2.7](https://github.com/cfpb/design-system/compare/v3.2.6..vv3.2.7) - October 30, 2024
+  873: - PR #[2082](https://github.com/cfpb/design-system/pull/2082): Add `aria-hidden:true` to SVG icons - Ans
+  877: - Adjust npm publishing config - ([2f20b8d](https://github.com/cfpb/design-system/commit/2f20b8d83eb7f46298ad5aaa6ad30b700fb85257)) - Ans
+  878: - Add `aria-hidden:true` to SVG icons - ([e1f4811](https://github.com/cfpb/design-system/commit/e1f481195648f7d270011de9217e3cf73d5b91cb)) - Ans
+  879: - Correctly process icons - ([181bea2](https://github.com/cfpb/design-system/commit/181bea2a44d02c2dd66f22c4f1d461e985d8d6ee)) - Ans
+  880: - Re-build dist files - ([228c0ac](https://github.com/cfpb/design-system/commit/228c0ac5b0f1ea1962c7ceedfbcf37e65c077ac1)) - Ans
+  882: ## [3.2.6](https://github.com/cfpb/design-system/compare/v3.2.5..vv3.2.6) - October 25, 2024
+  886: - PR #[2075](https://github.com/cfpb/design-system/pull/2075): Update button groups to use flexbox - Ans
+  890: - Update button groups to use flexbox - ([fe857d0](https://github.com/cfpb/design-system/commit/fe857d02fe08a6f3f60d262ebf9ef9c4ed9a0a52)) - Ans
+  891: - Move auto-changelog dep to root - ([a2acba5](https://github.com/cfpb/design-system/commit/a2acba58b6bf636d3999e5fcdb9ac6be3b3dc0f8)) - Ans
+  893: ## [3.2.5](https://github.com/cfpb/design-system/compare/v3.2.4..vv3.2.5) - October 23, 2024
+  897: - PR #[2069](https://github.com/cfpb/design-system/pull/2069): Remove `o-table--entry-header-on-small` class - Ans
+  901: - Remove - ([e839bde](https://github.com/cfpb/design-system/commit/e839bde972624c90c36bc58526df71a4e6d0c04a)) - Ans
+  902: - Add more `publishConfig` - ([b54c1c1](https://github.com/cfpb/design-system/commit/b54c1c19f8d2d559f428281b8ed1e64a57e41dac)) - Ans
+  904: ## [3.2.4](https://github.com/cfpb/design-system/compare/v3.2.3..vv3.2.4) - October 23, 2024
+  908: - Move auto-changelog to package - ([2eb43f2](https://github.com/cfpb/design-system/commit/2eb43f23cc3a8ebaa08da2c01f41fb273c50716e)) - Ans
+  910: ## [3.2.3](https://github.com/cfpb/design-system/compare/v3.2.2..vv3.2.3) - October 16, 2024
+  914: - PR #[2068](https://github.com/cfpb/design-system/pull/2068): Rename `o-table-wrapper--scrolling` to `o-table--scrolling` - Ans
+  918: - Rename `o-table-wrapper--scrolling` to `o-table--scrolling` - ([acded96](https://github.com/cfpb/design-system/commit/acded9655df851d2971b0b8f8da7a5221c065e43)) - Ans
+  920: ## [3.2.2](https://github.com/cfpb/design-system/compare/v3.2.1..vv3.2.2) - September 27, 2024
+  924: - PR #[2064](https://github.com/cfpb/design-system/pull/2064): Adjust code comments - Ans
+  928: - Adjust code comments - ([c31cf40](https://github.com/cfpb/design-system/commit/c31cf40a990abb6e38e96e5a2112f875d4311282)) - Ans
+  929: - Build assets - ([35eb3af](https://github.com/cfpb/design-system/commit/35eb3af2e3cd0c7f2a14bd111ed8e0b1392a9238)) - Ans
+  931: ## [3.2.1](https://github.com/cfpb/design-system/compare/v3.2.0..vv3.2.1) - September 27, 2024
+  935: - PR #[2058](https://github.com/cfpb/design-system/pull/2058): Swap lerna with release-it - Ans
+  936: - PR #[2063](https://github.com/cfpb/design-system/pull/2063): Refresh npm cache - Ans
+  940: - Swap lerna for release-it - ([3eb955a](https://github.com/cfpb/design-system/commit/3eb955ab4557a8d8efb43d580a39c4e113f55e5d)) - Ans
+  941: - Revert to 3.2.0 - ([3f8c3e0](https://github.com/cfpb/design-system/commit/3f8c3e0bc8960f9f816e922cad115983ab2f10b8)) - Ans
+  942: - Revert to v3.2.0 - ([1fbc6ac](https://github.com/cfpb/design-system/commit/1fbc6ac8b76664dc2a342fe6224e081f50ac36b9)) - Ans
+  943: - Revert to v3.2.0 - ([a676d01](https://github.com/cfpb/design-system/commit/a676d01f243dd6da1c69640010e9f7101590cda5)) - Ans
+  944: - Revert to 3.2.0 - ([0222ad1](https://github.com/cfpb/design-system/commit/0222ad1c71bd76f6a8b8a4d9f51b00b5f8be1c5a)) - Ans
+  945: - Revert to v3.2.0 - ([abd9903](https://github.com/cfpb/design-system/commit/abd99037e4885bc8c19285d23b1757d088cc5424)) - Ans
+  946: - Revert to v3.2.0 - ([f8cf8f1](https://github.com/cfpb/design-system/commit/f8cf8f1a24a530b458583a91870b8841c8b1ff0b)) - Ans
+  947: - Revert to v3.2.0 - ([a42322d](https://github.com/cfpb/design-system/commit/a42322d39fb6c7372b2ffc00e0bd025c481e1c6b)) - Ans
+  948: - Revert to v3.2.0 - ([9eb2d8c](https://github.com/cfpb/design-system/commit/9eb2d8c3fde5da7e12a9ec5f23a3d958a08eac13)) - Ans
+  950: ## [3.2.0](https://github.com/cfpb/design-system/compare/v3.1.9..vv3.2.0) - September 25, 2024
+  954: - PR #[2053](https://github.com/cfpb/design-system/pull/2053): More color contrast adjustments | Formatting fixes - Ans
+  955: - PR #[2056](https://github.com/cfpb/design-system/pull/2056): Update types/react@18.3.8, concurrently@9.0.1, postcss@8.4.47, sass@179.2, saucectl@0.186.0 - Ans
+  956: - PR #[2055](https://github.com/cfpb/design-system/pull/2055): Refactor heading mixins - Ans
+  960: - More color contrast adjustments | Formatting fixes - ([f3c95e5](https://github.com/cfpb/design-system/commit/f3c95e5c960bd0fe0c6a640de076428d3f994eca)) - Ans
+  961: - Remove redundant abstracts imports - ([57d178b](https://github.com/cfpb/design-system/commit/57d178b24f7acee3a1d704c221c4ff9ed054ec9c)) - Ans
+  962: - Refactor heading mixins - ([6f421a6](https://github.com/cfpb/design-system/commit/6f421a6ef6ea17c076fe34db23bdfe855ee71cc4)) - Ans
+  963: - V3.2.0 - ([1b92196](https://github.com/cfpb/design-system/commit/1b92196c49399125ce790a1c43e47e02659e3e3e)) - Ans
+  965: ## [3.1.9](https://github.com/cfpb/design-system/compare/v3.1.8..vv3.1.9) - September 12, 2024
+  969: - PR #[2051](https://github.com/cfpb/design-system/pull/2051): Filter tag tweaks - Ans
+  973: - V3.1.8 - ([f7b4d78](https://github.com/cfpb/design-system/commit/f7b4d7854e74fa99e2439c90ea28dc194f70c3cc)) - Ans
+  974: - Tweak filter tag layout - ([9c0c1f3](https://github.com/cfpb/design-system/commit/9c0c1f362f41e391f4c416fffec5665029e18858)) - Ans
+  975: - Bump version - ([8af1437](https://github.com/cfpb/design-system/commit/8af143793243ce4b08e7be32219a4cb3f6e86ee9)) - Ans
+  976: - V3.1.9 - ([b6b39a3](https://github.com/cfpb/design-system/commit/b6b39a3000a8fd8f75f237db1a86d3f3725780f8)) - Ans
+  978: ## [3.1.8](https://github.com/cfpb/design-system/compare/v3.1.7..vv3.1.8) - September 11, 2024
+  982: - PR #[2049](https://github.com/cfpb/design-system/pull/2049): Replace multiselect tags with filter tags - Ans
+  987: - Replace multiselect tags with filter tags - ([5052532](https://github.com/cfpb/design-system/commit/505253216946dc9f5c344966d88b38b89a90a92b)) - Ans
+  988: - Bump version - ([caa9f2f](https://github.com/cfpb/design-system/commit/caa9f2ffb1f452b547dcfc8410e9aef876ea3ae2)) - Ans
+  989: - V3.1.8 - ([ce63bfc](https://github.com/cfpb/design-system/commit/ce63bfcdecf687e9b96ab2420db225649b65db4b)) - Ans
+  991: ## [3.1.7](https://github.com/cfpb/design-system/compare/v3.1.6..vv3.1.7) - September 10, 2024
+  995: - PR #[2046](https://github.com/cfpb/design-system/pull/2046): Update gap in tags - Ans
+  999: - Update gap in tags - ([e6c8fa1](https://github.com/cfpb/design-system/commit/e6c8fa116ab842a83ff7b32f24db8251eb591cfb)) - Ans
+  1000: - Bump version - ([8f68113](https://github.com/cfpb/design-system/commit/8f68113c89ae1e24550d23c76a1765daac3a1a63)) - Ans
+  1001: - V3.1.7 - ([4154531](https://github.com/cfpb/design-system/commit/415453147d44ab32977359f985c50a66799818c1)) - Ans
+  1003: ## [3.1.6](https://github.com/cfpb/design-system/compare/v3.1.5..vv3.1.6) - September 10, 2024
+  1007: - PR #[2045](https://github.com/cfpb/design-system/pull/2045): Add non-link topic tags - Ans
+  1011: - Add non-link topic tags - ([f1c3158](https://github.com/cfpb/design-system/commit/f1c3158e739b114d92f83daeb79763af5c781b92)) - Ans
+  1012: - V3.1.6 - ([59f8344](https://github.com/cfpb/design-system/commit/59f83442c41d4ca6803d22971964dab26efb0ef0)) - Ans
+  1014: ## [3.1.5](https://github.com/cfpb/design-system/compare/v3.1.4..vv3.1.5) - September 10, 2024
+  1018: - PR #[2037](https://github.com/cfpb/design-system/pull/2037): Adjust focus rectangle offset for default links, expandables, summaries - Ans
+  1019: - PR #[2042](https://github.com/cfpb/design-system/pull/2042): Add stacked topic tag group modifier - Ans
+  1023: - Adds default outline-offset of 1px to focused links - ([5c00dbe](https://github.com/cfpb/design-system/commit/5c00dbefb47b2f8043eab1f94a9d34e23f011867)) - Ans
+  1024: - Adjust focus rectangle offset - ([3ed54e6](https://github.com/cfpb/design-system/commit/3ed54e6bb0d91615ca42ab71edf3ade33ac7c1ee)) - Ans
+  1025: - Add stacked topic tag group modifier - ([b89b032](https://github.com/cfpb/design-system/commit/b89b032b0bd5593ceb496e5449d20ed5dc396178)) - Ans
+  1026: - V3.1.5 - ([37c1b91](https://github.com/cfpb/design-system/commit/37c1b91a345ebaf7098509a05ec1e972cbcd91c3)) - Ans
+  1028: ## [3.1.4](https://github.com/cfpb/design-system/compare/v3.1.3..vv3.1.4) - September  5, 2024
+  1032: - PR #[2039](https://github.com/cfpb/design-system/pull/2039): Update index.scss - Ans
+  1036: - Update index.scss - ([f6ba359](https://github.com/cfpb/design-system/commit/f6ba3598acd1d58c5dff277218055d9ed74b6bd6)) - Ans
+  1037: - V3.1.4 - ([62179e8](https://github.com/cfpb/design-system/commit/62179e890fdeafb650900377678bde853f0f7a9d)) - Ans
+  1039: ## [3.1.3](https://github.com/cfpb/design-system/compare/v3.1.2..vv3.1.3) - September  5, 2024
+  1043: - PR #[2038](https://github.com/cfpb/design-system/pull/2038): Add tag RTL code - Ans
+  1047: - Add tag RTL code - ([6239902](https://github.com/cfpb/design-system/commit/62399029913e444a8809dd65fff6f1a98e580098)) - Ans
+  1048: - V3.1.3 - ([072112e](https://github.com/cfpb/design-system/commit/072112ea27fe26d283d6b230de22582c3be09370)) - Ans
+  1050: ## [3.1.2](https://github.com/cfpb/design-system/compare/v3.1.1..vv3.1.2) - September  5, 2024
+  1054: - PR #[2027](https://github.com/cfpb/design-system/pull/2027): Remove `$font-size` variable - Ans
+  1055: - PR #[2036](https://github.com/cfpb/design-system/pull/2036): Adjust tags outline and coloring - Ans
+  1059: - Remove $font-size variable - ([de3bc6a](https://github.com/cfpb/design-system/commit/de3bc6a7b8e58374483509ffcef2328c5e9a4baa)) - Ans
+  1060: - Adjust tags outline and coloring - ([843ced7](https://github.com/cfpb/design-system/commit/843ced766cfa3930574c45bd70f19f272508a415)) - Ans
+  1061: - Bump version - ([647e344](https://github.com/cfpb/design-system/commit/647e34496e3958aacef027ba35c3e3069e59772f)) - Ans
+  1062: - V3.1.2 - ([def4f44](https://github.com/cfpb/design-system/commit/def4f440c6e4df31e9c9001a3630e14011c2c840)) - Ans
+  1064: ## [3.1.1](https://github.com/cfpb/design-system/compare/v3.1.0..vv3.1.1) - September  4, 2024
+  1068: - PR #[2035](https://github.com/cfpb/design-system/pull/2035): Update types/react, decap-cms-app, cypress, postcss, sass, saucectl, stylelint - Ans
+  1069: - PR #[2034](https://github.com/cfpb/design-system/pull/2034): Update accordion BEM fix - Ans
+  1073: - Update accordion BEM fix - ([13dd557](https://github.com/cfpb/design-system/commit/13dd557463a7d62e9ba09c6fb5e833be2e9f5d22)) - Ans
+  1074: - Update types/react, decap-cms-app, cypress, postcss, sass, saucectl, stylelint - ([7dcaaf2](https://github.com/cfpb/design-system/commit/7dcaaf2a7c4ef72ef9aa8d1e5556993e79db3514)) - Ans
+  1076: - Bump version - ([5faa23f](https://github.com/cfpb/design-system/commit/5faa23fcf2f8b3e49bfc8ae88d9a3326073ba08a)) - Ans
+  1077: - V3.1.1 - ([6d08f67](https://github.com/cfpb/design-system/commit/6d08f674140b371f4c5eb6cfa1837320f5350fb9)) - Ans
+  1079: ## [3.1.0](https://github.com/cfpb/design-system/compare/v3.0.3..vv3.1.0) - September  4, 2024
+  1083: - PR #[2031](https://github.com/cfpb/design-system/pull/2031): Add topic tags | Re-arrange links page | Adjust sass imports - Ans
+  1087: - Add topic tags | Re-arrange links page | Adjust sass imports - ([6074735](https://github.com/cfpb/design-system/commit/60747356f5ee271e1e551651e5b5b19b919900e0)) - Ans
+  1088: - Adjust topic tag underlining - ([c1b2d19](https://github.com/cfpb/design-system/commit/c1b2d191299c385d4df8d9d2ef96b6f50bc39db2)) - Ans
+  1089: - Add topic tag bullet class - ([d187f9c](https://github.com/cfpb/design-system/commit/d187f9c35debfcc5e5332ba64392a816a6e345fb)) - Ans
+  1090: - Break long words at small screen sizes - ([f522017](https://github.com/cfpb/design-system/commit/f522017aedbd62eb840f4d8670f9a3157926e728)) - Ans
+  1091: - Bump version - ([a5d1c70](https://github.com/cfpb/design-system/commit/a5d1c709bc5f79e229859729fe085e8730264a61)) - Ans
+  1092: - V3.1.0 - ([95e0718](https://github.com/cfpb/design-system/commit/95e07185441126cf0376f28f49180a77168ee413)) - Ans
+  1094: ## [3.0.3](https://github.com/cfpb/design-system/compare/v3.0.2..vv3.0.3) - August 22, 2024
+  1098: - PR #[2026](https://github.com/cfpb/design-system/pull/2026): Tags: Add initial tag styling - Ans
+  1099: - PR #[2029](https://github.com/cfpb/design-system/pull/2029): Fix malformed line-height - Ans
+  1100: - PR #[2028](https://github.com/cfpb/design-system/pull/2028): Linter autofixes - Ans
+  1104: - Add initial tag styling - ([68883eb](https://github.com/cfpb/design-system/commit/68883ebda6bedba02b3a86f17497d22f635e9d4d)) - Ans
+  1105: - Update tags to regular weight - ([cad141f](https://github.com/cfpb/design-system/commit/cad141f577a923d7ad368d3594f21ae18a7bf5e1)) - Ans
+  1106: - Fix malformed line-height - ([a902e01](https://github.com/cfpb/design-system/commit/a902e019bb6731d749230b40b08dd57e237206b6)) - Ans
+  1107: - Autofix linter - ([600f799](https://github.com/cfpb/design-system/commit/600f799b54aaea34ba20644571d26808e074ccf6)) - Ans
+  1108: - Bump version - ([8822087](https://github.com/cfpb/design-system/commit/8822087c8b24f8d2edfd9ae56064a893122983d9)) - Ans
+  1109: - V3.0.3 - ([85b594f](https://github.com/cfpb/design-system/commit/85b594f98ad76a7bfcfd8576b9fcb82f89dd1c56)) - Ans
+  1111: ## [3.0.2](https://github.com/cfpb/design-system/compare/v3.0.1..vv3.0.2) - August 21, 2024
+  1115: - PR #[2024](https://github.com/cfpb/design-system/pull/2024): FCM: Unquote padding-bottom value in video-playing class - Ans
+  1119: - Unquote padding-bottom value in video-playing class - ([0972a29](https://github.com/cfpb/design-system/commit/0972a292720d5edb04c2c17e1ca5ad5ca38a5e74)) - Ans
+  1120: - V3.0.2 - ([f01daeb](https://github.com/cfpb/design-system/commit/f01daeba6c0204356ed86358d51a0f25e4af9159)) - Ans
+  1122: ## [3.0.1](https://github.com/cfpb/design-system/compare/v3.0.0..vv3.0.1) - August 16, 2024
+  1126: - PR #[2022](https://github.com/cfpb/design-system/pull/2022): Create root package index.scss - Ans
+  1130: - Create root package index.scss - ([b4ae5d0](https://github.com/cfpb/design-system/commit/b4ae5d08c7bee7f09ef478743038b02e7bb4d55d)) - Ans
+  1131: - V3.0.1 - ([dbcf5b3](https://github.com/cfpb/design-system/commit/dbcf5b3bcc5b64fa7760011f05c7d7fa8517406a)) - Ans
+  1137: - PR #[2005](https://github.com/cfpb/design-system/pull/2005): Consolidate packages into cfpb-design-system - Ans
+  1138: - PR #[2014](https://github.com/cfpb/design-system/pull/2014): Update banner color scheme - Ans
+  1139: - PR #[2016](https://github.com/cfpb/design-system/pull/2016): Add script to decap preview - Ans
+  1140: - PR #[2017](https://github.com/cfpb/design-system/pull/2017): Add base index file | Remove less file - Ans
+  1141: - PR #[2018](https://github.com/cfpb/design-system/pull/2018): Remove default export - Ans
+  1142: - PR #[2019](https://github.com/cfpb/design-system/pull/2019): Pre-v3 prep - Ans
+  1143: - PR #[2020](https://github.com/cfpb/design-system/pull/2020): Update decap-cms-app@3.3.2, saucectl@0.183.0, stylelint@16.8.2, cypress@13.13.3, esbuild@0.23.1 - Ans
+  1147: - Consolidate packages into cfpb-design-system - ([eb63aba](https://github.com/cfpb/design-system/commit/eb63aba9edccaff1cb5739212b1dac7fa7c1be89)) - Ans
+  1148: - Move some button and layout vars to the abstracts vars - ([434262e](https://github.com/cfpb/design-system/commit/434262eba8f0ac35f66fa6fd4d2cdaa065747e37)) - Ans
+  1149: - Update banner color scheme - ([440ab7e](https://github.com/cfpb/design-system/commit/440ab7eab5b23082a6fd665fe246e86c0c9dcdbb)) - Ans
+  1150: - Add script to decap preview - ([af903c9](https://github.com/cfpb/design-system/commit/af903c9180da5a6668c6943ef46ffd509f836912)) - Ans
+  1151: - Add base index file | Remove less file - ([406e73e](https://github.com/cfpb/design-system/commit/406e73eb478053b53d6b2ba26870b50d2e6b9d69)) - Ans
+  1152: - Remove default export - ([44c6a64](https://github.com/cfpb/design-system/commit/44c6a64252454aeba5ed1a7a9cb9985dfab7c949)) - Ans
+  1153: - Remove underscore named files | Move custom props to mixin | Move some vars to global space - ([20b9076](https://github.com/cfpb/design-system/commit/20b9076365f4f19617ddaf78544af089ddf7d042)) - Ans
+  1154: - Update decap-cms-app@3.3.2, saucectl@0.183.0, stylelint@16.8.2, cypress@13.13.3 - ([8c095fd](https://github.com/cfpb/design-system/commit/8c095fd73576729451d7ea285dd965528502b04a)) - Ans
+  1155: - V3.0.0 - ([5810e39](https://github.com/cfpb/design-system/commit/5810e39c705e77c043124b0cebbb0aa370fe4116)) - Ans
+
+packages/cfpb-design-system/README.md
+  9: [documentation site](https://cfpb.github.io/design-system/).
+  15: - [Find out about contributing](https://github.com/cfpb/design-system/blob/main/CONTRIBUTING.md)
+  16: - [File a bug](https://github.com/cfpb/design-system/issues/new?labels=bug)
+
+packages/cfpb-design-system/TERMS.md
+  40: [policy]: https://github.com/cfpb/design-system/blob/main/TERMS.md
+
+packages/cfpb-design-system/package.json
+  13:     "url": "https://cfpb.github.io/design-system"
+  26:     "url": "https://github.com/cfpb/design-system/issues"
+
+packages/cfpb-design-system/src/components/cfpb-expandables/summary.js
+  143:        See https://github.com/cfpb/design-system/blob/72623270013f2ad08dbe92b5b709ed2b434ee41e/packages/cfpb-atomic-component/src/utilities/transition/transition.less#L84
+
+packages/cfpb-design-system/src/components/cfpb-forms/multiselect.scss
+  84:       // See https://github.com/cfpb/design-system/blob/4d26d5af04317bcc00b4677aa866fe8d526e82e0/packages/cfpb-forms/src/organisms/Multiselect.js#L340
+
